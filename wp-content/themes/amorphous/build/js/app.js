@@ -218,6 +218,7 @@ var App = function (_React$Component) {
     _createClass(App, [{
         key: "render",
         value: function render() {
+            console.log(this, 'App');
             return _react2.default.createElement(
                 "div",
                 { className: "l-wrap" },
@@ -226,6 +227,9 @@ var App = function (_React$Component) {
                 _react2.default.createElement(_reactRouterDom.Route, { path: "/page/:id", component: _AboutPage2.default })
             );
         }
+    }, {
+        key: "buildRoutes",
+        value: function buildRoutes(data) {}
     }]);
 
     return App;
@@ -233,17 +237,26 @@ var App = function (_React$Component) {
 
 App.propTypes = {
     match: _propTypes2.default.object.isRequired,
-    loading: _propTypes2.default.bool.isRequired
+    loading: _propTypes2.default.bool.isRequired,
+    pages: _propTypes2.default.array
 };
 
 function mapStateToProps(state, newProp) {
     return {
-        loading: state.ajaxCallsInProgress > 0
+        loading: state.ajaxCallsInProgress > 0,
+        pages: state.pages
+    };
+}
+
+// determines what actions are available in the component
+function mapDispatchToProps(dispatch) {
+    return {
+        actions: (0, _redux.bindActionCreators)(pageActions, dispatch) // becomes this.props.actions
     };
 }
 
 //export default App;
-exports.default = (0, _reactRedux.connect)(mapStateToProps)(App);
+exports.default = (0, _reactRedux.connect)(mapStateToProps, mapDispatchToProps)((0, _reactRouterDom.withRouter)(App));
 
 },{"../actions/pageActions":2,"./about/AboutPage":6,"./common/Header":7,"./home/HomePage":9,"prop-types":75,"react":304,"react-redux":239,"react-router-dom":256,"redux":312}],6:[function(require,module,exports){
 "use strict";
@@ -297,8 +310,9 @@ var AboutPage = function (_React$Component) {
 
     _createClass(AboutPage, [{
         key: "render",
+
+        // https://github.com/DreySkee/wp-api-react
         value: function render() {
-            console.log(this, 'about page');
             var titleRendered = this.props.page.title.rendered;
 
             return _react2.default.createElement(
@@ -324,7 +338,8 @@ AboutPage.propTypes = {
 
 function mapStateToProps(state, newProp) {
     return {
-        page: state.page
+        page: state.page,
+        pages: state.pages
     };
 }
 
@@ -583,7 +598,8 @@ var history = (0, _createBrowserHistory2.default)();
 var rootEl = document.getElementById('app');
 var store = (0, _configureStore2.default)();
 
-store.dispatch((0, _pageActions.loadPage)());
+//store.dispatch( loadPage() );
+
 
 (0, _reactDom.render)(_react2.default.createElement(
     _reactRedux.Provider,

@@ -10,9 +10,9 @@ import {withRouter} from "react-router-dom";
 import PageRender from "../page/pageRender";
 
 class AboutPage extends React.Component {
-
+    // https://github.com/DreySkee/wp-api-react
     render() {
-        console.log(this, 'about page');
+
         const {rendered: titleRendered} = this.props.page.title;
         return (
             <div>
@@ -30,7 +30,8 @@ AboutPage.propTypes = {
 
 function mapStateToProps( state, newProp ) {
     return {
-        page: state.page
+        page: state.page,
+        pages: state.pages
     };
 }
 

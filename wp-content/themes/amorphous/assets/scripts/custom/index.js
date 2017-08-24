@@ -7,13 +7,13 @@ import configureStore from "./store/configureStore";
 import {Provider} from "react-redux";
 import createHistory from "history/createBrowserHistory";
 
-import {loadPage} from "./actions/pageActions";
+import {loadPage, loadPages} from "./actions/pageActions";
 
 const history = createHistory();
 const rootEl = document.getElementById( 'app' );
 const store = configureStore();
 
-store.dispatch( loadPage() );
+store.dispatch( loadPages() );
 
 render(
     <Provider store={store}>
