@@ -125,6 +125,8 @@ function amorphous_scripts() {
 	wp_localize_script( 'build-main', 'globalPost', [
 		'postID' => $post->ID
 	]);
+	$mainMenu = wp_get_nav_menu_items( 'Main' );
+	wp_localize_script( 'build-main', 'mainMenu', $mainMenu );
 	wp_localize_script( 'build-main', 'mwccRestApi', [
 		'home' => home_url(),
 		'main' => home_url( '', 'rest' ) . '/wp-json/',

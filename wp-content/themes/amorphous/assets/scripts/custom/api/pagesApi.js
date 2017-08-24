@@ -1,4 +1,4 @@
-/*global mwccRestApi, globalPost */
+/*global mwccRestApi, globalPost, mainMenu */
 import axios from "axios";
 
 class PagesApi {
@@ -8,7 +8,7 @@ class PagesApi {
         const restApiUrl = mwccRestApi.rest;
         const { postID } = globalPost;
         const pages = [];
-
+        console.log( mainMenu, 'menu');
         this.pagesEndPoint = `${appUrl}/wp-json/wp/v2/pages`;
         this.postsEndPoint = `${appUrl}/wp-json/wp/v2/${postType}`; // Endpoint for WP posts
         this.postIdEndPoint = `${appUrl}/wp-json/wp/v2/${postType}/${postID}`;

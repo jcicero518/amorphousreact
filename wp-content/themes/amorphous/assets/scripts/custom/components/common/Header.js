@@ -1,13 +1,16 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { Link, Switch } from "react-router-dom";
+import { Link } from "react-router-dom";
 
-const Header = () => {
+import LoadingDots from "./LoadingDots";
+
+const Header = ({loading}) => {
     return (
         <nav>
-            <Link to="/" activeClassName="active">Home</Link>
+            <Link to="/">Home</Link>
             {" | "}
-            <Link to="/about" activeClassName="active">About</Link>
+            <Link to="/about">About</Link>
+            {loading && <LoadingDots interval={100} dots={20} />}
         </nav>
     );
 };

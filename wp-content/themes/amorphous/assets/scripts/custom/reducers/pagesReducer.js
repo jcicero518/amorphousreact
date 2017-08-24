@@ -2,7 +2,6 @@ import * as types from "../actions/actionTypes";
 import initialState from "./initialState";
 
 function pagesReducer( state = initialState.pages, action ) {
-    console.log( action, 'action');
     switch ( action.type ) {
         case types.LOAD_PAGES_SUCCESS:
             return action.pages;

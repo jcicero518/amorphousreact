@@ -1,0 +1,165 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/bin/node',
+1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli   'i',
+1 verbose cli   'wordpress-query-page',
+1 verbose cli   'wordpress-query-post',
+1 verbose cli   '--save' ]
+2 info using npm@3.10.10
+3 info using node@v6.11.1
+4 silly loadCurrentTree Starting
+5 silly install loadCurrentTree
+6 silly install readLocalPackageData
+7 silly fetchPackageMetaData wordpress-query-page
+8 silly fetchPackageMetaData wordpress-query-post
+9 silly fetchNamedPackageData wordpress-query-page
+10 silly mapToRegistry name wordpress-query-page
+11 silly mapToRegistry using default registry
+12 silly mapToRegistry registry https://registry.npmjs.org/
+13 silly mapToRegistry data Result {
+13 silly mapToRegistry   raw: 'wordpress-query-page',
+13 silly mapToRegistry   scope: null,
+13 silly mapToRegistry   escapedName: 'wordpress-query-page',
+13 silly mapToRegistry   name: 'wordpress-query-page',
+13 silly mapToRegistry   rawSpec: '',
+13 silly mapToRegistry   spec: 'latest',
+13 silly mapToRegistry   type: 'tag' }
+14 silly mapToRegistry uri https://registry.npmjs.org/wordpress-query-page
+15 silly fetchNamedPackageData wordpress-query-post
+16 silly mapToRegistry name wordpress-query-post
+17 silly mapToRegistry using default registry
+18 silly mapToRegistry registry https://registry.npmjs.org/
+19 silly mapToRegistry data Result {
+19 silly mapToRegistry   raw: 'wordpress-query-post',
+19 silly mapToRegistry   scope: null,
+19 silly mapToRegistry   escapedName: 'wordpress-query-post',
+19 silly mapToRegistry   name: 'wordpress-query-post',
+19 silly mapToRegistry   rawSpec: '',
+19 silly mapToRegistry   spec: 'latest',
+19 silly mapToRegistry   type: 'tag' }
+20 silly mapToRegistry uri https://registry.npmjs.org/wordpress-query-post
+21 verbose request uri https://registry.npmjs.org/wordpress-query-page
+22 verbose request no auth needed
+23 info attempt registry request try #1 at 4:09:56 PM
+24 verbose request using bearer token for auth
+25 verbose request id e5f950801a2c3c1e
+26 http request GET https://registry.npmjs.org/wordpress-query-page
+27 verbose request uri https://registry.npmjs.org/wordpress-query-post
+28 verbose request no auth needed
+29 info attempt registry request try #1 at 4:09:56 PM
+30 verbose request using bearer token for auth
+31 http request GET https://registry.npmjs.org/wordpress-query-post
+32 http 200 https://registry.npmjs.org/wordpress-query-page
+33 verbose headers { server: 'nginx/1.10.3',
+33 verbose headers   'content-type': 'application/json',
+33 verbose headers   'last-modified': 'Mon, 28 Nov 2016 03:17:11 GMT',
+33 verbose headers   etag: 'W/"583ba1b7-1c89"',
+33 verbose headers   'content-encoding': 'gzip',
+33 verbose headers   'cache-control': 'max-age=300',
+33 verbose headers   'transfer-encoding': 'chunked',
+33 verbose headers   'accept-ranges': 'bytes',
+33 verbose headers   date: 'Thu, 24 Aug 2017 20:09:57 GMT',
+33 verbose headers   via: '1.1 varnish',
+33 verbose headers   connection: 'keep-alive',
+33 verbose headers   'x-served-by': 'cache-jfk8128-JFK',
+33 verbose headers   'x-cache': 'MISS',
+33 verbose headers   'x-cache-hits': '0',
+33 verbose headers   'x-timer': 'S1503605397.118461,VS0,VE74',
+33 verbose headers   vary: 'Accept-Encoding, Accept' }
+34 silly get cb [ 200,
+34 silly get   { server: 'nginx/1.10.3',
+34 silly get     'content-type': 'application/json',
+34 silly get     'last-modified': 'Mon, 28 Nov 2016 03:17:11 GMT',
+34 silly get     etag: 'W/"583ba1b7-1c89"',
+34 silly get     'content-encoding': 'gzip',
+34 silly get     'cache-control': 'max-age=300',
+34 silly get     'transfer-encoding': 'chunked',
+34 silly get     'accept-ranges': 'bytes',
+34 silly get     date: 'Thu, 24 Aug 2017 20:09:57 GMT',
+34 silly get     via: '1.1 varnish',
+34 silly get     connection: 'keep-alive',
+34 silly get     'x-served-by': 'cache-jfk8128-JFK',
+34 silly get     'x-cache': 'MISS',
+34 silly get     'x-cache-hits': '0',
+34 silly get     'x-timer': 'S1503605397.118461,VS0,VE74',
+34 silly get     vary: 'Accept-Encoding, Accept' } ]
+35 verbose get saving wordpress-query-page to /Users/jcicero/.npm/registry.npmjs.org/wordpress-query-page/.cache.json
+36 verbose correctMkdir /Users/jcicero/.npm correctMkdir not in flight; initializing
+37 http 404 https://registry.npmjs.org/wordpress-query-post
+38 verbose headers { 'content-type': 'application/json',
+38 verbose headers   'cache-control': 'max-age=0',
+38 verbose headers   'content-length': '2',
+38 verbose headers   'accept-ranges': 'bytes',
+38 verbose headers   date: 'Thu, 24 Aug 2017 20:09:57 GMT',
+38 verbose headers   via: '1.1 varnish',
+38 verbose headers   connection: 'keep-alive',
+38 verbose headers   'x-served-by': 'cache-jfk8120-JFK',
+38 verbose headers   'x-cache': 'MISS',
+38 verbose headers   'x-cache-hits': '0',
+38 verbose headers   'x-timer': 'S1503605397.113369,VS0,VE405',
+38 verbose headers   vary: 'Accept-Encoding' }
+39 silly get cb [ 404,
+39 silly get   { 'content-type': 'application/json',
+39 silly get     'cache-control': 'max-age=0',
+39 silly get     'content-length': '2',
+39 silly get     'accept-ranges': 'bytes',
+39 silly get     date: 'Thu, 24 Aug 2017 20:09:57 GMT',
+39 silly get     via: '1.1 varnish',
+39 silly get     connection: 'keep-alive',
+39 silly get     'x-served-by': 'cache-jfk8120-JFK',
+39 silly get     'x-cache': 'MISS',
+39 silly get     'x-cache-hits': '0',
+39 silly get     'x-timer': 'S1503605397.113369,VS0,VE405',
+39 silly get     vary: 'Accept-Encoding' } ]
+40 silly fetchPackageMetaData Error: Registry returned 404 for GET on https://registry.npmjs.org/wordpress-query-post
+40 silly fetchPackageMetaData     at makeError (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:302:12)
+40 silly fetchPackageMetaData     at CachingRegistryClient.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:280:14)
+40 silly fetchPackageMetaData     at Request._callback (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:210:14)
+40 silly fetchPackageMetaData     at Request.self.callback (/usr/local/lib/node_modules/npm/node_modules/request/request.js:187:22)
+40 silly fetchPackageMetaData     at emitTwo (events.js:106:13)
+40 silly fetchPackageMetaData     at Request.emit (events.js:191:7)
+40 silly fetchPackageMetaData     at Request.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:1048:10)
+40 silly fetchPackageMetaData     at emitOne (events.js:96:13)
+40 silly fetchPackageMetaData     at Request.emit (events.js:188:7)
+40 silly fetchPackageMetaData     at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:969:12)
+40 silly fetchPackageMetaData  error for wordpress-query-post { Error: Registry returned 404 for GET on https://registry.npmjs.org/wordpress-query-post
+40 silly fetchPackageMetaData     at makeError (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:302:12)
+40 silly fetchPackageMetaData     at CachingRegistryClient.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:280:14)
+40 silly fetchPackageMetaData     at Request._callback (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:210:14)
+40 silly fetchPackageMetaData     at Request.self.callback (/usr/local/lib/node_modules/npm/node_modules/request/request.js:187:22)
+40 silly fetchPackageMetaData     at emitTwo (events.js:106:13)
+40 silly fetchPackageMetaData     at Request.emit (events.js:191:7)
+40 silly fetchPackageMetaData     at Request.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:1048:10)
+40 silly fetchPackageMetaData     at emitOne (events.js:96:13)
+40 silly fetchPackageMetaData     at Request.emit (events.js:188:7)
+40 silly fetchPackageMetaData     at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:969:12) pkgid: 'wordpress-query-post', statusCode: 404, code: 'E404' }
+41 silly rollbackFailedOptional Starting
+42 silly rollbackFailedOptional Finishing
+43 silly runTopLevelLifecycles Finishing
+44 silly install printInstalled
+45 verbose stack Error: Registry returned 404 for GET on https://registry.npmjs.org/wordpress-query-post
+45 verbose stack     at makeError (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:302:12)
+45 verbose stack     at CachingRegistryClient.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:280:14)
+45 verbose stack     at Request._callback (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:210:14)
+45 verbose stack     at Request.self.callback (/usr/local/lib/node_modules/npm/node_modules/request/request.js:187:22)
+45 verbose stack     at emitTwo (events.js:106:13)
+45 verbose stack     at Request.emit (events.js:191:7)
+45 verbose stack     at Request.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:1048:10)
+45 verbose stack     at emitOne (events.js:96:13)
+45 verbose stack     at Request.emit (events.js:188:7)
+45 verbose stack     at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:969:12)
+46 verbose statusCode 404
+47 verbose pkgid wordpress-query-post
+48 verbose cwd /Users/jcicero/Homestead/Projects/amorphous/wp-content/themes/amorphous
+49 error Darwin 14.5.0
+50 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "i" "wordpress-query-page" "wordpress-query-post" "--save"
+51 error node v6.11.1
+52 error npm  v3.10.10
+53 error code E404
+54 error 404 Registry returned 404 for GET on https://registry.npmjs.org/wordpress-query-post
+55 error 404
+56 error 404 'wordpress-query-post' is not in the npm registry.
+57 error 404 You should bug the author to publish it (or use the name yourself!)
+58 error 404 Note that you can also install from a
+59 error 404 tarball, folder, http url, or git url.
+60 verbose exit [ 1, true ]

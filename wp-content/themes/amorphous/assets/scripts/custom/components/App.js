@@ -1,18 +1,25 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { Route } from 'react-router-dom';
+
+import Header from "./common/Header";
+import HomePage from "./home/HomePage";
+import AboutPage from "./about/AboutPage";
+
 import {connect} from "react-redux";
 import * as pageActions from "../actions/pageActions";
-import Header from "./common/Header";
+
 import {bindActionCreators} from "redux";
-//import Page from "../pages/page";
+
 
 class App extends React.Component {
 
     render() {
-        console.log(this, 'app');
         return (
             <div className="l-wrap">
-                <Header />
+                <Header loading={this.props.loading} />
+                <Route exact path="/" component={HomePage} />
+                <Route path="/page/:id" component={AboutPage} />
             </div>
         );
     }
@@ -20,30 +27,15 @@ class App extends React.Component {
 
 
 App.propTypes = {
-    //actions: PropTypes.object.isRequired,
-    //page: PropTypes.array
-    //children: PropTypes.object.isRequired
+    match: PropTypes.object.isRequired,
+    loading: PropTypes.bool.isRequired
 };
 
 function mapStateToProps( state, newProp ) {
     return {
-        page: state.page
-        //pages: state.pages
-    };
-}
-
-// determines what actions are available in the component
-function mapDispatchToProps( dispatch ) {
-    /**
-     * or
-     * return {
-     *   loadCourses: () => { dispatch( loadCourses() )
-     *   }
-     */
-    return {
-        actions: bindActionCreators( pageActions, dispatch ) // becomes this.props.actions
+        loading: state.ajaxCallsInProgress > 0
     };
 }
 
 //export default App;
-export default connect( mapStateToProps, mapDispatchToProps )( App );
+export default connect( mapStateToProps )( App );
