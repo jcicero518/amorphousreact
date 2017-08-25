@@ -13,36 +13,38 @@ class AboutPage extends React.Component {
     // https://github.com/DreySkee/wp-api-react
     render() {
         console.log(this, 'about render');
-        let thepage = this.getPageBySlug();
-        console.log( thepage, 'thepage' );
         //const {rendered} = this.props.page.title;
         // <PageRender page={this.props.page} />
         return (
             <div>
                 <h1>About Page</h1>
-
+                <h2>{this.props.page.title.rendered}</h2>
+                <PageRender page={this.props.page} />
             </div>
         )
     }
 
-    getPageBySlug() {
-        const {pages, match} = this.props;
-        let slug = match.url;
-        return pages.filter( page => {
-            return page.title.rendered === match.url.replace( '/', '' );
-        });
-    }
 }
 
 AboutPage.propTypes = {
-    page: PropTypes.array,
+    page: PropTypes.object,
     history: PropTypes.object,
     match: PropTypes.object
 };
 
-function mapStateToProps( state, newProp ) {
+function getPageBySlug( pages, slug ) {
+    return pages.filter( page => {
+        return page.slug === slug;
+    });
+}
+
+function mapStateToProps( state, ownProps ) {
+    console.log(ownProps, 'ownProps');
+    const pageSlug = ownProps.match.path.replace( '/', '' );
+    let page = getPageBySlug( state.pages, pageSlug );
+
     return {
-        page: state.page,
+        page: page[0],
         pages: state.pages
     };
 }

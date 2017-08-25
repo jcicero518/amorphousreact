@@ -9,6 +9,8 @@ var LOAD_PAGE_SUCCESS = exports.LOAD_PAGE_SUCCESS = 'LOAD_PAGE_SUCCESS';
 var BEGIN_AJAX_CALL = exports.BEGIN_AJAX_CALL = 'BEGIN_AJAX_CALL';
 var AJAX_CALL_ERROR = exports.AJAX_CALL_ERROR = 'AJAX_CALL_ERROR';
 
+var LOCATION_CHANGE = exports.LOCATION_CHANGE = 'LOCATION_CHANGE';
+
 },{}],2:[function(require,module,exports){
 "use strict";
 
@@ -317,8 +319,6 @@ var AboutPage = function (_React$Component) {
         // https://github.com/DreySkee/wp-api-react
         value: function render() {
             console.log(this, 'about render');
-            var thepage = this.getPageBySlug();
-            console.log(thepage, 'thepage');
             //const {rendered} = this.props.page.title;
             // <PageRender page={this.props.page} />
             return _react2.default.createElement(
@@ -328,20 +328,14 @@ var AboutPage = function (_React$Component) {
                     "h1",
                     null,
                     "About Page"
-                )
+                ),
+                _react2.default.createElement(
+                    "h2",
+                    null,
+                    this.props.page.title.rendered
+                ),
+                _react2.default.createElement(_pageRender2.default, { page: this.props.page })
             );
-        }
-    }, {
-        key: "getPageBySlug",
-        value: function getPageBySlug() {
-            var _props = this.props,
-                pages = _props.pages,
-                match = _props.match;
-
-            var slug = match.url;
-            return pages.filter(function (page) {
-                return page.title.rendered === match.url.replace('/', '');
-            });
         }
     }]);
 
@@ -349,14 +343,24 @@ var AboutPage = function (_React$Component) {
 }(_react2.default.Component);
 
 AboutPage.propTypes = {
-    page: _propTypes2.default.array,
+    page: _propTypes2.default.object,
     history: _propTypes2.default.object,
     match: _propTypes2.default.object
 };
 
-function mapStateToProps(state, newProp) {
+function getPageBySlug(pages, slug) {
+    return pages.filter(function (page) {
+        return page.slug === slug;
+    });
+}
+
+function mapStateToProps(state, ownProps) {
+    console.log(ownProps, 'ownProps');
+    var pageSlug = ownProps.match.path.replace('/', '');
+    var page = getPageBySlug(state.pages, pageSlug);
+
     return {
-        page: state.page,
+        page: page[0],
         pages: state.pages
     };
 }
