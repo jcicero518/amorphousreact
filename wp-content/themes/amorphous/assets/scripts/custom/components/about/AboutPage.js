@@ -11,6 +11,7 @@ import PageRender from "../page/pageRender";
 
 class AboutPage extends React.Component {
     // https://github.com/DreySkee/wp-api-react
+    //http://jpsierens.com/simple-react-redux-application/
     render() {
         console.log(this, 'about render');
         //const {rendered} = this.props.page.title;

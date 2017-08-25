@@ -317,6 +317,7 @@ var AboutPage = function (_React$Component) {
         key: "render",
 
         // https://github.com/DreySkee/wp-api-react
+        //http://jpsierens.com/simple-react-redux-application/
         value: function render() {
             console.log(this, 'about render');
             //const {rendered} = this.props.page.title;
