@@ -24,6 +24,6 @@ export default function configureStore( initialState ) {
         rootReducer,
         initialState,
         //applyMiddleware(...middleware), // w/o redux devtools
-        composeEnhancers( applyMiddleware(...middleware), DevTools.instrument() )
+        composeEnhancers( applyMiddleware(...middleware) )
     );
 }
