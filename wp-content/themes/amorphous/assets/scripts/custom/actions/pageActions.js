@@ -22,7 +22,6 @@ export function loadPages() {
     let api = new PagesApi();
     return function( dispatch ) {
         return api.getPages().then( pages => {
-            console.log(pages, 'pages');
             dispatch( loadPagesSuccess( pages ) );
         }).catch( error => {
             throw(error);

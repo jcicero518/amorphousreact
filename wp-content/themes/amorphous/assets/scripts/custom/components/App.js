@@ -1,40 +1,36 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { Route } from 'react-router-dom';
 
 import Header from "./common/Header";
 import HomePage from "./home/HomePage";
 import AboutPage from "./about/AboutPage";
+import PageRender from "./page/pageRender";
 
 import {connect} from "react-redux";
 
 import * as pageActions from "../actions/pageActions";
 
 import {bindActionCreators} from "redux";
-import {withRouter} from "react-router-dom";
+import {BrowserRouter as Router, Redirect, Switch, Route, withRouter} from "react-router-dom";
 
+import Routes from "../routes";
 
 class App extends React.Component {
 
     render() {
-        console.log(this, 'App');
+
         return (
             <div className="l-wrap">
                 <Header loading={this.props.loading} />
-                <Route exact path="/" component={HomePage} />
-                <Route path="/page/:id" component={AboutPage} />
+                {Routes}
             </div>
         );
-    }
-
-    buildRoutes( data ) {
-
     }
 }
 
 
 App.propTypes = {
-    match: PropTypes.object.isRequired,
+    match: PropTypes.object,
     loading: PropTypes.bool.isRequired,
     pages: PropTypes.array
 };
@@ -54,4 +50,4 @@ function mapDispatchToProps( dispatch ) {
 }
 
 //export default App;
-export default connect( mapStateToProps, mapDispatchToProps )( withRouter( App ) );
+export default connect( mapStateToProps, mapDispatchToProps )( App );

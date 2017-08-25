@@ -5,6 +5,8 @@ import createHistory from "history/createBrowserHistory";
 import { routerMiddleware, routerReducer } from 'react-router-redux';
 import thunk from "redux-thunk";
 
+import DevTools from "../devtools/devtools";
+
 const history = createHistory();
 const historyMiddleware = routerMiddleware( history );
 const loggerMiddleware = createLogger();
@@ -22,6 +24,6 @@ export default function configureStore( initialState ) {
         rootReducer,
         initialState,
         //applyMiddleware(...middleware), // w/o redux devtools
-        composeEnhancers( applyMiddleware(...middleware) )
+        composeEnhancers( applyMiddleware(...middleware), DevTools.instrument() )
     );
 }

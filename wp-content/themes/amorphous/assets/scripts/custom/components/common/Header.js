@@ -1,15 +1,18 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { Link } from "react-router-dom";
+import { BrowserRouter as Router, Redirect, Switch, Route, Link, NavLink } from "react-router-dom";
 
+import AboutPage from "../about/AboutPage";
 import LoadingDots from "./LoadingDots";
 
-const Header = ({loading}) => {
+const Header = ({loading, pages}) => {
+
     return (
+
         <nav>
-            <Link to="/">Home</Link>
+            <NavLink to="/" activeClassName="active">Home</NavLink>
             {" | "}
-            <Link to="/about">About</Link>
+            <NavLink to="/about" activeClassName="active">About</NavLink>
             {loading && <LoadingDots interval={100} dots={20} />}
         </nav>
     );

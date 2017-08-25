@@ -1,25 +1,27 @@
 import React from "react";
 import {render} from "react-dom";
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { ConnectedRouter } from "react-router-redux";
 import App from "./components/App";
 
 import configureStore from "./store/configureStore";
 import {Provider} from "react-redux";
 import createHistory from "history/createBrowserHistory";
 
-import {loadPage, loadPages} from "./actions/pageActions";
+import {loadPages} from "./actions/pageActions";
 
 const history = createHistory();
 const rootEl = document.getElementById( 'app' );
 const store = configureStore();
 
-store.dispatch( loadPages() );
 
+store.dispatch( loadPages() );
+//store.dispatch( loadPage() );
 render(
     <Provider store={store}>
-        <Router>
+        <ConnectedRouter history={history}>
             <Route path="/" component={App} />
-        </Router>
+        </ConnectedRouter>
     </Provider>, rootEl
 );
 
