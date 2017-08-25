@@ -10,6 +10,7 @@ import {withRouter} from "react-router-dom";
 import PageRender from "../page/pageRender";
 
 class AboutPage extends React.Component {
+    // https://wpengine.com/wp-content/uploads/2017/02/WP-EBK-LT-UltimateGuideToPhp-FINAL.pdf
     // https://github.com/DreySkee/wp-api-react
     //http://jpsierens.com/simple-react-redux-application/
     render() {
