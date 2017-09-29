@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "MWCC theme modules / tasks",
   "scripts": {
-    "start": "webpack-dev-server --inline --progress --config webpack.config.dev.js",
+    "start": "webpack --watch --progress --config webpack.config.js",
     "build": "npm run clean && webpack -p --progress --config webpack.production.js",
     "clean": "rimraf ./build/*"
   },
@@ -28,6 +28,7 @@
     "browser-sync": "^2.18.8",
     "browser-sync-webpack-plugin": "^1.2.0",
     "browserify": "^14.1.0",
+    "bulma": "^0.5.3",
     "cheerio": "^1.0.0-rc.2",
     "clean-webpack-plugin": "^0.1.16",
     "colors": "^1.1.2",
