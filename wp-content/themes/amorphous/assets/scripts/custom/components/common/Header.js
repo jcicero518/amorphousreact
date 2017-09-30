@@ -2,13 +2,11 @@ import React from "react";
 import PropTypes from "prop-types";
 import { BrowserRouter as Router, Redirect, Switch, Route, Link, NavLink } from "react-router-dom";
 
-import AboutPage from "../about/AboutPage";
 import LoadingDots from "./LoadingDots";
 
-const Header = ({loading, pages}) => {
+const Header = ({loading}) => {
 
     return (
-
         <nav>
             <NavLink to="/" activeClassName="active">Home</NavLink>
             {" | "}
@@ -16,6 +14,10 @@ const Header = ({loading, pages}) => {
             {loading && <LoadingDots interval={100} dots={20} />}
         </nav>
     );
+};
+
+Header.propTypes = {
+    loading: PropTypes.bool.isRequired
 };
 
 export default Header;

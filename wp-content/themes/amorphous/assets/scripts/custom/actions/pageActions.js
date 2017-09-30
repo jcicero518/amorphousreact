@@ -1,5 +1,6 @@
 import * as types from "./actionTypes";
 import PagesApi from "../api/pagesApi";
+import {beginAjaxCall, ajaxCallError} from "../actions/ajaxStatusActions";
 
 export function loadPagesSuccess( pages ) {
     return {
@@ -21,9 +22,11 @@ export function loadPageSuccess( page ) {
 export function loadPages() {
     let api = new PagesApi();
     return function( dispatch ) {
+        dispatch( beginAjaxCall() );
         return api.getPages().then( pages => {
             dispatch( loadPagesSuccess( pages ) );
         }).catch( error => {
+            dispatch( ajaxCallError( error ) );
             throw(error);
         });
     };
@@ -32,10 +35,11 @@ export function loadPages() {
 export function loadPage() {
     let api = new PagesApi();
     return function( dispatch ) {
+        dispatch( beginAjaxCall() );
         return api.getPage().then( page => {
-            console.log(page, 'page');
             dispatch( loadPageSuccess( page ) );
         }).catch( error => {
+            dispatch( ajaxCallError( error ) );
             throw(error);
         });
     };

@@ -6,6 +6,7 @@ const PageRender = ({page}) => {
     return (
         <div>
             <h2>{page.title.rendered}</h2>
+            <div dangerouslySetInnerHTML={{__html: page.content.rendered}}></div>
         </div>
     )
 };

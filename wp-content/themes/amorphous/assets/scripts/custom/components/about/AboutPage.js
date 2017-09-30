@@ -15,17 +15,12 @@ class AboutPage extends React.Component {
     //http://jpsierens.com/simple-react-redux-application/
     render() {
         console.log(this, 'about render');
-        //const {rendered} = this.props.page.title;
-        // <PageRender page={this.props.page} />
         return (
             <div>
-                <h1>About Page</h1>
-                <h2>{this.props.page.title.rendered}</h2>
                 <PageRender page={this.props.page} />
             </div>
         )
     }
-
 }
 
 AboutPage.propTypes = {

@@ -1,6 +1,6 @@
 import React from "react";
 import {render} from "react-dom";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route, Redirect } from "react-router-dom";
 import { ConnectedRouter } from "react-router-redux";
 import App from "./components/App";
 
