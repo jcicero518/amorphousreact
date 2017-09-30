@@ -35,6 +35,10 @@ const webpackConfig = {
                         'css-loader', 'sass-loader'
                     ]
                 })
+            },
+            {
+                test: /\.css$/,
+                use: [ 'style-loader', 'postcss-loader' ]
             }
         ]
         /*rules: [
