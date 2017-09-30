@@ -8,8 +8,8 @@ import LoadingDots from "./LoadingDots";
 const Header = ({loading, pages}) => {
 
     return (
-        <section class="section">
-            <div class="container">
+        <section className="section">
+            <div className="container">
                 <nav>
                     <NavLink to="/" activeClassName="active">Home</NavLink>
                     {" | "}

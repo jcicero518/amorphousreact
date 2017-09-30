@@ -6,8 +6,8 @@ class HomePage extends React.Component {
 
     render() {
         return (
-            <section class="section">
-                <div class="container">
+            <section className="section">
+                <div className="container">
                     <h1>Home page</h1>
                     <h2>Welcome to the app</h2>
                 </div>

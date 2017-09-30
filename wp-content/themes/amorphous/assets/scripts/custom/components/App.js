@@ -20,8 +20,8 @@ class App extends React.Component {
     render() {
 
         return (
-            <div class="section">
-                <div class="container">
+            <div className="section">
+                <div className="container">
                     <div className="l-wrap">
                         <Header loading={this.props.loading} />
                             {Routes}
