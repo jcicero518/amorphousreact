@@ -8,12 +8,8 @@
  */
 
 get_header(); ?>
-	<div id="app"></div>
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main">
 
-		</main><!-- #main -->
-	</div><!-- #primary -->
+	<div id="app"></div>
 
 <?php
 //get_sidebar();

@@ -14,10 +14,13 @@ class AboutPage extends React.Component {
     // https://github.com/DreySkee/wp-api-react
     //http://jpsierens.com/simple-react-redux-application/
     render() {
-        console.log(this, 'about render');
+
         return (
-            <div>
-                <PageRender page={this.props.page} />
+            <div className="section">
+                <div className="container">
+                    <h1>{this.props.page.title.rendered}</h1>
+                    <PageRender page={this.props.page} />
+                </div>
             </div>
         )
     }
@@ -26,6 +29,7 @@ class AboutPage extends React.Component {
 AboutPage.propTypes = {
     page: PropTypes.object,
     history: PropTypes.object,
+    location: PropTypes.object,
     match: PropTypes.object
 };
 

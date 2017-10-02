@@ -1,3 +1,4 @@
+// https://github.com/jackreichert/a-wp-react-redux-theme/
 import React from "react";
 import PropTypes from "prop-types";
 
@@ -18,12 +19,14 @@ import Routes from "../routes";
 class App extends React.Component {
 
     render() {
-
+        console.log(this.props, 'App props');
         return (
+
             <div className="l-wrap">
                 <Header loading={this.props.loading} />
                 {Routes}
             </div>
+
         );
     }
 }

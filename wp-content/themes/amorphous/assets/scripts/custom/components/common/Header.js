@@ -7,11 +7,20 @@ import LoadingDots from "./LoadingDots";
 const Header = ({loading}) => {
 
     return (
-        <nav>
-            <NavLink to="/" activeClassName="active">Home</NavLink>
-            {" | "}
-            <NavLink to="/about" activeClassName="active">About</NavLink>
-            {loading && <LoadingDots interval={100} dots={20} />}
+        <nav className="navbar">
+            <div className="container">
+                <div className="navbar-brand">
+                    <a className="navbar-item" href="http://bulma.io">
+                        <img src="http://bulma.io/images/bulma-logo.png" alt="Bulma: a modern CSS framework based on Flexbox" width="112" height="28" />
+                    </a>
+                </div>
+                <div className="navbar-menu">
+                    <NavLink to="/" activeClassName="active" className="navbar-item">Home</NavLink>
+                    {" | "}
+                    <NavLink to="/about" activeClassName="active" className="navbar-item">About</NavLink>
+                    {loading && <LoadingDots interval={100} dots={20} />}
+                </div>
+            </div>
         </nav>
     );
 };

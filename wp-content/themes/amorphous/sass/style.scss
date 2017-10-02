@@ -41,6 +41,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
 # Media
 	## Captions
 	## Galleries
+
 --------------------------------------------------------------*/
 @import "variables-site/variables-site";
 @import "mixins/mixins-master";
@@ -104,3 +105,42 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
 # Media
 --------------------------------------------------------------*/
 @import "media/media";
+
+.container {
+  //lost-center: 980px;
+}
+
+.loadingDots {
+  color: $white;
+}
+
+.navbar {
+  background-color: $color_navbar;
+  .navbar-brand {
+    //lost-center: 1200px;
+  }
+  .navbar-menu {
+    a {
+      color: $color_navbar_link;
+      text-decoration: none;
+      text-transform: uppercase;
+      &:hover, &:focus {
+        color: $color_navbar_link-hover;
+        transition: all 250ms linear;
+      }
+    }
+  }
+}
+
+.footer {
+  padding: 0;
+  background-color: $color_bg_footer;
+  color: $white;
+  a {
+    color: $color_footer_link;
+    transition: all 250ms linear;
+    &:hover, &:focus {
+      color: darken($color_footer_link, 4%);
+    }
+  }
+}

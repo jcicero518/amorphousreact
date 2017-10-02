@@ -11,20 +11,22 @@
 
 ?>
 
-	</div><!-- #content -->
-
-	<footer id="colophon" class="site-footer">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'amorphous' ) ); ?>"><?php
-				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'amorphous' ), 'WordPress' );
-			?></a>
-			<span class="sep"> | </span>
-			<?php
-				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'amorphous' ), 'amorphous', '<a href="http://amorphouswebsolutions.com">Jeff Cicero</a>' );
-			?>
-		</div><!-- .site-info -->
+	<footer id="colophon" class="site-footer footer">
+		<section class="section">
+			<div class="container">
+				<div class="site-info">
+					<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'amorphous' ) ); ?>"><?php
+						/* translators: %s: CMS name, i.e. WordPress. */
+						printf( esc_html__( 'Proudly powered by %s', 'amorphous' ), 'WordPress' );
+						?></a>
+					<span class="sep"> | </span>
+					<?php
+					/* translators: 1: Theme name, 2: Theme author. */
+					printf( esc_html__( 'Theme: %1$s by %2$s.', 'amorphous' ), 'amorphous', '<a href="http://amorphouswebsolutions.com">Jeff Cicero</a>' );
+					?>
+				</div><!-- .site-info -->
+			</div>
+		</section>
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 
