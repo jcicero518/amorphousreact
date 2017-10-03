@@ -36,4 +36,25 @@
 		</div><!-- .site-branding -->
 
 	</header><!-- #masthead -->
-
+	<nav id="site-navigation" class="main-navigation navbar">
+		<div class="container">
+			<div class="navbar-brand">
+				<a class="navbar-item" href="http://bulma.io">
+					<img src="http://bulma.io/images/bulma-logo.png" alt="Bulma: a modern CSS framework based on Flexbox" width="112" height="28" />
+				</a>
+			</div>
+			<div class="navbar-menu">
+				<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'amorphous' ); ?></button>
+				<?php
+				wp_nav_menu( array(
+					'menu' => 'Main',
+					'theme_location' => 'menu-1',
+					'container' => FALSE,
+					'menu_class' => 'navbar-menu',
+					'menu_id'        => 'primary-menu',
+					'walker' => new lib\Menu\MenuWalker()
+				) );
+				?>
+			</div>
+		</div>
+	</nav>

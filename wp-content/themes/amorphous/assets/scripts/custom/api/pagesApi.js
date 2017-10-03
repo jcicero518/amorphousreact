@@ -8,7 +8,9 @@ class PagesApi {
         const restApiUrl = mwccRestApi.rest;
         const { postID } = globalPost;
         const pages = [];
+        const PRETTYPERMALINK_ENDPOINT = `${restApiUrl}amorphous-theme/v1/prettyPermalink/`;
 
+        this.themeRest = `${appUrl}/wp-json/`;
         this.pagesEndPoint = `${appUrl}/wp-json/wp/v2/pages`;
         this.postsEndPoint = `${appUrl}/wp-json/wp/v2/${postType}`; // Endpoint for WP posts
         this.postIdEndPoint = `${appUrl}/wp-json/wp/v2/${postType}/${postID}`;
@@ -20,6 +22,19 @@ class PagesApi {
                 resolve( response.data );
             }).catch( ( error ) => {
                 reject( error );
+            });
+        });
+    }
+
+    /*getPageById() {
+        return new Promise( ( resolve, reject ) => {
+            axios.get()
+        })
+    }*/
+    getPageByPath( path ) {
+        return new Promise( ( resolve, reject ) => {
+            axios.get( `${this.themeRest}amorphous-theme/v1/prettyPermalink${path}`).then( response => {
+                resolve( Object.assign( [], response.data ))
             });
         });
     }

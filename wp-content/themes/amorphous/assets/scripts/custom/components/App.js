@@ -18,11 +18,33 @@ import Routes from "../routes";
 
 class App extends React.Component {
 
-    render() {
-        console.log(this.props, 'App props');
-        return (
+    constructor(props, context) {
+        super(props, context);
+    }
 
-            <div className="l-wrap">
+    componentWillMount() {
+        let path = this.props.location.pathname;
+        if ( path == '/') {
+            path = '/home';
+        }
+        this.props.actions.loadPageByPath( path );
+    }
+
+    componentWillReceiveProps( nextProps ) {
+        let path = this.props.location.pathname;
+        if ( path == '/') {
+            path = '/home';
+        }
+        if ( path !== nextProps.location.pathname ) {
+            //this.props.actions.loadPageByPath( path );
+        }
+        // this.props.pageId -> nextProps.match.params for pageId?
+    }
+
+    render() {
+        console.log(this, 'app render this');
+        return (
+            <div>
                 <Header loading={this.props.loading} />
                 {Routes}
             </div>
@@ -35,13 +57,21 @@ class App extends React.Component {
 App.propTypes = {
     match: PropTypes.object,
     loading: PropTypes.bool.isRequired,
-    pages: PropTypes.array
+    pages: PropTypes.array,
+    page: PropTypes.object
 };
 
-function mapStateToProps( state, newProp ) {
+function mapStateToProps( state, ownProps) {
+    console.log(ownProps, 'newProp in App');
+    let path = ownProps.location.pathname;
+    if ( path == '/') {
+        path = '/home';
+    }
     return {
         loading: state.ajaxCallsInProgress > 0,
-        pages: state.pages
+        page: state.page,
+        pages: state.pages,
+        pageId: state.pageId
     };
 }
 
@@ -53,4 +83,4 @@ function mapDispatchToProps( dispatch ) {
 }
 
 //export default App;
-export default connect( mapStateToProps, mapDispatchToProps )( App );
+export default connect( mapStateToProps, mapDispatchToProps )(withRouter( App ) );

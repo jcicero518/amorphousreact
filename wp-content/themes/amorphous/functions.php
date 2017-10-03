@@ -131,11 +131,16 @@ function amorphous_scripts() {
 	wp_localize_script( 'build-main', 'mwccRestApi', [
 		'home' => home_url(),
 		'main' => home_url( '', 'rest' ) . '/wp-json/',
-		'rest' => home_url( '', 'rest' ) . '/wp-json/mwcc-rest-api/v1/'
+		'rest' => home_url( '', 'rest' ) . '/wp-json/amorphous-theme/v1/'
 	]);
 }
 add_action( 'wp_enqueue_scripts', 'amorphous_scripts' );
 
+require_once get_template_directory() . '/autoloader.php';
+
+add_action( 'init', function() {
+	new lib\CPT\CPT();
+});
 /**
  * Implement the Custom Header feature.
  */

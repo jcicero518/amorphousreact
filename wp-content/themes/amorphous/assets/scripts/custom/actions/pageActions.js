@@ -16,9 +16,42 @@ export function loadPageSuccess( page ) {
     };
 }
 
+export function loadPathSuccess( pageId ) {
+    return {
+        type: types.ROUTER,
+        pageId
+    }
+}
+
 /**
  * Thunks
  */
+export function loadPageIdByPath( path ) {
+    let api = new PagesApi();
+    return function( dispatch ) {
+        dispatch( beginAjaxCall() );
+        return api.getPageByPath( path).then( page => {
+            dispatch( loadPathSuccess( page.id ) );
+        }).catch( error => {
+            dispatch( ajaxCallError( error ) );
+            throw(error);
+        });
+    }
+}
+
+export function loadPageByPath( path = '/home' ) {
+    let api = new PagesApi();
+    return function( dispatch ) {
+        dispatch( beginAjaxCall() );
+        return api.getPageByPath( path ).then( page => {
+            dispatch( loadPageSuccess( page ) );
+        }).catch( error => {
+            dispatch( ajaxCallError( error ) );
+            throw(error);
+        });
+    }
+}
+
 export function loadPages() {
     let api = new PagesApi();
     return function( dispatch ) {
