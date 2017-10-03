@@ -6439,7 +6439,7 @@ html {
   box-sizing: inherit; }
 
 body {
-  background: #fff;
+  background: #F2F2F2;
   /* Fallback for when there is no custom background color defined. */ }
 
 blockquote, q {
@@ -6604,10 +6604,14 @@ a {
     left: auto; }
 
 .navbar li {
+  padding: 20px 10px;
   display: flex; }
 
 .navbar .navbar-menu a {
   font-family: "Lato", sans-serif;
+  font-weight: bold;
+  font-size: 14px;
+  font-size: 0.875rem;
   color: #F5F7FA;
   text-decoration: none;
   text-transform: uppercase; }
@@ -6616,15 +6620,22 @@ a {
 .navbar .navbar-menu .current-menu-item > a,
 .navbar .navbar-menu .current_page_ancestor > a,
 .navbar .navbar-menu .current-menu-ancestor > a {
-  color: #DA4453;
-  background-color: #F5F5F5; }
+  color: #DA4453; }
+
+.navbar .navbar-brand a {
+  font-size: 20px;
+  font-size: 1.25rem;
+  font-family: "Droid Sans", sans-serif;
+  color: #F5F7FA;
+  font-weight: bold; }
+  .navbar .navbar-brand a:hover, .navbar .navbar-brand a:focus {
+    color: #000000; }
 
 .navbar .current_page_item > a,
 .navbar .current-menu-item > a,
 .navbar .current_page_ancestor > a,
 .navbar .current-menu-ancestor > a {
-  color: #DA4453;
-  background-color: #F5F5F5; }
+  color: #DA4453; }
 
 /* Small menu. */
 @media screen and (min-width: 37.5em) {

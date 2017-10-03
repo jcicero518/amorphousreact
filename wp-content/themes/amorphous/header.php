@@ -39,21 +39,24 @@
 	<nav id="site-navigation" class="main-navigation navbar">
 		<div class="container">
 			<div class="navbar-brand">
-				<a class="navbar-item" href="http://bulma.io">
-					<img src="http://bulma.io/images/bulma-logo.png" alt="Bulma: a modern CSS framework based on Flexbox" width="112" height="28" />
-				</a>
+				<a class="navbar-item" href="/">Amorphous Web Solutions</a>
+				<button class="button navbar-burger">
+					<span></span>
+					<span></span>
+					<span></span>
+				</button>
 			</div>
 			<div class="navbar-menu">
-				<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'amorphous' ); ?></button>
 				<?php
-				wp_nav_menu( array(
+				$menu = wp_nav_menu( array(
 					'menu' => 'Main',
 					'theme_location' => 'menu-1',
 					'container' => FALSE,
-					'menu_class' => 'navbar-menu',
-					'menu_id'        => 'primary-menu',
+					'menu_class' => 'navbar-menu navbar-end',
 					'walker' => new lib\Menu\MenuWalker()
 				) );
+				//var_dump($menu);
+				//add_filter('nav_menu_item_args')
 				?>
 			</div>
 		</div>

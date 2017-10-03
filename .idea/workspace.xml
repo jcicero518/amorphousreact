@@ -2,130 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9dddb1fe-02a6-4770-8864-611a56394be3" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/deployment.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/config/api.config.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/config/db.config.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/amorphous/assets/scripts/custom/containers/blog.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/amorphous/assets/scripts/custom/containers/single.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/amorphous/assets/scripts/custom/reducers/routerReducer.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/amorphous/assets/scripts/custom/webfonts/googleFonts.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/amorphous/autoloader.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/amorphous/inc/theme-endpoints.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/amorphous/lib/Autoload/Loader.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/amorphous/lib/CPT/CPT.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/amorphous/lib/Menu/MenuWalker.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/amorphous/lib/Posts/Card.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/amorphous/lib/Posts/PostInterface.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/amorphous/lib/endpoints/add-featured-image.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/amorphous/lib/endpoints/add-formatted-date.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/amorphous/lib/endpoints/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/amorphous/lib/endpoints/menus.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/amorphous/lib/endpoints/pretty-permalinks.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/amorphous/lib/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/amorphous/lib/theme-endpoints.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/amorphous/lib/theme-enqueue.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/amorphous/lib/theme-support.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/amorphous/src/actions/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/amorphous/src/components/Footer.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/amorphous/src/components/Header.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/amorphous/src/components/Main/Article.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/amorphous/src/components/Main/Article/Content.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/amorphous/src/components/Main/Article/Title.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/amorphous/src/components/Main/Article/comment.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/amorphous/src/components/Main/Article/meta.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/amorphous/src/components/main.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/amorphous/src/components/search.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/amorphous/src/containers/blog.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/amorphous/src/containers/category.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/amorphous/src/containers/comments/commentForm.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/amorphous/src/containers/comments/comments.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/amorphous/src/containers/parts/menu.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/amorphous/src/containers/parts/pageNav.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/amorphous/src/containers/parts/postFooter.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/amorphous/src/containers/search.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/amorphous/src/containers/single.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/amorphous/src/containers/tag.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/amorphous/src/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/amorphous/src/reducers/cat_reducer.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/amorphous/src/reducers/comments_reducer.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/amorphous/src/reducers/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/amorphous/src/reducers/menu_reducer.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/amorphous/src/reducers/posts_reducer.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/amorphous/src/reducers/routerMatch_reducer.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/amorphous/src/reducers/tag_reducer.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/amorphous/src/sass/pieces/article.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/amorphous/src/sass/pieces/comments.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/amorphous/src/sass/pieces/footer.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/amorphous/src/sass/pieces/global.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/amorphous/src/sass/pieces/header.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/amorphous/src/sass/pieces/mixins.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/amorphous/src/sass/pieces/transitions.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/amorphous/src/sass/pieces/variables.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/amorphous/src/sass/styles.scss" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/hello.php" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Webpack" afterPath="$PROJECT_DIR$/Webpack" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-includes/js/tinymce/wp-tinymce.js.gz" afterPath="$PROJECT_DIR$/wp-includes/js/tinymce/wp-tinymce.js.gz" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-admin/about.php" afterPath="$PROJECT_DIR$/wp-admin/about.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-admin/edit-tag-form.php" afterPath="$PROJECT_DIR$/wp-admin/edit-tag-form.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-admin/includes/class-wp-plugins-list-table.php" afterPath="$PROJECT_DIR$/wp-admin/includes/class-wp-plugins-list-table.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-admin/includes/file.php" afterPath="$PROJECT_DIR$/wp-admin/includes/file.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-admin/includes/template.php" afterPath="$PROJECT_DIR$/wp-admin/includes/template.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-admin/install.php" afterPath="$PROJECT_DIR$/wp-admin/install.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-admin/js/widgets/text-widgets.js" afterPath="$PROJECT_DIR$/wp-admin/js/widgets/text-widgets.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-admin/js/widgets/text-widgets.min.js" afterPath="$PROJECT_DIR$/wp-admin/js/widgets/text-widgets.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-admin/plugin-editor.php" afterPath="$PROJECT_DIR$/wp-admin/plugin-editor.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-admin/plugins.php" afterPath="$PROJECT_DIR$/wp-admin/plugins.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-admin/setup-config.php" afterPath="$PROJECT_DIR$/wp-admin/setup-config.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-admin/theme-editor.php" afterPath="$PROJECT_DIR$/wp-admin/theme-editor.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-admin/user-edit.php" afterPath="$PROJECT_DIR$/wp-admin/user-edit.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/akismet/_inc/akismet.js" afterPath="$PROJECT_DIR$/wp-content/plugins/akismet/_inc/akismet.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/akismet/akismet.php" afterPath="$PROJECT_DIR$/wp-content/plugins/akismet/akismet.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/akismet/class.akismet-admin.php" afterPath="$PROJECT_DIR$/wp-content/plugins/akismet/class.akismet-admin.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/akismet/class.akismet.php" afterPath="$PROJECT_DIR$/wp-content/plugins/akismet/class.akismet.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/akismet/readme.txt" afterPath="$PROJECT_DIR$/wp-content/plugins/akismet/readme.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/akismet/views/config.php" afterPath="$PROJECT_DIR$/wp-content/plugins/akismet/views/config.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/assets/scripts/custom/actions/actionTypes.js" afterPath="$PROJECT_DIR$/wp-content/themes/amorphous/assets/scripts/custom/actions/actionTypes.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/assets/scripts/custom/actions/pageActions.js" afterPath="$PROJECT_DIR$/wp-content/themes/amorphous/assets/scripts/custom/actions/pageActions.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/assets/scripts/custom/api/pagesApi.js" afterPath="$PROJECT_DIR$/wp-content/themes/amorphous/assets/scripts/custom/api/pagesApi.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/assets/scripts/custom/app.js" afterPath="$PROJECT_DIR$/wp-content/themes/amorphous/assets/scripts/custom/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/assets/scripts/custom/components/App.js" afterPath="$PROJECT_DIR$/wp-content/themes/amorphous/assets/scripts/custom/components/App.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/assets/scripts/custom/components/Main.js" afterPath="$PROJECT_DIR$/wp-content/themes/amorphous/assets/scripts/custom/components/Main.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/assets/scripts/custom/index.js" afterPath="$PROJECT_DIR$/wp-content/themes/amorphous/assets/scripts/custom/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/assets/scripts/custom/reducers/index.js" afterPath="$PROJECT_DIR$/wp-content/themes/amorphous/assets/scripts/custom/reducers/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/assets/scripts/custom/reducers/initialState.js" afterPath="$PROJECT_DIR$/wp-content/themes/amorphous/assets/scripts/custom/reducers/initialState.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/assets/scripts/custom/store/configureStore.js" afterPath="$PROJECT_DIR$/wp-content/themes/amorphous/assets/scripts/custom/store/configureStore.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/assets/scripts/custom/webfonts/googleFonts.js" afterPath="$PROJECT_DIR$/wp-content/themes/amorphous/assets/scripts/custom/webfonts/googleFonts.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/dist/bundle.js" afterPath="$PROJECT_DIR$/wp-content/themes/amorphous/dist/bundle.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/dist/styles.css" afterPath="$PROJECT_DIR$/wp-content/themes/amorphous/dist/styles.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/functions.php" afterPath="$PROJECT_DIR$/wp-content/themes/amorphous/functions.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/header.php" afterPath="$PROJECT_DIR$/wp-content/themes/amorphous/header.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/package.json" afterPath="$PROJECT_DIR$/wp-content/themes/amorphous/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/lib/Menu/MenuWalker.php" afterPath="$PROJECT_DIR$/wp-content/themes/amorphous/lib/Menu/MenuWalker.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/page.php" afterPath="$PROJECT_DIR$/wp-content/themes/amorphous/page.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/sass/navigation/_menus.scss" afterPath="$PROJECT_DIR$/wp-content/themes/amorphous/sass/navigation/_menus.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/sass/typography/_headings.scss" afterPath="$PROJECT_DIR$/wp-content/themes/amorphous/sass/typography/_headings.scss" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/sass/variables-site/_colors.scss" afterPath="$PROJECT_DIR$/wp-content/themes/amorphous/sass/variables-site/_colors.scss" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/sass/variables-site/_typography.scss" afterPath="$PROJECT_DIR$/wp-content/themes/amorphous/sass/variables-site/_typography.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/style.css" afterPath="$PROJECT_DIR$/wp-content/themes/amorphous/style.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/template-home.php" afterPath="$PROJECT_DIR$/wp-content/themes/amorphous/template-home.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/template-parts/content-page.php" afterPath="$PROJECT_DIR$/wp-content/themes/amorphous/template-parts/content-page.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-includes/class-wp-customize-manager.php" afterPath="$PROJECT_DIR$/wp-includes/class-wp-customize-manager.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-includes/embed.php" afterPath="$PROJECT_DIR$/wp-includes/embed.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-includes/formatting.php" afterPath="$PROJECT_DIR$/wp-includes/formatting.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-includes/js/mce-view.js" afterPath="$PROJECT_DIR$/wp-includes/js/mce-view.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-includes/js/mce-view.min.js" afterPath="$PROJECT_DIR$/wp-includes/js/mce-view.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-includes/js/tinymce/plugins/wplink/plugin.js" afterPath="$PROJECT_DIR$/wp-includes/js/tinymce/plugins/wplink/plugin.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-includes/js/tinymce/plugins/wplink/plugin.min.js" afterPath="$PROJECT_DIR$/wp-includes/js/tinymce/plugins/wplink/plugin.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-includes/js/twemoji.js" afterPath="$PROJECT_DIR$/wp-includes/js/twemoji.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-includes/js/twemoji.min.js" afterPath="$PROJECT_DIR$/wp-includes/js/twemoji.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-includes/js/wp-emoji-loader.js" afterPath="$PROJECT_DIR$/wp-includes/js/wp-emoji-loader.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-includes/js/wp-emoji-loader.min.js" afterPath="$PROJECT_DIR$/wp-includes/js/wp-emoji-loader.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-includes/js/wp-emoji-release.min.js" afterPath="$PROJECT_DIR$/wp-includes/js/wp-emoji-release.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-includes/js/wplink.js" afterPath="$PROJECT_DIR$/wp-includes/js/wplink.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-includes/js/wplink.min.js" afterPath="$PROJECT_DIR$/wp-includes/js/wplink.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-includes/script-loader.php" afterPath="$PROJECT_DIR$/wp-includes/script-loader.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-includes/version.php" afterPath="$PROJECT_DIR$/wp-includes/version.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-includes/widgets/class-wp-widget-text.php" afterPath="$PROJECT_DIR$/wp-includes/widgets/class-wp-widget-text.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-includes/wp-db.php" afterPath="$PROJECT_DIR$/wp-includes/wp-db.php" />
     </list>
     <ignored path="amorphous.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -150,18 +38,8 @@
       <file leaf-file-name="_typography.scss" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/wp-content/themes/amorphous/sass/variables-site/_typography.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.625">
-              <caret line="1" column="22" selection-start-line="1" selection-start-column="22" selection-end-line="1" selection-end-column="22" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="_headings.scss" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wp-content/themes/amorphous/sass/typography/_headings.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.5882353">
-              <caret line="2" column="22" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
+            <state vertical-scroll-proportion="-5.0">
+              <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -170,8 +48,18 @@
       <file leaf-file-name="_menus.scss" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/wp-content/themes/amorphous/sass/navigation/_menus.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.5294118">
-              <caret line="54" column="36" selection-start-line="54" selection-start-column="36" selection-end-line="54" selection-end-column="36" />
+            <state vertical-scroll-proportion="-7.9411764">
+              <caret line="77" column="30" selection-start-line="77" selection-start-column="30" selection-end-line="77" selection-end-column="30" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="template-home.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/wp-content/themes/amorphous/template-home.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.49825174">
+              <caret line="25" column="18" selection-start-line="25" selection-start-column="18" selection-end-line="25" selection-end-column="18" />
               <folding />
             </state>
           </provider>
@@ -180,20 +68,18 @@
       <file leaf-file-name="page.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/wp-content/themes/amorphous/page.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-18.125">
-              <caret line="40" column="0" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
-              <folding>
-                <element signature="e#6#344#0#PHP" expanded="false" />
-              </folding>
+            <state vertical-scroll-proportion="-17.5">
+              <caret line="42" column="26" selection-start-line="42" selection-start-column="26" selection-end-line="42" selection-end-column="26" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="content-page.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/wp-content/themes/amorphous/template-parts/content-page.php">
+      <file leaf-file-name="googleFonts.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wp-content/themes/amorphous/assets/scripts/custom/webfonts/googleFonts.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.49825174">
-              <caret line="25" column="28" selection-start-line="25" selection-start-column="28" selection-end-line="25" selection-end-column="28" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="5" column="31" selection-start-line="5" selection-start-column="31" selection-end-line="5" selection-end-column="31" />
               <folding />
             </state>
           </provider>
@@ -202,7 +88,7 @@
       <file leaf-file-name="Card.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/wp-content/themes/amorphous/lib/Posts/Card.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-38.833332">
+            <state vertical-scroll-proportion="-19.458334">
               <caret line="63" column="5" selection-start-line="63" selection-start-column="5" selection-end-line="63" selection-end-column="5" />
               <folding>
                 <element signature="e#29#42#0#PHP" expanded="true" />
@@ -214,33 +100,8 @@
       <file leaf-file-name="PostInterface.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/wp-content/themes/amorphous/lib/Posts/PostInterface.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.125">
+            <state vertical-scroll-proportion="0.0">
               <caret line="5" column="34" selection-start-line="5" selection-start-column="34" selection-end-line="5" selection-end-column="34" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CPT.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wp-content/themes/amorphous/lib/CPT/CPT.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-1.9480519">
-              <caret line="10" column="5" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
-              <folding>
-                <element signature="e#215#2751#0#PHP" expanded="false" />
-                <element signature="e#2753#5301#0#PHP" expanded="false" />
-                <marker date="1507058442000" expanded="true" signature="1661:1677" placeholder="Insert into Card... " />
-                <marker date="1507058442000" expanded="true" signature="4199:4215" placeholder="Insert into Card... " />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="_colors.scss" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wp-content/themes/amorphous/sass/variables-site/_colors.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-16.25">
-              <caret line="26" column="22" selection-start-line="26" selection-start-column="22" selection-end-line="26" selection-end-column="22" />
               <folding />
             </state>
           </provider>
@@ -249,8 +110,20 @@
       <file leaf-file-name="functions.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/wp-content/themes/amorphous/functions.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-11.708333">
+            <state vertical-scroll-proportion="0.0">
               <caret line="142" column="3" selection-start-line="142" selection-start-column="3" selection-end-line="142" selection-end-column="3" />
+              <folding>
+                <element signature="e#6#152#0#PHP" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_colors.scss" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wp-content/themes/amorphous/sass/variables-site/_colors.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-13.208333">
+              <caret line="22" column="16" selection-start-line="22" selection-start-column="16" selection-end-line="22" selection-end-column="16" />
               <folding />
             </state>
           </provider>
@@ -278,7 +151,6 @@
         <option value="$PROJECT_DIR$/wp-content/themes/amorphous/assets/scripts/custom/components/about/AboutPage.js" />
         <option value="$PROJECT_DIR$/wp-content/themes/amorphous/config.js" />
         <option value="$PROJECT_DIR$/wp-content/themes/amorphous/package.json" />
-        <option value="$PROJECT_DIR$/wp-content/themes/amorphous/template-home.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/amorphous/assets/scripts/custom/components/common/Header.js" />
         <option value="$PROJECT_DIR$/wp-content/themes/amorphous/assets/scripts/custom/components/home/HomePage.js" />
         <option value="$PROJECT_DIR$/wp-content/themes/amorphous/sass/style.scss" />
@@ -296,21 +168,22 @@
         <option value="$PROJECT_DIR$/wp-content/themes/amorphous/assets/scripts/custom/components/App.js" />
         <option value="$PROJECT_DIR$/wp-content/themes/amorphous/assets/scripts/custom/index.js" />
         <option value="$PROJECT_DIR$/data/config/db.config.php" />
-        <option value="$PROJECT_DIR$/wp-content/themes/amorphous/header.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/amorphous/style.css" />
-        <option value="$PROJECT_DIR$/wp-content/themes/amorphous/lib/Menu/MenuWalker.php" />
-        <option value="$PROJECT_DIR$/wp-content/themes/amorphous/sass/variables-site/_colors.scss" />
-        <option value="$PROJECT_DIR$/wp-content/themes/amorphous/assets/scripts/custom/webfonts/googleFonts.js" />
         <option value="$PROJECT_DIR$/wp-content/themes/amorphous/assets/scripts/custom/app.js" />
-        <option value="$PROJECT_DIR$/wp-content/themes/amorphous/sass/navigation/_menus.scss" />
-        <option value="$PROJECT_DIR$/wp-content/themes/amorphous/sass/variables-site/_typography.scss" />
         <option value="$PROJECT_DIR$/wp-content/themes/amorphous/sass/typography/_headings.scss" />
         <option value="$PROJECT_DIR$/wp-content/themes/amorphous/functions.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/amorphous/lib/CPT/CPT.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/amorphous/lib/Posts/PostInterface.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/amorphous/lib/Posts/Card.php" />
-        <option value="$PROJECT_DIR$/wp-content/themes/amorphous/page.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/amorphous/template-parts/content-page.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/amorphous/header.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/amorphous/lib/Menu/MenuWalker.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/amorphous/assets/scripts/custom/webfonts/googleFonts.js" />
+        <option value="$PROJECT_DIR$/wp-content/themes/amorphous/sass/variables-site/_typography.scss" />
+        <option value="$PROJECT_DIR$/wp-content/themes/amorphous/page.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/amorphous/sass/variables-site/_colors.scss" />
+        <option value="$PROJECT_DIR$/wp-content/themes/amorphous/sass/navigation/_menus.scss" />
+        <option value="$PROJECT_DIR$/wp-content/themes/amorphous/template-home.php" />
       </list>
     </option>
   </component>
@@ -324,8 +197,8 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" interpreter_name="Remote PHP 7" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="89" />
-    <option name="y" value="76" />
+    <option name="x" value="100" />
+    <option name="y" value="67" />
     <option name="width" value="1680" />
     <option name="height" value="1049" />
   </component>
@@ -354,8 +227,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -678,6 +549,36 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="lib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Menu" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="amorphous" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="amorphous" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wp-content" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="themes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="amorphous" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="assets" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -741,6 +642,20 @@
               <option name="myItemId" value="data" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="amorphous" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="amorphous" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="data" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="config" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
@@ -748,6 +663,8 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -853,16 +770,15 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="89" y="76" width="1680" height="1049" extended-state="0" />
+    <frame x="100" y="67" width="1680" height="1049" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32967034" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27106228" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2741148" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" x="205" y="256" width="1480" height="849" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32975295" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32975295" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -871,6 +787,7 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32975295" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -897,33 +814,10 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/amorphous/assets/scripts/custom/reducers/initialState.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.10067114">
-          <caret line="4" column="14" selection-start-line="4" selection-start-column="14" selection-end-line="4" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/amorphous/assets/scripts/custom/reducers/routerReducer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.27684563">
-          <caret line="11" column="1" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/a-wp-react-redux-theme/src/components/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/amorphous/assets/scripts/custom/components/home/HomePage.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.22651006">
           <caret line="9" column="30" selection-start-line="9" selection-start-column="30" selection-end-line="9" selection-end-column="30" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -980,7 +874,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.17617449">
           <caret line="7" column="16" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="16" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -988,7 +881,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="48" column="44" selection-start-line="48" selection-start-column="44" selection-end-line="48" selection-end-column="44" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1010,7 +902,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.12583892">
           <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1018,7 +909,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.27684563">
           <caret line="11" column="11" selection-start-line="11" selection-start-column="11" selection-end-line="11" selection-end-column="11" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1033,7 +923,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="20" column="8" selection-start-line="20" selection-start-column="8" selection-end-line="20" selection-end-column="8" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1041,7 +930,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="9" column="25" selection-start-line="9" selection-start-column="25" selection-end-line="9" selection-end-column="25" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1049,7 +937,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1057,7 +944,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1065,7 +951,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.40268457">
           <caret line="16" column="10" selection-start-line="16" selection-start-column="10" selection-end-line="16" selection-end-column="10" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1073,9 +958,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="15" column="22" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
-          <folding>
-            <marker date="1506953640000" expanded="true" signature="1125:1127" placeholder="{...}" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1083,7 +965,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="47" column="16" selection-start-line="47" selection-start-column="16" selection-end-line="47" selection-end-column="52" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1091,7 +972,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="42" column="38" selection-start-line="42" selection-start-column="38" selection-end-line="42" selection-end-column="38" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1099,7 +979,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-1.25">
           <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="13" selection-end-column="25" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1107,7 +986,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="12" column="8" selection-start-line="12" selection-start-column="8" selection-end-line="12" selection-end-column="8" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1115,7 +993,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-4.375">
           <caret line="7" column="30" selection-start-line="7" selection-start-column="30" selection-end-line="7" selection-end-column="30" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1123,9 +1000,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="49" column="18" selection-start-line="49" selection-start-column="18" selection-end-line="49" selection-end-column="18" />
-          <folding>
-            <marker date="1506989584000" expanded="true" signature="1414:1431" placeholder="{...}" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1133,7 +1007,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-4.375">
           <caret line="7" column="4" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="4" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1141,7 +1014,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1149,7 +1021,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.37751678">
           <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1157,7 +1028,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.5769231">
           <caret line="22" column="32" selection-start-line="22" selection-start-column="32" selection-end-line="22" selection-end-column="32" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1165,15 +1035,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-4.375">
           <caret line="7" column="35" selection-start-line="7" selection-start-column="35" selection-end-line="7" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/amorphous/header.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-15.708333">
-          <caret line="48" column="23" selection-start-line="48" selection-start-column="23" selection-end-line="48" selection-end-column="23" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1181,7 +1042,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-4.0392156">
           <caret line="125" column="32" selection-start-line="123" selection-start-column="6" selection-end-line="125" selection-end-column="32" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1189,7 +1049,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-30.0">
           <caret line="614" column="0" selection-start-line="614" selection-start-column="0" selection-end-line="614" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1197,61 +1056,20 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="1" column="32" selection-start-line="1" selection-start-column="32" selection-end-line="1" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/amorphous/sass/navigation/_menus.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.5294118">
-          <caret line="54" column="36" selection-start-line="54" selection-start-column="36" selection-end-line="54" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/amorphous/sass/variables-site/_typography.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.625">
-          <caret line="1" column="22" selection-start-line="1" selection-start-column="22" selection-end-line="1" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/amorphous/lib/Menu/MenuWalker.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.36713287">
-          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/amorphous/assets/scripts/custom/webfonts/googleFonts.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.12583892">
-          <caret line="5" column="5" selection-start-line="5" selection-start-column="5" selection-end-line="5" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/amorphous/sass/typography/_headings.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.5882353">
+        <state vertical-scroll-proportion="0.0">
           <caret line="2" column="22" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/amorphous/sass/variables-site/_colors.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-16.25">
-          <caret line="26" column="22" selection-start-line="26" selection-start-column="22" selection-end-line="26" selection-end-column="22" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/amorphous/lib/CPT/CPT.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.9480519">
+        <state vertical-scroll-proportion="0.0">
           <caret line="10" column="5" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
           <folding>
             <element signature="e#215#2751#0#PHP" expanded="false" />
@@ -1264,23 +1082,83 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/amorphous/functions.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.708333">
+        <state vertical-scroll-proportion="0.0">
           <caret line="142" column="3" selection-start-line="142" selection-start-column="3" selection-end-line="142" selection-end-column="3" />
-          <folding />
+          <folding>
+            <element signature="e#6#152#0#PHP" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/amorphous/lib/Posts/PostInterface.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.125">
+        <state vertical-scroll-proportion="0.0">
           <caret line="5" column="34" selection-start-line="5" selection-start-column="34" selection-end-line="5" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/amorphous/template-parts/content-page.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.875">
+          <caret line="17" column="42" selection-start-line="17" selection-start-column="42" selection-end-line="17" selection-end-column="42" />
+          <folding>
+            <element signature="e#6#154#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-includes/class-walker-nav-menu.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.9405594">
+          <caret line="138" column="16" selection-start-line="138" selection-start-column="16" selection-end-line="138" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/amorphous/lib/Menu/MenuWalker.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-11.333333">
+          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/amorphous/sass/typography/_typography.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/amorphous/assets/scripts/custom/webfonts/googleFonts.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="5" column="31" selection-start-line="5" selection-start-column="31" selection-end-line="5" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/amorphous/sass/variables-site/_typography.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.0">
+          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/amorphous/header.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7377622">
+          <caret line="56" column="20" selection-start-line="56" selection-start-column="20" selection-end-line="56" selection-end-column="20" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/amorphous/lib/Posts/Card.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-38.833332">
+        <state vertical-scroll-proportion="-19.458334">
           <caret line="63" column="5" selection-start-line="63" selection-start-column="5" selection-end-line="63" selection-end-column="5" />
           <folding>
             <element signature="e#29#42#0#PHP" expanded="true" />
@@ -1290,18 +1168,32 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/amorphous/page.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-18.125">
-          <caret line="40" column="0" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
-          <folding>
-            <element signature="e#6#344#0#PHP" expanded="false" />
-          </folding>
+        <state vertical-scroll-proportion="-17.5">
+          <caret line="42" column="26" selection-start-line="42" selection-start-column="26" selection-end-line="42" selection-end-column="26" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/amorphous/template-parts/content-page.php">
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/amorphous/sass/variables-site/_colors.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-13.208333">
+          <caret line="22" column="16" selection-start-line="22" selection-start-column="16" selection-end-line="22" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/amorphous/sass/navigation/_menus.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.9411764">
+          <caret line="77" column="30" selection-start-line="77" selection-start-column="30" selection-end-line="77" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/amorphous/template-home.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.49825174">
-          <caret line="25" column="28" selection-start-line="25" selection-start-column="28" selection-end-line="25" selection-end-column="28" />
+          <caret line="25" column="18" selection-start-line="25" selection-start-column="18" selection-end-line="25" selection-end-column="18" />
           <folding />
         </state>
       </provider>

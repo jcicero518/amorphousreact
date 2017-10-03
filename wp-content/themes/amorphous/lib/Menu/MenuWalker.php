@@ -17,7 +17,7 @@ class MenuWalker extends \Walker_Nav_Menu {
 		$item->linkClasses = ['navbar-item'];
 
 		//var_dump($item);
-		$output .= "<li class='" . implode(" ", $item->classes) . "'>";
+		$output .= "<li class='" . trim( implode(" ", $item->classes) ) . "'>";
 
 		//Add SPAN if no Permalink
 		if ($permalink && $permalink != '#') {
@@ -36,4 +36,5 @@ class MenuWalker extends \Walker_Nav_Menu {
 			$output .= '</span>';
 		}
 	}
+
 }
