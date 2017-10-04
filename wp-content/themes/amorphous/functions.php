@@ -141,6 +141,7 @@ require_once get_template_directory() . '/autoloader.php';
 add_action( 'init', function() {
 	new lib\CPT\CPT();
 });
+
 /**
  * Implement the Custom Header feature.
  */

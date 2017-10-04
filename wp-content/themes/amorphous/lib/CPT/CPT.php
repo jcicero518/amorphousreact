@@ -46,7 +46,7 @@ class CPT {
 			'description'           => __( 'Card', 'mwcc' ),
 			'labels'                => $labels,
 			'supports'              => array( 'title', 'thumbnail', 'editor' ),
-			'taxonomies'            => array( 'post_tag' ),
+			'taxonomies'            => array( 'post_tag', 'category' ),
 			'hierarchical'          => false,
 			'public'                => true,
 			'show_ui'               => true,
@@ -58,7 +58,7 @@ class CPT {
 			'has_archive'           => false,
 			'exclude_from_search'   => false,
 			'publicly_queryable'    => true,
-			'capability_type'       => 'page',
+			'capability_type'       => 'post',
 			'show_in_rest'          => true,
 		);
 		register_post_type( 'card', $args );

@@ -11,39 +11,13 @@
  *
  * @package amorphous
  */
-
+global $post;
+$layoutFilter = new lib\Filters\Layout( $post );
 get_header(); ?>
 
 	<section class="section">
 		<div class="container">
-			<div class="columns">
-				<div class="column is-two-thirds">
-					<div class="box">
-						<?php
-						while ( have_posts() ) : the_post();
-
-							get_template_part( 'template-parts/content', 'page' );
-
-							// If comments are open or we have at least one comment, load up the comment template.
-							if ( comments_open() || get_comments_number() ) :
-								comments_template();
-							endif;
-
-						endwhile; // End of the loop.
-
-						$cards = new lib\Posts\Card();
-						$output = $cards->getQuery();
-						?>
-					</div>
-
-				</div>
-				<div class="column">
-					<div class="box">
-						<?php get_sidebar(); ?>
-					</div>
-				</div>
-			</div>
-
+			<?= apply_filters( 'theme_page_layout', $layoutFilter->getLayout() ); ?>
 		</div>
 	</section>
 	<!--<div id="app"></div>-->
