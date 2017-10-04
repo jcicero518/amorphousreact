@@ -1,15 +1,9 @@
-.main-navigation {
-	clear: both;
-	display: block;
-	float: left;
-	width: 100%;
+
+.navbar {
 
 	ul {
-		display: none;
-		list-style: none;
 		margin: 0;
-		padding-left: 0;
-
+		padding: 0;
 		ul {
 			box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
 			float: left;
@@ -50,30 +44,59 @@
 	}
 
 	li {
-		float: left;
-		position: relative;
-
+		padding: 20px 10px;
+		display: flex;
 		&:hover > a,
 		&.focus > a {
 		}
 	}
 
+	.navbar-menu {
+		a {
+
+			font-family: $font__nav;
+			font-weight: bold;
+			@include font-size(0.875);
+			color: $color_navbar_link;
+			text-decoration: none;
+			text-transform: uppercase;
+		}
+		.current_page_item > a,
+		.current-menu-item > a,
+		.current_page_ancestor > a,
+		.current-menu-ancestor > a {
+			color: $color_navbar_link-hover;
+			//background-color: $color_navbar_link_bg-hover;
+		}
+	}
+	.navbar-brand {
+		a {
+			@include font-size(1.25);
+			font-family: $font__logo;
+			color: $color_navbar_link;
+			font-weight: bold;
+			&:hover, &:focus {
+				color: $black;
+			}
+		}
+	}
 	a {
-		display: block;
-		text-decoration: none;
+
 	}
 
 	.current_page_item > a,
 	.current-menu-item > a,
 	.current_page_ancestor > a,
 	.current-menu-ancestor > a {
+		color: $color_navbar_link-hover;
+		//background-color: $color_navbar_link_bg-hover;
 	}
 }
 
 /* Small menu. */
 .menu-toggle,
 .main-navigation.toggled ul {
-	display: block;
+	//display: block;
 }
 
 @media screen and (min-width: 37.5em) {
@@ -81,7 +104,7 @@
 		display: none;
 	}
 	.main-navigation ul {
-		display: block;
+		//display: block;
 	}
 }
 

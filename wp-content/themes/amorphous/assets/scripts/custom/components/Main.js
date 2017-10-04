@@ -39,6 +39,7 @@ function getPageBySlug( pages, slug ) {
 }
 
 function mapStateToProps( state, ownProps ) {
+    console.log(state, 'main state');
     console.log(ownProps, 'ownProps');
     const pageSlug = ownProps.match.path.replace( '/', '' );
     console.log(pageSlug, 'pageSlug');

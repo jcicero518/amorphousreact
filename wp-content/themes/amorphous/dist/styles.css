@@ -6378,13 +6378,14 @@ select,
 optgroup,
 textarea {
   color: #404040;
-  font-family: sans-serif;
+  font-family: "Raleway", "Lato", sans-serif;
   font-size: 16px;
   font-size: 1rem;
   line-height: 1.5; }
 
 h1, h2, h3, h4, h5, h6 {
-  clear: both; }
+  font-family: "Lato";
+  font-weight: bold; }
 
 p {
   margin-bottom: 1.5em; }
@@ -6438,7 +6439,7 @@ html {
   box-sizing: inherit; }
 
 body {
-  background: #fff;
+  background: #F2F2F2;
   /* Fallback for when there is no custom background color defined. */ }
 
 blockquote, q {
@@ -6580,51 +6581,66 @@ a {
 /*--------------------------------------------------------------
 ## Menus
 --------------------------------------------------------------*/
-.main-navigation {
-  clear: both;
-  display: block;
-  float: left;
-  width: 100%; }
-  .main-navigation ul {
-    display: none;
-    list-style: none;
-    margin: 0;
-    padding-left: 0; }
-    .main-navigation ul ul {
-      box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-      float: left;
-      position: absolute;
-      top: 100%;
-      left: -999em;
-      z-index: 99999; }
-      .main-navigation ul ul ul {
-        left: -999em;
-        top: 0; }
-      .main-navigation ul ul li:hover > ul,
-      .main-navigation ul ul li.focus > ul {
-        left: 100%; }
-      .main-navigation ul ul a {
-        width: 200px; }
-    .main-navigation ul li:hover > ul,
-    .main-navigation ul li.focus > ul {
-      left: auto; }
-  .main-navigation li {
+.navbar ul {
+  margin: 0;
+  padding: 0; }
+  .navbar ul ul {
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
     float: left;
-    position: relative; }
-  .main-navigation a {
-    display: block;
-    text-decoration: none; }
+    position: absolute;
+    top: 100%;
+    left: -999em;
+    z-index: 99999; }
+    .navbar ul ul ul {
+      left: -999em;
+      top: 0; }
+    .navbar ul ul li:hover > ul,
+    .navbar ul ul li.focus > ul {
+      left: 100%; }
+    .navbar ul ul a {
+      width: 200px; }
+  .navbar ul li:hover > ul,
+  .navbar ul li.focus > ul {
+    left: auto; }
+
+.navbar li {
+  padding: 20px 10px;
+  display: flex; }
+
+.navbar .navbar-menu a {
+  font-family: "Lato", sans-serif;
+  font-weight: bold;
+  font-size: 14px;
+  font-size: 0.875rem;
+  color: #F5F7FA;
+  text-decoration: none;
+  text-transform: uppercase; }
+
+.navbar .navbar-menu .current_page_item > a,
+.navbar .navbar-menu .current-menu-item > a,
+.navbar .navbar-menu .current_page_ancestor > a,
+.navbar .navbar-menu .current-menu-ancestor > a {
+  color: #DA4453; }
+
+.navbar .navbar-brand a {
+  font-size: 20px;
+  font-size: 1.25rem;
+  font-family: "Droid Sans", sans-serif;
+  color: #F5F7FA;
+  font-weight: bold; }
+  .navbar .navbar-brand a:hover, .navbar .navbar-brand a:focus {
+    color: #000000; }
+
+.navbar .current_page_item > a,
+.navbar .current-menu-item > a,
+.navbar .current_page_ancestor > a,
+.navbar .current-menu-ancestor > a {
+  color: #DA4453; }
 
 /* Small menu. */
-.menu-toggle,
-.main-navigation.toggled ul {
-  display: block; }
-
 @media screen and (min-width: 37.5em) {
   .menu-toggle {
-    display: none; }
-  .main-navigation ul {
-    display: block; } }
+    display: none; } }
 
 .site-main .comment-navigation, .site-main
 .posts-navigation, .site-main

@@ -532,7 +532,7 @@ a:active {
 /*--------------------------------------------------------------
 ## Menus
 --------------------------------------------------------------*/
-.main-navigation {
+/*.main-navigation {
 	clear: both;
 	display: block;
 	float: left;
@@ -554,7 +554,7 @@ a:active {
 .main-navigation a {
 	display: block;
 	text-decoration: none;
-}
+}*/
 
 .main-navigation ul ul {
 	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
@@ -604,21 +604,6 @@ a:active {
 .main-navigation .current-menu-item > a,
 .main-navigation .current_page_ancestor > a,
 .main-navigation .current-menu-ancestor > a {
-}
-
-/* Small menu. */
-.menu-toggle,
-.main-navigation.toggled ul {
-	display: block;
-}
-
-@media screen and (min-width: 37.5em) {
-	.menu-toggle {
-		display: none;
-	}
-	.main-navigation ul {
-		display: block;
-	}
 }
 
 .site-main .comment-navigation,

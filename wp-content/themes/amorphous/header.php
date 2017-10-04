@@ -36,4 +36,28 @@
 		</div><!-- .site-branding -->
 
 	</header><!-- #masthead -->
-
+	<nav id="site-navigation" class="main-navigation navbar">
+		<div class="container">
+			<div class="navbar-brand">
+				<a class="navbar-item" href="/">Amorphous Web Solutions</a>
+				<button class="button navbar-burger">
+					<span></span>
+					<span></span>
+					<span></span>
+				</button>
+			</div>
+			<div class="navbar-menu">
+				<?php
+				$menu = wp_nav_menu( array(
+					'menu' => 'Main',
+					'theme_location' => 'menu-1',
+					'container' => FALSE,
+					'menu_class' => 'navbar-menu navbar-end',
+					'walker' => new lib\Menu\MenuWalker()
+				) );
+				//var_dump($menu);
+				//add_filter('nav_menu_item_args')
+				?>
+			</div>
+		</div>
+	</nav>
