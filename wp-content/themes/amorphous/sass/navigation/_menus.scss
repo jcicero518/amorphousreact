@@ -53,20 +53,23 @@
 
 	.navbar-menu {
 		a {
-
 			font-family: $font__nav;
 			font-weight: bold;
 			@include font-size(0.875);
 			color: $color_navbar_link;
 			text-decoration: none;
 			text-transform: uppercase;
+			&:hover, &:focus {
+				color: $color_navbar_link-hover;
+				background-color: transparent;
+			}
 		}
 		.current_page_item > a,
 		.current-menu-item > a,
 		.current_page_ancestor > a,
 		.current-menu-ancestor > a {
 			color: $color_navbar_link-hover;
-			//background-color: $color_navbar_link_bg-hover;
+			background-color: transparent;
 		}
 	}
 	.navbar-brand {
@@ -76,6 +79,7 @@
 			color: $color_navbar_link;
 			font-weight: bold;
 			&:hover, &:focus {
+				background-color: $color_navbar_link_bg-hover;
 				color: $black;
 			}
 		}
@@ -89,7 +93,7 @@
 	.current_page_ancestor > a,
 	.current-menu-ancestor > a {
 		color: $color_navbar_link-hover;
-		//background-color: $color_navbar_link_bg-hover;
+		background-color: transparent;
 	}
 }
 

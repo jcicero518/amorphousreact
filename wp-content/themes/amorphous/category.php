@@ -11,42 +11,57 @@ get_header(); ?>
 
 	<section class="section">
 		<div class="container">
+
 			<div class="box">
 				<?php
 				global $wp_query;
-				query_posts([
-					'post_type' => 'card'
+				$args = array_merge( $wp_query->query_vars, [
+					'post_type' => 'card',
+					'posts_per_page' => 10
 				]);
-				if ( have_posts() ) : ?>
+				$categoryQuery = new WP_Query( $args );
+				if ( $categoryQuery->have_posts() ) : ?>
 
 					<header class="page-header">
 						<?php
 
-						the_archive_title( '<h1 class="page-title">', '</h1>' );
+						the_archive_title( '<h1 class="title">', '</h1>' );
 						the_archive_description( '<div class="archive-description">', '</div>' );
 						?>
 					</header><!-- .page-header -->
 
 					<?php
 					/* Start the Loop */
-					while ( have_posts() ) : the_post();
+					while ( $categoryQuery->have_posts() ) : $categoryQuery->the_post();
 
-						/*
-						 * Include the Post-Format-specific template for the content.
-						 * If you want to override this in a child theme, then include a file
-						 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-						 */
-						get_template_part( 'template-parts/content', get_post_format() );
+						?>
+						<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+							<header class="entry-header">
+								<h2 class="title">
+									<a href="<?= esc_url( get_permalink( $categoryQuery->post->ID ) ); ?>"><?= get_the_title( $categoryQuery->post->ID); ?></a>
+								</h2>
+								<?php
+								if ( 'post' === get_post_type() || 'card' === get_post_type() ) : ?>
+									<div class="entry-meta">
+										<span class="tag is-info">Topics</span> <?= get_the_category_list( ', ' ); ?>
+									</div>
+									<?php
+								endif;
+								?>
+							</header>
+							<div class="entry-content">
+								<?= get_the_excerpt( $categoryQuery->post->ID ); ?>
+							</div>
+						</article>
 
+					<?php
 					endwhile;
 
 					the_posts_navigation();
 
-				else :
-
-					get_template_part( 'template-parts/content', 'none' );
-
-				endif; ?>
+				endif;
+				wp_reset_postdata();
+				?>
 			</div>
 
 
@@ -54,5 +69,5 @@ get_header(); ?>
 	</section><!-- #primary -->
 
 <?php
-get_sidebar();
+//get_sidebar();
 get_footer();

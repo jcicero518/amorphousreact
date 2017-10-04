@@ -15,7 +15,6 @@
 	</header><!-- .entry-header -->
 
 	<div class="entry-content">
-		<h2 class="subtitle">Subtitle</h2>
 		<?php the_content(); ?>
 	</div><!-- .entry-content -->
 

@@ -6384,8 +6384,12 @@ textarea {
   line-height: 1.5; }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Lato";
+  font-family: "Roboto Slab", sans-serif;
   font-weight: bold; }
+
+h2.title {
+  font-size: 24px;
+  font-size: 1.5rem; }
 
 p {
   margin-bottom: 1.5em; }
@@ -6425,6 +6429,9 @@ mark, ins {
 
 big {
   font-size: 125%; }
+
+.site-footer p, .site-footer a {
+  font-family: "Lato", sans-serif; }
 
 /*--------------------------------------------------------------
 # Elements
@@ -6482,6 +6489,17 @@ img {
 figure {
   margin: 1em 0;
   /* Extra wide images within figure tags don't overflow the content area. */ }
+
+.card.type-card {
+  padding: 15px; }
+
+.breadcrumbs {
+  margin: 0;
+  list-style: none; }
+  .breadcrumbs li {
+    margin-right: 0.5em;
+    list-style: none;
+    display: inline-block; }
 
 table {
   margin: 0 0 1.5em;
@@ -6568,11 +6586,11 @@ textarea {
 ## Links
 --------------------------------------------------------------*/
 a {
-  color: royalblue; }
+  color: #444; }
   a:visited {
-    color: purple; }
+    color: #444; }
   a:hover, a:focus, a:active {
-    color: midnightblue; }
+    color: #DA4453; }
   a:focus {
     outline: thin dotted; }
   a:hover, a:active {
@@ -6615,27 +6633,33 @@ a {
   color: #F5F7FA;
   text-decoration: none;
   text-transform: uppercase; }
+  .navbar .navbar-menu a:hover, .navbar .navbar-menu a:focus {
+    color: #DA4453;
+    background-color: transparent; }
 
 .navbar .navbar-menu .current_page_item > a,
 .navbar .navbar-menu .current-menu-item > a,
 .navbar .navbar-menu .current_page_ancestor > a,
 .navbar .navbar-menu .current-menu-ancestor > a {
-  color: #DA4453; }
+  color: #DA4453;
+  background-color: transparent; }
 
 .navbar .navbar-brand a {
   font-size: 20px;
   font-size: 1.25rem;
-  font-family: "Droid Sans", sans-serif;
+  font-family: "Roboto Slab", sans-serif;
   color: #F5F7FA;
   font-weight: bold; }
   .navbar .navbar-brand a:hover, .navbar .navbar-brand a:focus {
+    background-color: #F5F5F5;
     color: #000000; }
 
 .navbar .current_page_item > a,
 .navbar .current-menu-item > a,
 .navbar .current_page_ancestor > a,
 .navbar .current-menu-ancestor > a {
-  color: #DA4453; }
+  color: #DA4453;
+  background-color: transparent; }
 
 /* Small menu. */
 @media screen and (min-width: 37.5em) {
@@ -6871,13 +6895,8 @@ object {
 
 .navbar {
   background-color: #363636; }
-  .navbar .navbar-menu a {
-    color: #F5F7FA;
-    text-decoration: none;
-    text-transform: uppercase; }
-    .navbar .navbar-menu a:hover, .navbar .navbar-menu a:focus {
-      color: #DA4453;
-      transition: all 250ms linear; }
+  .navbar .navbar-menu a:hover, .navbar .navbar-menu a:focus {
+    transition: all 250ms linear; }
 
 .footer {
   padding: 0;

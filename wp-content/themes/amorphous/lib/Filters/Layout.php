@@ -17,8 +17,11 @@ class Layout {
 	}
 
 	public function initFilters() {
-		add_filter( 'theme_page_layout', function( $layout ) {
-			switch ( $layout ) {
+		add_filter( 'theme_page_layout', function( $layoutArgs = [] ) {
+			$category = isset( $layoutArgs['category'] ) ? $layoutArgs['category'] : NULL;
+			$postType = isset( $layoutArgs['postType'] ) ? $layoutArgs['postType'] : NULL;
+
+			switch ( $layoutArgs['layout'] ) {
 				case 'twocol':
 					?>
 					<div class="columns">
@@ -26,9 +29,24 @@ class Layout {
 							<div class="box">
 								<?php
 								while ( have_posts() ) : the_post();
+									?>
+									<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+										<header class="entry-header">
+											<?php the_title( '<h1 class="title">', '</h1>' ); ?>
+										</header><!-- .entry-header -->
 
-									get_template_part( 'template-parts/content', 'page' );
+										<div class="entry-content">
+											<?php the_content(); ?>
+											<?php if ( $postType ): ?>
+												<?= apply_filters( 'theme_display_posts', [ 'postType' => $postType ] ); ?>
+											<?php endif; ?>
+										</div><!-- .entry-content -->
 
+										<footer class="entry-footer">
+										</footer><!-- .entry-footer -->
+
+									</article><!-- #post-<?php the_ID(); ?> -->
+									<?php
 									// If comments are open or we have at least one comment, load up the comment template.
 									if ( comments_open() || get_comments_number() ) :
 										comments_template();
@@ -36,8 +54,8 @@ class Layout {
 
 								endwhile; // End of the loop.
 
-								$cards = new Card();
-								$output = $cards->getQuery();
+								//$cards = new Card();
+								//$output = $cards->getQuery();
 								?>
 							</div>
 

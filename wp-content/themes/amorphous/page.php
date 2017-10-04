@@ -17,7 +17,7 @@ get_header(); ?>
 
 	<section class="section">
 		<div class="container">
-			<?= apply_filters( 'theme_page_layout', $layoutFilter->getLayout() ); ?>
+			<?= apply_filters( 'theme_page_layout', [ 'layout' => $layoutFilter->getLayout() ] ); ?>
 		</div>
 	</section>
 	<!--<div id="app"></div>-->

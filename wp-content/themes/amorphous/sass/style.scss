@@ -121,11 +121,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
   }
   .navbar-menu {
     a {
-      color: $color_navbar_link;
-      text-decoration: none;
-      text-transform: uppercase;
       &:hover, &:focus {
-        color: $color_navbar_link-hover;
         transition: all 250ms linear;
       }
     }

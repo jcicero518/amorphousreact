@@ -60,7 +60,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "894ceae5b84fc96f9a2c"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "be6245388e1865198010"; // eslint-disable-line no-unused-vars
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
@@ -2200,7 +2200,7 @@ function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj;
 
 WebFont.load({
     google: {
-        families: ['Droid+Sans:400,700:latin-ext', 'Lato:300,400,700:latin-ext', 'Raleway:400,600,700:latin-ext']
+        families: ['Roboto+Slab:400,500,700:latin-ext', 'Lato:300,400,700:latin-ext', 'Raleway:400,600,700:latin-ext']
     }
 });
 

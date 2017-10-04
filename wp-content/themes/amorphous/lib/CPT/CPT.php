@@ -2,6 +2,13 @@
 
 namespace lib\CPT;
 
+/**
+ * Class CPT
+ * Custom Post Types for WP. Each post type requires a call to register_post_type(),
+ * split into their own methods.
+ *
+ * @package lib\CPT
+ */
 class CPT {
 
 	public function __construct() {

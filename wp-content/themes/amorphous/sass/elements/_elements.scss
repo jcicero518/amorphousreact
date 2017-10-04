@@ -39,4 +39,21 @@ figure {
 	margin: 1em 0; /* Extra wide images within figure tags don't overflow the content area. */
 }
 
+.card {
+	&.type-card {
+		padding: 15px;
+	}
+}
+
+.breadcrumbs {
+	margin: 0;
+	list-style: none;
+	li {
+		margin-right: 0.5em;
+		list-style: none;
+		display: inline-block;
+	}
+}
+
+
 @import "tables";

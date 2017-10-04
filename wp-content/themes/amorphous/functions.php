@@ -142,6 +142,8 @@ add_action( 'init', function() {
 	new lib\CPT\CPT();
 });
 
+new lib\Filters\Posts();
+
 /**
  * Implement the Custom Header feature.
  */

@@ -43,3 +43,10 @@ mark, ins {
 big {
 	font-size: 125%;
 }
+
+.site-footer {
+	p, a {
+		font-family: $font__footer;
+	}
+
+}
