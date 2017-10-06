@@ -53,7 +53,7 @@ class CPT {
 			'description'           => __( 'Card', 'mwcc' ),
 			'labels'                => $labels,
 			'supports'              => array( 'title', 'thumbnail', 'editor' ),
-			'taxonomies'            => array( 'post_tag', 'category' ),
+			'taxonomies'            => array( 'post_tag', 'category', 'code_category' ),
 			'hierarchical'          => false,
 			'public'                => true,
 			'show_ui'               => true,

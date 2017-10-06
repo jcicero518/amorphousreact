@@ -25,7 +25,7 @@ class Layout {
 				case 'twocol':
 					?>
 					<div class="columns">
-						<div class="column is-two-thirds">
+						<div class="column is-9">
 							<div class="box">
 								<?php
 								while ( have_posts() ) : the_post();

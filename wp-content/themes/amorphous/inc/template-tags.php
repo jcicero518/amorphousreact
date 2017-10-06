@@ -41,6 +41,14 @@ if ( ! function_exists( 'amorphous_posted_on' ) ) :
 	}
 endif;
 
+function amorphous_term_list( $postId, $tax = 'code_category' ) {
+	?>
+	<div class="entry-meta">
+		<span class="tag is-info">Topics</span> <?= get_the_term_list( $postId, 'code_category', '', ', ', ' ' ); ?>
+	</div>
+	<?php
+}
+
 if ( ! function_exists( 'amorphous_entry_footer' ) ) :
 	/**
 	 * Prints HTML with meta information for the categories, tags and comments.

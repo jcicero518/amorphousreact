@@ -14,7 +14,7 @@ class Posts {
 		add_filter( 'excerpt_more', function( $more ) {
 			global $post;
 			$more = "<br /><br />";
-			$more .= '<a class="" href="' . get_permalink( $post->ID ) . '">Read More &raquo;</a>';
+			$more .= '<a class="button" href="' . get_permalink( $post->ID ) . '">Read More &raquo;</a>';
 			$more .= '';
 			return $more;
 		});
@@ -52,9 +52,7 @@ class Posts {
 									<?= get_the_title( $query->post->ID); ?>
 								</a>
 							</h2>
-							<div class="entry-meta">
-								<span class="tag is-info">Topics</span> <?= get_the_category_list( ', ' ); ?>
-							</div>
+							<?php amorphous_term_list( $query->post->ID, 'code_category' ); ?>
 						</header>
 						<div class="entry-content">
 							<?= get_the_excerpt( $query->post->ID ); ?>

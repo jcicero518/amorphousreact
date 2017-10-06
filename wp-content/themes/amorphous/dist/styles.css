@@ -6391,6 +6391,11 @@ h2.title {
   font-size: 24px;
   font-size: 1.5rem; }
 
+.widget-area .widget-title {
+  margin-bottom: 1.25em;
+  text-transform: uppercase;
+  color: #636467; }
+
 p {
   margin-bottom: 1.5em; }
 
@@ -6595,6 +6600,11 @@ a {
     outline: thin dotted; }
   a:hover, a:active {
     outline: 0; }
+  a.button {
+    font-weight: bold; }
+    a.button:hover {
+      color: #DA4453;
+      transition: all 250ms linear; }
 
 /*--------------------------------------------------------------
 ## Menus
@@ -6775,6 +6785,16 @@ a {
   /* Make sure select elements fit in widgets. */ }
   .widget select {
     max-width: 100%; }
+  .widget.widget_categories ul, .widget.code-catslist ul {
+    margin: 0;
+    list-style: none; }
+    .widget.widget_categories ul li, .widget.code-catslist ul li {
+      list-style: none;
+      border-bottom: 1px solid #F2F2F2;
+      margin-bottom: 10px;
+      padding-bottom: 10px;
+      display: flex;
+      justify-content: space-between; }
 
 /*--------------------------------------------------------------
 # Content
