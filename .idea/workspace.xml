@@ -2,19 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9dddb1fe-02a6-4770-8864-611a56394be3" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/wp-custom-widgets/Application/Iterator/Arrays.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/wp-custom-widgets/Application/Iterator/Directory.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/wp-custom-widgets/Application/Iterator/LargeFile.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/wp-custom-widgets/Application/WPDatabase/Connection.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/wp-custom-widgets/Application/WPDatabase/WpFinder.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/wp-custom-widgets/Application/WPDatabase/WpInsert.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/wp-custom-widgets/assets/js/admin.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/wp-custom-widgets/includes/class-related-careers-widget.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/wp-custom-widgets/includes/class-related-links-widget.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/wp-custom-widgets/includes/class-wp-custom-widgets.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/wp-custom-widgets/wp-custom-widgets.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Webpack" afterPath="$PROJECT_DIR$/Webpack" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/wp-custom-widgets/assets/js/admin.js" afterPath="$PROJECT_DIR$/wp-content/plugins/wp-custom-widgets/assets/js/admin.js" />
     </list>
     <ignored path="amorphous.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -81,8 +70,8 @@
       <file leaf-file-name="admin.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/wp-content/plugins/wp-custom-widgets/assets/js/admin.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.40268457">
-              <caret line="16" column="86" selection-start-line="16" selection-start-column="86" selection-end-line="16" selection-end-column="86" />
+            <state vertical-scroll-proportion="0.7802013">
+              <caret line="31" column="36" selection-start-line="31" selection-start-column="36" selection-end-line="31" selection-end-column="36" />
               <folding />
             </state>
           </provider>
@@ -1202,8 +1191,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/plugins/wp-custom-widgets/assets/js/admin.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.40268457">
-          <caret line="16" column="86" selection-start-line="16" selection-start-column="86" selection-end-line="16" selection-end-column="86" />
+        <state vertical-scroll-proportion="0.7802013">
+          <caret line="31" column="36" selection-start-line="31" selection-start-column="36" selection-end-line="31" selection-end-column="36" />
           <folding />
         </state>
       </provider>
