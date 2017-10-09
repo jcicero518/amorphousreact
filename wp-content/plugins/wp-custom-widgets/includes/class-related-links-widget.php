@@ -144,18 +144,13 @@ class RelatedLinksWidget extends WP_Widget {
 		$wId = $this->getId();
 		$wIdBase = $this->getIdBase();
 		$wNum = $this->getNumber();
-		echo 'ID: ' . $wId . "<br />";
+		/*echo 'ID: ' . $wId . "<br />";
 		echo 'Number: ' . $wNum . "<br />";
 		echo 'ID Base: ' . $wIdBase;
-		var_dump( $instance);
+		var_dump( $instance);*/
 
 		?>
-		<div
-			class="sr-only is-hidden-widget-attrs"
-		    data-widget-base-name="<?= $this->getId(); ?>"
-		    data-widget-input-name="widget-<?= $this->getId(); ?>"
-		    data-field-instance-count="<?= $field_instance_count; ?>">
-		</div>
+
 		<?php
 		$this->getTitleField( $title );
 

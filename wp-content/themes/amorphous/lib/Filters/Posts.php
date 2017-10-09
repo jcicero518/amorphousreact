@@ -38,7 +38,17 @@ class Posts {
 
 			ob_start();
 
+			if ( get_query_var('paged') ) {
+				$paged = get_query_var('paged');
+			} elseif ( get_query_var('page') ) { // 'page' is used instead of 'paged' on Static Front Page
+				$paged = get_query_var('page');
+			} else {
+				$paged = 1;
+			}
+
 			$args['post_type'] = $postType;
+			$args['paged'] = $paged;
+			$args['posts_per_page'] = 5;
 			$query = new \WP_Query( $args );
 			if ( $query->have_posts() ):
 				while ( $query->have_posts() ):
@@ -60,6 +70,9 @@ class Posts {
 					</div>
 					<?php
 				endwhile;
+
+				theme_page_navi( $query );
+
 			endif;
 
 			$output = ob_get_contents();

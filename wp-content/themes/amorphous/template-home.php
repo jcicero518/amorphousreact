@@ -20,6 +20,7 @@ get_header(); ?>
 						<?php the_content(); ?>
 					</div><!-- .entry-content -->
 
+
 					<footer class="entry-footer"></footer>
 				</article>
 			</div>

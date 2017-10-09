@@ -28,18 +28,8 @@ if ( ! defined( 'WP_WIDGET_CUSTOM_ASSETS_DIR' ) ) {
 	define( 'WP_WIDGET_CUSTOM_ASSETS_DIR', plugins_url( '', __FILE__ ) . '/assets/' );
 }
 
-add_action( 'rest_api_init', 'register_widget_endpoints', 0 );
-
 require plugin_dir_path( __FILE__ ) . 'includes/class-wp-custom-widgets.php';
-require plugin_dir_path( __FILE__ ) . 'Application/Iterator/LargeFile.php';
 require plugin_dir_path( __FILE__ ) . 'includes/class-related-links-widget.php';
 
 new WPCustomWidgets\WP_Custom_Widgets();
 
-function register_widget_endpoints() {
-	/**
-	 * @type WP_Widget_Factory $wp_widget_factory
-	 */
-	global $wp_widget_factory;
-
-}

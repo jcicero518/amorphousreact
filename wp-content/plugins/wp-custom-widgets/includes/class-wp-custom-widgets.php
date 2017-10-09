@@ -11,7 +11,6 @@ namespace WPCustomWidgets;
 class WP_Custom_Widgets {
 
 	const WIDGET_CLASSNAME = 'RelatedLinksWidget';
-	const WIDGET_CAREERS_CLASSNAME = 'RelatedCareersWidget';
 
 	public function __construct() {
 		$this->enqueueAssets();
