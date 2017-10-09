@@ -6671,6 +6671,20 @@ a {
   color: #DA4453;
   background-color: transparent; }
 
+.pagination ul {
+  margin: 0;
+  list-style: none;
+  display: flex; }
+  .pagination ul li {
+    margin: 0 0.25em;
+    list-style: none; }
+    .pagination ul li:first-of-type {
+      margin-left: 0; }
+    .pagination ul li:last-of-type {
+      margin-right: 0; }
+    .pagination ul li a {
+      display: inline-block; }
+
 /* Small menu. */
 @media screen and (min-width: 37.5em) {
   .menu-toggle {
