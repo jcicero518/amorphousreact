@@ -133,6 +133,14 @@ function amorphous_scripts() {
 		'main' => home_url( '', 'rest' ) . '/wp-json/',
 		'rest' => home_url( '', 'rest' ) . '/wp-json/amorphous-theme/v1/'
 	]);
+
+	$queried_object = get_queried_object();
+	$local = [
+		'queriedObject' => $queried_object
+	];
+	$local['taxonomy'] = get_taxonomy( $queried_object->taxonomy );
+
+	wp_localize_script( 'build-main', 'settings', $local );
 }
 add_action( 'wp_enqueue_scripts', 'amorphous_scripts' );
 

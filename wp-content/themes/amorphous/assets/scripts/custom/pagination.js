@@ -1,15 +1,15 @@
 /*global mwccRestApi, settings */
 import axios from "axios";
 
-const categoryMount = document.getElementById( 'categoryMount' );
+const categoryMount = document.getElementById( 'content-replace' );
 
 class Pagination {
 
     constructor(params) {
         const appUrl = mwccRestApi.home;
-        const pageContainer = document.querySelector( '.l-pagination' );
+        const pageContainer = document.querySelector( '.pagination' );
 
-        this.postType = params[0] ? params[0] : 'news-article';
+        this.postType = params[0] ? params[0] : 'card';
         this.category = params[1] ? params[1] : 'general-news';
         this.categoryId = params[2] ? params[2] : 0;
         this.page = 1;
@@ -42,11 +42,28 @@ class Pagination {
         });
     }
 
+    renderPage( payload ) {
+        payload.forEach( post => {
+            let template = `<div class="box">
+            <header class="entry-header">
+                <h2 class="title"><a href="${post.guid.rendered}">${post.title.rendered}</a></h2>
+                <div class="entry-meta">
+                </div>
+            </header>
+            <div class="entry-content">${post.content.rendered}</div>
+            </div>`;
+            let fragment = document.createDocumentFragment();
+            fragment.innerHTML = template;
+            let element = document.createElement('DIV', fragment);
+            categoryMount.appendChild( element );
+        });
+    }
+
     getPage( pageNum ) {
         console.log(this.endPoint, 'ep');
-        this.api( `${this.endPoint}?per_page=5&categories=${this.categoryId}&page=${pageNum}`).then( payload => {
-            categoryMount.innerHTML = payload;
-            console.log(payload, 'payload');
+        this.api( `${this.endPoint}?per_page=5&page=${pageNum}`).then( payload => {
+            console.log(payload);
+            this.renderPage( payload );
         });
     }
 
@@ -61,11 +78,5 @@ class Pagination {
         })
     }
 }
-
-console.log(settings, 'settings');
-const {category_nicename, cat_ID} = settings.queriedObject;
-console.log(settings.queriedObject, 'queried');
-let page = new Pagination(['news-article', category_nicename, cat_ID]);
-page.watchLinks();
 
 export default Pagination;
