@@ -48,40 +48,15 @@ const webpackConfig = {
                 loaders: ExtractTextPlugin.extract({
                     fallback: 'style-loader',
                     use: [
-                        'css-loader', 'sass-loader', 'postcss-loader'
+                        'css-loader',
+                        'sass-loader',
+                        'postcss-loader'
                     ]
                 })
             }
         ]
 
-        /*rules: [
-            {
-                test: /\.js$/,
-                include: path.resolve(__dirname, 'assets/scripts/custom'),
-                //exclude: /node_modules/,
-                use: [{
-                    loader: 'babel-loader'
-                }]
-            },*/
-            /*{
-                test: /\.scss$/,
-                // processed in reverse order, like fn calls - styleLoader(cssLoader(sassLoader('source')))
-                use: [
-                    'style-loader', // outputs our CSS into a <style> tag in the document
-                    'css-loader', // parses the CSS into JavaScript and resolves any dependencies
-                    'sass-loader' // transforms Sass into CSS
-                ]
-            },*/
 
-            //{test: /\.css$/, use: [ { loader: 'style-loader' }, {loader: 'css-loader', options: {modules: true} } ] },
-            //{test: /\.css$/, loader: "style-loader!css-loader", exclude: /node_modules/},
-            /*{
-                test: /(\.css)$/,
-                use: ExtractTextPlugin.extract({
-                    fallback: 'style-loader',
-                    use: 'css-loader'
-                })
-            },*/
             //{test: /\.(sass|scss)$/, loader: "style-loader!css-loader!sass-loader"},
             /*{test: /\.eot(\?v=\d+\.\d+\.\d+)?$/, loader: 'file'},
             {test: /\.(woff|woff2)$/, loader: 'url?prefix=font/&limit=5000'},

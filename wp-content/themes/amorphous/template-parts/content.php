@@ -6,7 +6,7 @@
  *
  * @package amorphous
  */
-
+get_post_th
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>

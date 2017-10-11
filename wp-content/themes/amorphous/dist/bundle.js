@@ -60,7 +60,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "be6245388e1865198010"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "37bf14003936da21b7e5"; // eslint-disable-line no-unused-vars
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
@@ -2183,7 +2183,7 @@ __webpack_require__(19);
 /* 16 */
 /***/ (function(module, exports) {
 
-// removed by extract-text-webpack-plugin
+throw new Error("Module build failed: ModuleBuildError: Module build failed: ReferenceError: document is not defined\n    at Object.resolveUrl (/Users/jeffcicero/Code/Projects/amorphousreact/wp-content/themes/amorphous/node_modules/resolve-url/resolve-url.js:21:25)\n    at runLoaders (/Users/jeffcicero/Code/Projects/amorphousreact/wp-content/themes/amorphous/node_modules/webpack/lib/NormalModule.js:194:19)\n    at /Users/jeffcicero/Code/Projects/amorphousreact/wp-content/themes/amorphous/node_modules/loader-runner/lib/LoaderRunner.js:364:11\n    at /Users/jeffcicero/Code/Projects/amorphousreact/wp-content/themes/amorphous/node_modules/loader-runner/lib/LoaderRunner.js:230:18\n    at runSyncOrAsync (/Users/jeffcicero/Code/Projects/amorphousreact/wp-content/themes/amorphous/node_modules/loader-runner/lib/LoaderRunner.js:143:3)\n    at iterateNormalLoaders (/Users/jeffcicero/Code/Projects/amorphousreact/wp-content/themes/amorphous/node_modules/loader-runner/lib/LoaderRunner.js:229:2)\n    at /Users/jeffcicero/Code/Projects/amorphousreact/wp-content/themes/amorphous/node_modules/loader-runner/lib/LoaderRunner.js:202:4\n    at /Users/jeffcicero/Code/Projects/amorphousreact/wp-content/themes/amorphous/node_modules/enhanced-resolve/lib/CachedInputFileSystem.js:70:14\n    at _combinedTickCallback (internal/process/next_tick.js:73:7)\n    at process._tickCallback (internal/process/next_tick.js:104:9)");
 
 /***/ }),
 /* 17 */
@@ -2232,7 +2232,7 @@ g,0<d.length&&(d=za[d[0]])&&(a.c[e]=d))}a.c[e]||(d=za[e])&&(a.c[e]=d);for(d=0;d<
 /* 19 */
 /***/ (function(module, exports) {
 
-// removed by extract-text-webpack-plugin
+throw new Error("Module build failed: ModuleBuildError: Module build failed: ReferenceError: document is not defined\n    at Object.resolveUrl (/Users/jeffcicero/Code/Projects/amorphousreact/wp-content/themes/amorphous/node_modules/resolve-url/resolve-url.js:21:25)\n    at runLoaders (/Users/jeffcicero/Code/Projects/amorphousreact/wp-content/themes/amorphous/node_modules/webpack/lib/NormalModule.js:194:19)\n    at /Users/jeffcicero/Code/Projects/amorphousreact/wp-content/themes/amorphous/node_modules/loader-runner/lib/LoaderRunner.js:364:11\n    at /Users/jeffcicero/Code/Projects/amorphousreact/wp-content/themes/amorphous/node_modules/loader-runner/lib/LoaderRunner.js:230:18\n    at runSyncOrAsync (/Users/jeffcicero/Code/Projects/amorphousreact/wp-content/themes/amorphous/node_modules/loader-runner/lib/LoaderRunner.js:143:3)\n    at iterateNormalLoaders (/Users/jeffcicero/Code/Projects/amorphousreact/wp-content/themes/amorphous/node_modules/loader-runner/lib/LoaderRunner.js:229:2)\n    at /Users/jeffcicero/Code/Projects/amorphousreact/wp-content/themes/amorphous/node_modules/loader-runner/lib/LoaderRunner.js:202:4\n    at /Users/jeffcicero/Code/Projects/amorphousreact/wp-content/themes/amorphous/node_modules/enhanced-resolve/lib/CachedInputFileSystem.js:70:14\n    at _combinedTickCallback (internal/process/next_tick.js:73:7)\n    at process._tickCallback (internal/process/next_tick.js:104:9)");
 
 /***/ })
 /******/ ]);
