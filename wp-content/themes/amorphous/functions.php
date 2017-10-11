@@ -105,10 +105,10 @@ function amorphous_widgets_init() {
 		'name'          => esc_html__( 'Sidebar', 'amorphous' ),
 		'id'            => 'sidebar-1',
 		'description'   => esc_html__( 'Add widgets here.', 'amorphous' ),
-		'before_widget' => '<section id="%1$s" class="widget %2$s">',
+		'before_widget' => '<section class="widget %2$s">',
 		'after_widget'  => '</section>',
-		'before_title'  => '<h2 class="widget-title">',
-		'after_title'   => '</h2>',
+		'before_title'  => '<h3 class="widget-title">',
+		'after_title'   => '</h3>',
 	) );
 }
 add_action( 'widgets_init', 'amorphous_widgets_init' );
@@ -139,11 +139,17 @@ add_action( 'wp_enqueue_scripts', 'amorphous_scripts' );
 require_once get_template_directory() . '/autoloader.php';
 
 add_action( 'init', function() {
+	new lib\CPT\Taxonomy();
 	new lib\CPT\CPT();
 });
 
 new lib\Filters\Posts();
+new lib\Sidebar\Widgets();
+new lib\Widgets\CategoryListWidget();
 
+add_action( 'widgets_init', function() {
+	register_widget( lib\Widgets\CategoryListWidget::class );
+});
 /**
  * Implement the Custom Header feature.
  */

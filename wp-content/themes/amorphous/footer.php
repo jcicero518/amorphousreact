@@ -15,15 +15,7 @@
 		<section class="section">
 			<div class="container">
 				<div class="site-info">
-					<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'amorphous' ) ); ?>"><?php
-						/* translators: %s: CMS name, i.e. WordPress. */
-						printf( esc_html__( 'Proudly powered by %s', 'amorphous' ), 'WordPress' );
-						?></a>
-					<span class="sep"> | </span>
-					<?php
-					/* translators: 1: Theme name, 2: Theme author. */
-					printf( esc_html__( 'Theme: %1$s by %2$s.', 'amorphous' ), 'amorphous', '<a href="http://amorphouswebsolutions.com">Jeff Cicero</a>' );
-					?>
+					<p>&copy; <?= date( 'Y' ); ?> Amorphous Web Solutions</p>
 				</div><!-- .site-info -->
 			</div>
 		</section>

@@ -14,7 +14,7 @@ class Posts {
 		add_filter( 'excerpt_more', function( $more ) {
 			global $post;
 			$more = "<br /><br />";
-			$more .= '<a class="" href="' . get_permalink( $post->ID ) . '">Read More &raquo;</a>';
+			$more .= '<a class="button" href="' . get_permalink( $post->ID ) . '">Read More &raquo;</a>';
 			$more .= '';
 			return $more;
 		});
@@ -38,7 +38,17 @@ class Posts {
 
 			ob_start();
 
+			if ( get_query_var('paged') ) {
+				$paged = get_query_var('paged');
+			} elseif ( get_query_var('page') ) { // 'page' is used instead of 'paged' on Static Front Page
+				$paged = get_query_var('page');
+			} else {
+				$paged = 1;
+			}
+
 			$args['post_type'] = $postType;
+			$args['paged'] = $paged;
+			$args['posts_per_page'] = 5;
 			$query = new \WP_Query( $args );
 			if ( $query->have_posts() ):
 				while ( $query->have_posts() ):
@@ -52,9 +62,7 @@ class Posts {
 									<?= get_the_title( $query->post->ID); ?>
 								</a>
 							</h2>
-							<div class="entry-meta">
-								<span class="tag is-info">Topics</span> <?= get_the_category_list( ', ' ); ?>
-							</div>
+							<?php amorphous_term_list( $query->post->ID, 'code_category' ); ?>
 						</header>
 						<div class="entry-content">
 							<?= get_the_excerpt( $query->post->ID ); ?>
@@ -62,6 +70,9 @@ class Posts {
 					</div>
 					<?php
 				endwhile;
+
+				theme_page_navi( $query );
+
 			endif;
 
 			$output = ob_get_contents();

@@ -41,6 +41,14 @@ if ( ! function_exists( 'amorphous_posted_on' ) ) :
 	}
 endif;
 
+function amorphous_term_list( $postId, $tax = 'code_category' ) {
+	?>
+	<div class="entry-meta">
+		<span class="tag is-info">Topics</span> <?= get_the_term_list( $postId, 'code_category', '', ', ', ' ' ); ?>
+	</div>
+	<?php
+}
+
 if ( ! function_exists( 'amorphous_entry_footer' ) ) :
 	/**
 	 * Prints HTML with meta information for the categories, tags and comments.
@@ -100,3 +108,29 @@ if ( ! function_exists( 'amorphous_entry_footer' ) ) :
 		);
 	}
 endif;
+
+function theme_page_navi( $postQuery = NULL ) {
+	global $wp_query;
+
+	$bignum = 999999999;
+	if ( empty( $postQuery ) ) {
+		$postQuery = $wp_query;
+	}
+
+	if ( $postQuery->max_num_pages <= 1 )
+		return;
+
+	echo '<nav class="pagination">';
+	echo paginate_links( array(
+		'base'         => str_replace( $bignum, '%#%', esc_url( get_pagenum_link($bignum) ) ),
+		'format'       => '',
+		'current'      => max( 1, get_query_var('paged') ),
+		'total'        => $postQuery->max_num_pages,
+		'prev_text'    => '&larr;',
+		'next_text'    => '&rarr;',
+		'type'         => 'list',
+		'end_size'     => 3,
+		'mid_size'     => 3
+	) );
+	echo '</nav>';
+}

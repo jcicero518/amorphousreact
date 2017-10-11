@@ -25,7 +25,7 @@ class Layout {
 				case 'twocol':
 					?>
 					<div class="columns">
-						<div class="column is-two-thirds">
+						<div class="column is-9">
 							<div class="box">
 								<?php
 								while ( have_posts() ) : the_post();
@@ -54,9 +54,45 @@ class Layout {
 
 								endwhile; // End of the loop.
 
+								if ( is_front_page() ):
+									$cardArgs = [
+										'post_type' => 'card',
+										'posts_per_page' => 3
+									];
+
+									$cardQuery = new \WP_Query( $cardArgs );
+									if ( $cardQuery->have_posts() ):
+										?>
+										<div class="columns">
+											<?php
+											while ( $cardQuery->have_posts() ):
+												$cardQuery->the_post();
+												?>
+												<div class="column">
+													<div class="box">
+														<div class="entry-header">
+															<h2 class="title" style="margin-bottom: 1em"><?= get_the_title( $cardQuery->post->ID ); ?></h2>
+														</div>
+														<div>
+															<?= get_the_excerpt( $cardQuery->post->ID ); ?>
+														</div>
+													</div>
+												</div>
+												<?php
+											endwhile;
+											wp_reset_postdata();
+											wp_reset_query();
+											?>
+										</div>
+										<?php
+									endif;
+								endif;
+
 								//$cards = new Card();
 								//$output = $cards->getQuery();
+								theme_page_navi();
 								?>
+
 							</div>
 
 						</div>
