@@ -35,7 +35,7 @@ class Layout {
 											<?php the_title( '<h1 class="title">', '</h1>' ); ?>
 										</header><!-- .entry-header -->
 
-										<div class="entry-content">
+										<div id="content-replace" class="entry-content replace-content">
 											<?php the_content(); ?>
 											<?php if ( $postType ): ?>
 												<?= apply_filters( 'theme_display_posts', [ 'postType' => $postType ] ); ?>
@@ -43,6 +43,7 @@ class Layout {
 										</div><!-- .entry-content -->
 
 										<footer class="entry-footer">
+											
 										</footer><!-- .entry-footer -->
 
 									</article><!-- #post-<?php the_ID(); ?> -->

@@ -113,6 +113,72 @@ function amorphous_widgets_init() {
 }
 add_action( 'widgets_init', 'amorphous_widgets_init' );
 
+add_action( 'rest_api_init', 'register_api_hooks' );
+function register_api_hooks() {
+	$postObjects = [ 'post', 'card' ];
+	/**
+	 * Add the plaintext content to GET requests for individual posts
+	 */
+	register_rest_field( $postObjects, 'plaintext', [
+		'get_callback' => 'rest_field_plaintext'
+	]);
+	register_rest_field( $postObjects, 'plaintitle', [
+		'get_callback' => 'rest_field_plaintitle'
+	]);
+	register_rest_field( $postObjects, 'post_excerpt', [
+		'get_callback' => 'rest_field_excerpt'
+	]);
+	register_rest_field( $postObjects, 'post_permalink', [
+		'get_callback' => 'rest_field_permalink'
+	]);
+	register_rest_field( $postObjects, 'post_code_cat_tax', [
+		'get_callback' => 'rest_field_code_cat_tax'
+	]);
+	//rest_authorization_required_code()
+}
+
+// Return plaintext content for posts, cards
+function rest_field_plaintext( $object, $fieldname, $request ) {
+	return strip_tags( html_entity_decode( $object['content']['rendered'] ) );
+}
+
+function rest_field_plaintitle( $object, $fieldname, $request ) {
+	return strip_tags( html_entity_decode( $object['title']['rendered'] ) );
+}
+
+function rest_field_excerpt( $object, $fieldname, $request ) {
+	return strip_tags( html_entity_decode( get_the_excerpt( $object['id'] ) ) );
+}
+
+function rest_field_permalink( $object, $fieldname, $request ) {
+	return get_permalink( $object['id'] );
+}
+
+function rest_field_code_cat_tax( $object, $fieldname, $request ) {
+	$codeCatIds = $object['code_category'];
+	$termOutput = [];
+
+	foreach ( $codeCatIds as $catId ) {
+		$name = get_term_field( 'name', $catId, 'code_category' );
+		$termLink = get_term_link( $catId, 'code_category' );
+		$termOutput['name'][] = $name;
+		$termOutput['link'][] = $termLink;
+		//$termOutput[] = '<a title="' . $name . '" href="' . $termLink . '">' . $name . '</a>';
+	}
+	return $termOutput;
+}
+
+// Disable REST API user endpoints
+add_filter( 'rest_endpoints', function( $endpoints ){
+	if ( isset( $endpoints['/wp/v2/users'] ) ) {
+		unset( $endpoints['/wp/v2/users'] );
+	}
+	if ( isset( $endpoints['/wp/v2/users/(?P<id>[\d]+)'] ) ) {
+		unset( $endpoints['/wp/v2/users/(?P<id>[\d]+)'] );
+	}
+	return $endpoints;
+});
+
 /**
  * Enqueue scripts and styles.
  */
@@ -133,6 +199,14 @@ function amorphous_scripts() {
 		'main' => home_url( '', 'rest' ) . '/wp-json/',
 		'rest' => home_url( '', 'rest' ) . '/wp-json/amorphous-theme/v1/'
 	]);
+
+	$queried_object = get_queried_object();
+	$local = [
+		'queriedObject' => $queried_object
+	];
+	$local['taxonomy'] = get_taxonomy( $queried_object->taxonomy );
+
+	wp_localize_script( 'build-main', 'settings', $local );
 }
 add_action( 'wp_enqueue_scripts', 'amorphous_scripts' );
 

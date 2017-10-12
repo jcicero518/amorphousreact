@@ -51,6 +51,9 @@ class Posts {
 			$args['posts_per_page'] = 5;
 			$query = new \WP_Query( $args );
 			if ( $query->have_posts() ):
+				?>
+				<div id="content-inner-replace">
+				<?php
 				while ( $query->have_posts() ):
 					$query->the_post();
 					?>
@@ -70,11 +73,11 @@ class Posts {
 					</div>
 					<?php
 				endwhile;
-
-				theme_page_navi( $query );
-
 			endif;
-
+			?>
+			</div>
+			<?php
+			theme_page_navi( $query );
 			$output = ob_get_contents();
 			ob_end_clean();
 			return $output;

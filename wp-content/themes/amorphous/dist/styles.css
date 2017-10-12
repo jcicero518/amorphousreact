@@ -6609,67 +6609,65 @@ a {
 /*--------------------------------------------------------------
 ## Menus
 --------------------------------------------------------------*/
-.navbar ul {
-  margin: 0;
-  padding: 0; }
-  .navbar ul ul {
-    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-    float: left;
-    position: absolute;
-    top: 100%;
-    left: -999em;
-    z-index: 99999; }
-    .navbar ul ul ul {
+.navbar {
+  background-repeat: repeat;
+  background-position: 0 0; }
+  .navbar ul {
+    margin: 0;
+    padding: 0; }
+    .navbar ul ul {
+      box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+      float: left;
+      position: absolute;
+      top: 100%;
       left: -999em;
-      top: 0; }
-    .navbar ul ul li:hover > ul,
-    .navbar ul ul li.focus > ul {
-      left: 100%; }
-    .navbar ul ul a {
-      width: 200px; }
-  .navbar ul li:hover > ul,
-  .navbar ul li.focus > ul {
-    left: auto; }
-
-.navbar li {
-  padding: 20px 10px;
-  display: flex; }
-
-.navbar .navbar-menu a {
-  font-family: "Lato", sans-serif;
-  font-weight: bold;
-  font-size: 14px;
-  font-size: 0.875rem;
-  color: #F5F7FA;
-  text-decoration: none;
-  text-transform: uppercase; }
-  .navbar .navbar-menu a:hover, .navbar .navbar-menu a:focus {
+      z-index: 99999; }
+      .navbar ul ul ul {
+        left: -999em;
+        top: 0; }
+      .navbar ul ul li:hover > ul,
+      .navbar ul ul li.focus > ul {
+        left: 100%; }
+      .navbar ul ul a {
+        width: 200px; }
+    .navbar ul li:hover > ul,
+    .navbar ul li.focus > ul {
+      left: auto; }
+  .navbar li {
+    padding: 20px 10px;
+    display: flex; }
+  .navbar .navbar-menu a {
+    font-family: "Lato", sans-serif;
+    font-weight: bold;
+    font-size: 14px;
+    font-size: 0.875rem;
+    color: #F5F7FA;
+    text-decoration: none;
+    text-transform: uppercase; }
+    .navbar .navbar-menu a:hover, .navbar .navbar-menu a:focus {
+      color: #DA4453;
+      background-color: transparent; }
+  .navbar .navbar-menu .current_page_item > a,
+  .navbar .navbar-menu .current-menu-item > a,
+  .navbar .navbar-menu .current_page_ancestor > a,
+  .navbar .navbar-menu .current-menu-ancestor > a {
     color: #DA4453;
     background-color: transparent; }
-
-.navbar .navbar-menu .current_page_item > a,
-.navbar .navbar-menu .current-menu-item > a,
-.navbar .navbar-menu .current_page_ancestor > a,
-.navbar .navbar-menu .current-menu-ancestor > a {
-  color: #DA4453;
-  background-color: transparent; }
-
-.navbar .navbar-brand a {
-  font-size: 20px;
-  font-size: 1.25rem;
-  font-family: "Roboto Slab", sans-serif;
-  color: #F5F7FA;
-  font-weight: bold; }
-  .navbar .navbar-brand a:hover, .navbar .navbar-brand a:focus {
-    background-color: #F5F5F5;
-    color: #000000; }
-
-.navbar .current_page_item > a,
-.navbar .current-menu-item > a,
-.navbar .current_page_ancestor > a,
-.navbar .current-menu-ancestor > a {
-  color: #DA4453;
-  background-color: transparent; }
+  .navbar .navbar-brand a {
+    font-size: 20px;
+    font-size: 1.25rem;
+    font-family: "Roboto Slab", sans-serif;
+    color: #F5F7FA;
+    font-weight: bold; }
+    .navbar .navbar-brand a:hover, .navbar .navbar-brand a:focus {
+      background-color: #F5F5F5;
+      color: #000000; }
+  .navbar .current_page_item > a,
+  .navbar .current-menu-item > a,
+  .navbar .current_page_ancestor > a,
+  .navbar .current-menu-ancestor > a {
+    color: #DA4453;
+    background-color: transparent; }
 
 .pagination ul {
   margin: 0;

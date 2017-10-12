@@ -9,6 +9,9 @@ const config = require('./assets/config.json');
 
 const webpackConfig = {
     //devtool: 'inline-source-map',
+    /*node: {
+        fs: 'empty'
+    },*/
     entry: [
         './assets/scripts/custom/app.js'
     ],
@@ -25,6 +28,12 @@ const webpackConfig = {
                 exclude: /node_modules/,
                 use: [{
                     loader: 'babel-loader'
+                }]
+            },
+            {
+                test: /\.hbs$/,
+                use: [{
+                    loader: 'handlebars-loader'
                 }]
             },
             {
@@ -48,7 +57,9 @@ const webpackConfig = {
                 loaders: ExtractTextPlugin.extract({
                     fallback: 'style-loader',
                     use: [
-                        'css-loader', 'sass-loader', 'postcss-loader'
+                        'css-loader',
+                        'sass-loader',
+                        'postcss-loader'
                     ]
                 })
             }
