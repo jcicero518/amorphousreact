@@ -2,7 +2,7 @@
 import axios from "axios";
 import codePostTpl from "../../templates/codePost.hbs";
 
-const categoryMount = document.getElementById( 'content-inner-replace' );
+const boxContainer = document.getElementById( 'content-inner-replace' );
 
 class Pagination {
 
@@ -44,16 +44,28 @@ class Pagination {
     }
 
     renderPage( payload ) {
-        payload.forEach( post => {
+        let allBoxes = boxContainer.querySelectorAll( '.box' );
+        let boxChildren = boxContainer.children;
+        //boxContainer.remove( allBoxes );
+        payload.forEach( (post, iterator) => {
             let eachTemplate = codePostTpl( post );
-            //let mount = document.getElementById( 'content-replace' );
-            //mount.replaceWith( eachTemplate );
-            categoryMount.insertAdjacentHTML('beforeend', eachTemplate);
-            //categoryMount.appendChild( element );
+
+            //boxContainer.removeChild( boxChildren[iterator] );
+            //console.log(eachTemplate, 'tem');
+            boxContainer.insertAdjacentHTML('beforeend', eachTemplate);
+            //boxContainer.appendChild( eachTemplate );
         });
+        let all = boxContainer.querySelectorAll( '.box' );
+        all.forEach( box => {
+            console.log(box, 'box');
+            box.classList.remove( 'hidden' );
+            box.classList.add( 'visible' );
+        })
     }
 
     getPage( pageNum ) {
+        this.page = pageNum;
+
         this.api( `${this.endPoint}?per_page=5&page=${pageNum}`).then( payload => {
             console.log(payload);
             this.renderPage( payload );
@@ -66,7 +78,6 @@ class Pagination {
                 e.preventDefault();
                 let newPage = link.innerHTML;
                 this.getPage( newPage );
-                console.log(link, 'link');
             });
         })
     }

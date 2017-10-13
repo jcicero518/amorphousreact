@@ -11,13 +11,7 @@ class Posts {
 	}
 
 	private function initFilters() {
-		add_filter( 'excerpt_more', function( $more ) {
-			global $post;
-			$more = "<br /><br />";
-			$more .= '<a class="button" href="' . get_permalink( $post->ID ) . '">Read More &raquo;</a>';
-			$more .= '';
-			return $more;
-		});
+		add_filter( 'excerpt_more', [ __CLASS__, 'theme_excerpt_more' ], 10, 1 );
 
 		add_filter( 'theme_display_cards', function( $args = [] ) {
 			$category = isset( $args['category'] ) ? $args['category'] : 'ALL';
@@ -54,7 +48,7 @@ class Posts {
 				?>
 				<div id="content-inner-replace">
 				<?php
-				while ( $query->have_posts() ):
+				/*while ( $query->have_posts() ):
 					$query->the_post();
 					?>
 					<div class="box">
@@ -72,7 +66,7 @@ class Posts {
 						</div>
 					</div>
 					<?php
-				endwhile;
+				endwhile;*/
 			endif;
 			?>
 			</div>
@@ -82,5 +76,13 @@ class Posts {
 			ob_end_clean();
 			return $output;
 		}, 10, 1);
+	}
+
+	function theme_excerpt_more( $more ) {
+		global $post;
+		$more = "<br /><br />";
+		$more .= '<a class="button" href="' . get_permalink( $post->ID ) . '">Read More &raquo;</a>';
+		$more .= '';
+		return $more;
 	}
 }

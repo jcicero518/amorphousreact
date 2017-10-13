@@ -113,6 +113,26 @@ function amorphous_widgets_init() {
 }
 add_action( 'widgets_init', 'amorphous_widgets_init' );
 
+add_filter( 'request', function( $query_string ) {
+	var_dump($query_string);
+	if ($query_string['name'] == 'page' && isset($query_string['page'])) {
+		unset($query_string['name']);
+		// 'page' in the query_string looks like '/2', so i'm spliting it out
+		list($delim, $page_index) = split('/', $query_string['page']);
+		$query_string['paged'] = $page_index;
+	}
+	if(isset($query_string['code_category']) && isset($query_string['paged'])){
+		$query_string['post_type'] = get_post_types($args = array(
+			'public'   => true,
+			'_builtin' => false
+		));
+		array_push($query_string['post_type'],'post');
+	}
+	var_dump($query_string);
+	return $query_string;
+});
+
+
 add_action( 'rest_api_init', 'register_api_hooks' );
 function register_api_hooks() {
 	$postObjects = [ 'post', 'card' ];
@@ -135,7 +155,15 @@ function register_api_hooks() {
 		'get_callback' => 'rest_field_code_cat_tax'
 	]);
 	//rest_authorization_required_code()
+
 }
+
+add_filter( 'json_excerpt_more', 'json_excerpt_more' );
+
+function json_excerpt_more( $output ) {
+	return '';
+}
+
 
 // Return plaintext content for posts, cards
 function rest_field_plaintext( $object, $fieldname, $request ) {
@@ -147,7 +175,11 @@ function rest_field_plaintitle( $object, $fieldname, $request ) {
 }
 
 function rest_field_excerpt( $object, $fieldname, $request ) {
-	return strip_tags( html_entity_decode( get_the_excerpt( $object['id'] ) ) );
+	remove_filter( 'excerpt_more', [ lib\Filters\Posts::class, 'theme_excerpt_more' ], 10 );
+	$output = strip_tags( html_entity_decode( get_the_excerpt( $object['id'] ) ) );
+	$output .= apply_filters( 'json_excerpt_more', $output );
+
+	return $output;
 }
 
 function rest_field_permalink( $object, $fieldname, $request ) {
@@ -161,8 +193,8 @@ function rest_field_code_cat_tax( $object, $fieldname, $request ) {
 	foreach ( $codeCatIds as $catId ) {
 		$name = get_term_field( 'name', $catId, 'code_category' );
 		$termLink = get_term_link( $catId, 'code_category' );
-		$termOutput['name'][] = $name;
-		$termOutput['link'][] = $termLink;
+		$termOutput[]['name'] = $name;
+		$termOutput[]['link'] = $termLink;
 		//$termOutput[] = '<a title="' . $name . '" href="' . $termLink . '">' . $name . '</a>';
 	}
 	return $termOutput;

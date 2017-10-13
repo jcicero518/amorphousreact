@@ -16,9 +16,17 @@ get_header(); ?>
 					<div class="box">
 						<?php
 						global $wp_query;
+						if ( get_query_var('paged') ) {
+							$paged = get_query_var('paged');
+						} elseif ( get_query_var('page') ) { // 'page' is used instead of 'paged' on Static Front Page
+							$paged = get_query_var('page');
+						} else {
+							$paged = 1;
+						}
 						$args = array_merge( $wp_query->query_vars, [
 							'post_type' => 'card',
-							'posts_per_page' => 10
+							'posts_per_page' => 5,
+							'paged' => $paged
 						]);
 						//var_dump($wp_query->get( 'code_category' ) );
 						$categoryQuery = new WP_Query( $args );
@@ -52,7 +60,8 @@ get_header(); ?>
 							<?php
 							endwhile;
 
-							the_posts_navigation();
+							//the_posts_navigation();
+							theme_page_navi( $categoryQuery );
 
 						endif;
 						wp_reset_postdata();

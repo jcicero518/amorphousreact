@@ -1,0 +1,13 @@
+.box {
+  transition: all 350ms linear;
+  &.hidden {
+    opacity: 0;
+    height: 0;
+    max-height: 0;
+  }
+  &.visible {
+    opacity: 1;
+    height: auto;
+    max-height: none;
+  }
+}

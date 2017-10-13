@@ -6510,6 +6510,17 @@ table {
   margin: 0 0 1.5em;
   width: 100%; }
 
+.box {
+  transition: all 350ms linear; }
+  .box.hidden {
+    opacity: 0;
+    height: 0;
+    max-height: 0; }
+  .box.visible {
+    opacity: 1;
+    height: auto;
+    max-height: none; }
+
 /*--------------------------------------------------------------
 # Forms
 --------------------------------------------------------------*/

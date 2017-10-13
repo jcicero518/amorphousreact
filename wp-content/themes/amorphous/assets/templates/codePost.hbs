@@ -1,10 +1,14 @@
-<div class="box">
+<div class="box hidden">
     <header class="entry-header">
         <h2 class="title"><a href="{{post_permalink}}">{{plaintitle}}</a></h2>
         <div class="entry-meta">
             <span class="tag is-info {{tagClass}}">Topics</span>
-            <a href="{{post_code_cat_tax.link}}">{{post_code_cat_tax.name}}</a>
+            {{#each post_code_cat_tax}}
+                <a title="{{name}}" href="{{link}}">{{name}}</a>
+            {{/each}}
         </div>
     </header>
     <div class="entry-content">{{post_excerpt}}</div>
+    <br />
+    <a class="button" title="Read More" href="{{post_permalink}}">Read More &raquo;</a>
 </div>
