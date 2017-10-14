@@ -114,7 +114,7 @@ function amorphous_widgets_init() {
 add_action( 'widgets_init', 'amorphous_widgets_init' );
 
 add_filter( 'request', function( $query_string ) {
-	var_dump($query_string);
+
 	if ($query_string['name'] == 'page' && isset($query_string['page'])) {
 		unset($query_string['name']);
 		// 'page' in the query_string looks like '/2', so i'm spliting it out
@@ -128,7 +128,7 @@ add_filter( 'request', function( $query_string ) {
 		));
 		array_push($query_string['post_type'],'post');
 	}
-	var_dump($query_string);
+
 	return $query_string;
 });
 
@@ -154,8 +154,49 @@ function register_api_hooks() {
 	register_rest_field( $postObjects, 'post_code_cat_tax', [
 		'get_callback' => 'rest_field_code_cat_tax'
 	]);
-	//rest_authorization_required_code()
 
+	register_rest_route( 'amorph/v2', 'querypage/(?P<page>[\d]+)', [
+		'methods' => WP_REST_Server::READABLE,
+		'callback' => 'theme_rest_pagination',
+		'args' => [],
+		'permission_callback' => 'checkPermissions'
+	]);
+
+	//rest_authorization_required_code()
+}
+
+function checkPermissions() {
+	return true;
+}
+
+function theme_rest_pagination( WP_REST_Request $request ) {
+	$params = $request->get_params();
+	$pageNum = absint($params['page']);
+	$perPage = 5;
+
+	$args = [
+		'post_type' => 'card',
+		'posts_per_page' => $perPage,
+		'paged' => $pageNum
+	];
+	$query = new WP_Query( $args );
+
+	$bignum = 999999999;
+
+	$data = paginate_links( array(
+		'base'         => str_replace( $bignum, '%#%', esc_url( get_pagenum_link($bignum) ) ),
+		'format'       => '',
+		'current'      => max( 1, $pageNum ),
+		//'total'        => $postQuery->max_num_pages,
+		'total' => $query->max_num_pages,
+		'prev_text'    => '&larr;',
+		'next_text'    => '&rarr;',
+		'type'         => 'list',
+		'end_size'     => 3,
+		'mid_size'     => 3
+	) );
+
+	return rest_ensure_response( $data );
 }
 
 add_filter( 'json_excerpt_more', 'json_excerpt_more' );
@@ -226,7 +267,7 @@ function amorphous_scripts() {
 	]);
 	$mainMenu = wp_get_nav_menu_items( 'Main' );
 	wp_localize_script( 'build-main', 'mainMenu', $mainMenu );
-	wp_localize_script( 'build-main', 'mwccRestApi', [
+	wp_localize_script( 'build-main', 'themeApi', [
 		'home' => home_url(),
 		'main' => home_url( '', 'rest' ) . '/wp-json/',
 		'rest' => home_url( '', 'rest' ) . '/wp-json/amorphous-theme/v1/'

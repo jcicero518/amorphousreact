@@ -78,7 +78,7 @@
     "npm-run-all": "^4.0.2",
     "open": "0.0.5",
     "postcss": "^6.0.12",
-    "postcss-loader": "^2.0.6",
+    "postcss-loader": "^2.0.7",
     "pretty-hrtime": "^1.0.3",
     "react-addons-test-utils": "^15.6.0",
     "react-headroom": "^2.1.5",

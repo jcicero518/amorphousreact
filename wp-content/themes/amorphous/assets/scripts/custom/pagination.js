@@ -1,46 +1,35 @@
-/*global mwccRestApi, settings */
-import axios from "axios";
+/*global themeApi, settings */
+import DataStore from "./DataStore";
 import codePostTpl from "../../templates/codePost.hbs";
 
+const pageContainer = document.querySelector( '.pagination' );
 const boxContainer = document.getElementById( 'content-inner-replace' );
 
 class Pagination {
 
-    constructor(params) {
-        const appUrl = mwccRestApi.home;
-        const pageContainer = document.querySelector( '.pagination' );
+    constructor() {
+        const {category_nicename, cat_ID} = settings.queriedObject;
+        this.dataStore = new DataStore({
+            postType: 'card',
+            categoryId: cat_ID,
+            category: category_nicename
+        });
 
-        this.postType = params[0] ? params[0] : 'card';
-        this.category = params[1] ? params[1] : 'general-news';
-        this.categoryId = params[2] ? params[2] : 0;
-        this.page = 1;
-        this.endPoint = `${appUrl}/wp-json/wp/v2/${this.postType}`;
-        // get category by slug
-        // http://mwcc.local/wp-json/wp/v2/categories?slug=general-news
-        // returns id to be used in filtering post
+        this.pageLinks = this.parsePageLinks();
+        this.watchLinks();
+    }
 
-        // get news by category
-        // general-news id = 8
-        // http://mwcc.local/wp-json/wp/v2/news-article?per_page=3&categories=8
+    reAttachPageLinks() {
+        this.pageLinks = this.parsePageLinks();
+        this.watchLinks();
+    }
+
+    parsePageLinks() {
         if ( pageContainer ) {
-            this.pageLinks = [...pageContainer.querySelectorAll( 'a')].filter( link => {
-                return ( link.hasAttribute( 'href' ) && link.innerHTML.match(/\d{1,}/) );
+            return [...pageContainer.querySelectorAll( 'a')].filter( link => {
+                return ( link.classList.contains( 'next' ) || link.innerHTML.match(/\d{1,}/) );
             });
         }
-    }
-
-    setPostType( postType ) {
-        this.postType = postType;
-    }
-
-    api( endPoint ) {
-        return new Promise( ( resolve, reject ) => {
-            axios.get( endPoint ).then( ( response ) => {
-                resolve( response.data );
-            }).catch( ( error ) => {
-                reject( error );
-            });
-        });
     }
 
     renderPage( payload ) {
@@ -63,24 +52,36 @@ class Pagination {
         })
     }
 
-    getPage( pageNum ) {
-        this.page = pageNum;
+    renderPagination( payload ) {
+        pageContainer.removeChild( pageContainer.children[0] );
+        pageContainer.insertAdjacentHTML( 'beforeend', payload );
+        this.reAttachPageLinks();
+    }
 
-        this.api( `${this.endPoint}?per_page=5&page=${pageNum}`).then( payload => {
-            console.log(payload);
-            this.renderPage( payload );
+    getPage( pageNum ) {
+
+        this.dataStore.setPage( pageNum).then( payload => {
+            console.log(payload, 'setPage payload');
+            if ( pageNum === 1 ) return false;
+            this.renderPagination( payload );
         });
+
+        this.dataStore.getPage().then( payload => {
+            console.log(payload, 'payload');
+            this.renderPage( payload );
+        })
     }
 
     watchLinks() {
         this.pageLinks.forEach( link => {
             link.addEventListener( 'click', e => {
                 e.preventDefault();
-                let newPage = link.innerHTML;
+                let newPage = link.innerHTML.match(/\d{1,}/) ? link.innerHTML : link.getAttribute( 'href').match(/\d{1,}/)[0];
+                console.log(this);
                 this.getPage( newPage );
             });
         })
     }
 }
 
-export default Pagination;
+const pagination = new Pagination().getPage(1);
