@@ -135,6 +135,7 @@ add_filter( 'request', function( $query_string ) {
 
 add_action( 'rest_api_init', 'register_api_hooks' );
 function register_api_hooks() {
+	global $post;
 	$postObjects = [ 'post', 'card' ];
 	/**
 	 * Add the plaintext content to GET requests for individual posts
@@ -155,14 +156,60 @@ function register_api_hooks() {
 		'get_callback' => 'rest_field_code_cat_tax'
 	]);
 
-	register_rest_route( 'amorph/v2', 'querypage/(?P<page>[\d]+)', [
+	register_rest_route( 'amorph/v2', 'querypage/(?P<pageId>[\d]+)/(?P<sourcePageId>[\d]+)', [
 		'methods' => WP_REST_Server::READABLE,
 		'callback' => 'theme_rest_pagination',
-		'args' => [],
+		'args' => [ 'postObject' => $post ],
 		'permission_callback' => 'checkPermissions'
 	]);
 
+	register_rest_route( 'wp_query', 'args', array(
+		'methods'             => WP_REST_Server::READABLE,
+		'callback'            => 'get_items',
+		'permission_callback' => 'checkPermissions'
+	) );
+
+
 	//rest_authorization_required_code()
+}
+
+function get_items( WP_REST_Request $request ) {
+	$params = $request->get_query_params();
+
+	$default_args = array(
+		'post_status'     => 'publish',
+		'posts_per_page'  => 10,
+		'has_password'    => false
+	);
+
+	// Combine defaults and query_args
+	$args = wp_parse_args( $query_args, $default_args );
+	// Run query
+	$wp_query = new WP_Query( $args );
+
+	$data = array();
+
+	return rest_ensure_response( $wp_query );
+	/*while ( $wp_query->have_posts() ) : $wp_query->the_post();
+
+		// Extra safety check for unallowed posts
+		if ( $this->check_is_post_allowed( $wp_query->post ) ) {
+
+			// Update properties post_type and meta to match current post_type
+			// This is kind of hacky, but the parent WP_REST_Posts_Controller
+			// does all kinds of assumptions from properties $post_type and
+			// $meta so we need to update it several times.
+			$this->post_type = $wp_query->post->post_type;
+			$this->meta = new WP_REST_Post_Meta_Fields( $wp_query->post->post_type );
+
+			// Use parent class functions to prepare the post
+			$itemdata = parent::prepare_item_for_response( $wp_query->post, $request );
+			$data[]   = parent::prepare_response_for_collection( $itemdata );
+		}
+
+	endwhile;
+
+	return $this->get_response( $request, $args, $wp_query, $data );*/
 }
 
 function checkPermissions() {
@@ -171,24 +218,40 @@ function checkPermissions() {
 
 function theme_rest_pagination( WP_REST_Request $request ) {
 	$params = $request->get_params();
-	$pageNum = absint($params['page']);
+	$queryParams = $request->get_query_params();
+	$pageNum = absint( $params['pageId'] );
+	$sourcePageId = absint( $params['sourcePageId'] );
 	$perPage = 5;
+	$bignum = 999999999;
+
+	$category = isset( $queryParams['category'] ) ? $queryParams['category'] : '';
+
+	$sourcePage = get_post( $sourcePageId );
+	$sourcePageType = get_post_type( $sourcePage );
+
+	$sourcePageBase = str_replace( $bignum, '%#%', esc_url( trailingslashit( get_permalink( $sourcePage->ID ) . $sourcePageType . '/' . $bignum ) ) );
 
 	$args = [
 		'post_type' => 'card',
 		'posts_per_page' => $perPage,
 		'paged' => $pageNum
 	];
+
+	if ( $category ) {
+		$args['tax_query'] = [[
+			'taxonomy' => 'code_category',
+			'field' => 'slug',
+			'terms' => $category
+		]];
+	}
+
 	$query = new WP_Query( $args );
 
-	$bignum = 999999999;
-
 	$data = paginate_links( array(
-		'base'         => str_replace( $bignum, '%#%', esc_url( get_pagenum_link($bignum) ) ),
+		'base'         => $sourcePageBase,
 		'format'       => '',
 		'current'      => max( 1, $pageNum ),
-		//'total'        => $postQuery->max_num_pages,
-		'total' => $query->max_num_pages,
+		'total'        => $query->max_num_pages,
 		'prev_text'    => '&larr;',
 		'next_text'    => '&rarr;',
 		'type'         => 'list',
@@ -196,8 +259,15 @@ function theme_rest_pagination( WP_REST_Request $request ) {
 		'mid_size'     => 3
 	) );
 
+	wp_reset_query();
+
 	return rest_ensure_response( $data );
 }
+
+add_action('wp_head', function() {
+	global $template;
+	//var_dump($template);
+});
 
 add_filter( 'json_excerpt_more', 'json_excerpt_more' );
 
@@ -231,12 +301,14 @@ function rest_field_code_cat_tax( $object, $fieldname, $request ) {
 	$codeCatIds = $object['code_category'];
 	$termOutput = [];
 
+	$counter = 0;
 	foreach ( $codeCatIds as $catId ) {
 		$name = get_term_field( 'name', $catId, 'code_category' );
 		$termLink = get_term_link( $catId, 'code_category' );
-		$termOutput[]['name'] = $name;
-		$termOutput[]['link'] = $termLink;
-		//$termOutput[] = '<a title="' . $name . '" href="' . $termLink . '">' . $name . '</a>';
+
+		$termOutput[$counter]['name'] = $name;
+		$termOutput[$counter]['link'] = $termLink;
+		$counter++;
 	}
 	return $termOutput;
 }
@@ -273,6 +345,7 @@ function amorphous_scripts() {
 		'rest' => home_url( '', 'rest' ) . '/wp-json/amorphous-theme/v1/'
 	]);
 
+	
 	$queried_object = get_queried_object();
 	$local = [
 		'queriedObject' => $queried_object
@@ -290,6 +363,7 @@ add_action( 'init', function() {
 	new lib\CPT\CPT();
 });
 
+//new lib\Rest\WpQueryRoute();
 new lib\Filters\Posts();
 new lib\Sidebar\Widgets();
 new lib\Widgets\CategoryListWidget();

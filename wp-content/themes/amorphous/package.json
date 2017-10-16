@@ -65,6 +65,7 @@
     "gulp-sourcemaps": "^2.4.1",
     "gulp-uglify": "^2.0.1",
     "gulp-util": "^3.0.8",
+    "handlebars-loader": "^1.6.0",
     "imagemin-pngcrush": "^5.0.0",
     "install": "^0.10.1",
     "jsdom": "^11.1.0",

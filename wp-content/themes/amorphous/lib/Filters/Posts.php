@@ -27,7 +27,7 @@ class Posts {
 		}, 10, 1);
 
 		add_filter( 'theme_display_posts', function( $args = [] ) {
-			$category = isset( $args['category'] ) ? $args['category'] : 'ALL';
+			$category = isset( $args['category'] ) ? $args['category'] : NULL;
 			$postType = isset( $args['postType'] ) ? $args['postType'] : NULL;
 
 			ob_start();
@@ -43,10 +43,23 @@ class Posts {
 			$args['post_type'] = $postType;
 			$args['paged'] = $paged;
 			$args['posts_per_page'] = 5;
+
+			if ( $category ) {
+				$args['tax_query'] = [[
+					'taxonomy' => 'code_category',
+					'field' => 'slug',
+					'terms' => $category
+				]];
+			}
+
 			$query = new \WP_Query( $args );
+
+			$request = $query->request;
+			$postCount = $query->post_count;
+
 			if ( $query->have_posts() ):
 				?>
-				<div id="content-inner-replace">
+				<div id="content-inner-replace" class="boxes-container">
 				<?php
 				/*while ( $query->have_posts() ):
 					$query->the_post();

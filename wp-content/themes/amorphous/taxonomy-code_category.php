@@ -28,21 +28,27 @@ get_header(); ?>
 							'posts_per_page' => 5,
 							'paged' => $paged
 						]);
-						//var_dump($wp_query->get( 'code_category' ) );
+
 						$categoryQuery = new WP_Query( $args );
 						if ( $categoryQuery->have_posts() ) : ?>
 
 							<header class="page-header">
 								<?php
-
 								the_archive_title( '<h1 class="title">', '</h1>' );
 								the_archive_description( '<div class="archive-description">', '</div>' );
+
 								?>
 							</header><!-- .page-header -->
-
+							<div class="entry-content">
+								<?= apply_filters( 'theme_display_posts', [
+									'postType' => 'card',
+									'category' => strtolower( single_term_title( '', false ) )
+								] );
+								?>
+							</div>
 							<?php
 							/* Start the Loop */
-							while ( $categoryQuery->have_posts() ) : $categoryQuery->the_post();
+							/*while ( $categoryQuery->have_posts() ) : $categoryQuery->the_post();
 
 								?>
 								<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
@@ -61,7 +67,7 @@ get_header(); ?>
 							endwhile;
 
 							//the_posts_navigation();
-							theme_page_navi( $categoryQuery );
+							theme_page_navi( $categoryQuery );*/
 
 						endif;
 						wp_reset_postdata();

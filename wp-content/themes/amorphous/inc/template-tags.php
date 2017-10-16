@@ -113,19 +113,28 @@ function theme_page_navi( $postQuery = NULL ) {
 	global $wp_query;
 
 	$bignum = 999999999;
+	// if no WP_Query instance is passed, assign $postQuery to $wp_query global
 	if ( empty( $postQuery ) ) {
 		$postQuery = $wp_query;
 	}
 
-	if ( $postQuery->max_num_pages <= 1 )
-		return;
+	// get current page and total number of pages to display
+	$current = $postQuery->get( 'paged', 1 );
+	$total = isset( $postQuery->max_num_pages ) ? intval( $postQuery->max_num_pages ) : 1;
 
-	echo '<nav class="pagination">';
+	// <= 1 pages to display, just output pagination "placeholder" for js
+	if ( $total <= 1 ) {
+		echo '<nav class="pagination l-pagination"></nav>';
+		return;
+	}
+
+
+	echo '<nav class="pagination l-pagination">';
 	echo paginate_links( array(
 		'base'         => str_replace( $bignum, '%#%', esc_url( get_pagenum_link($bignum) ) ),
 		'format'       => '',
-		'current'      => max( 1, get_query_var('paged') ),
-		'total'        => $postQuery->max_num_pages,
+		'current'      => max( 1, $current ),
+		'total'        => $total,
 		'prev_text'    => '&larr;',
 		'next_text'    => '&rarr;',
 		'type'         => 'list',

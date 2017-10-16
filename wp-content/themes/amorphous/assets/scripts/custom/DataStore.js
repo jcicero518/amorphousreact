@@ -1,9 +1,10 @@
-/*global themeApi, settings */
+/*global themeApi, globalPost, settings */
 import axios from "axios";
 
 class DataStore {
 
     constructor( params ) {
+
         const appUrl = themeApi.home;
 
         this.postType = params.postType ? params.postType : 'card';
@@ -12,6 +13,8 @@ class DataStore {
         this.page = params.page ? params.page : 1;
 
         this.settings = settings;
+
+        this.currentPageId = globalPost.postID;
         this.endPoint = `${appUrl}/wp-json/wp/v2/${this.postType}`;
         this.pageEndpoint = `${appUrl}/wp-json/amorph/v2/querypage/`;
     }
@@ -29,13 +32,23 @@ class DataStore {
 
     setPage( pageNum ) {
         this.page = pageNum;
-        return this.api( `${this.pageEndpoint}${pageNum}`).then( payload => {
+        let sourcePage = this.currentPageId;
+        let category = this.category ? this.category : '';
+        return this.api( `${this.pageEndpoint}${pageNum}/${sourcePage}?category=${category}`).then( payload => {
             return payload;
         });
     }
 
     getPage() {
-        return this.api( `${this.endPoint}?per_page=5&page=${this.page}`).then( payload => {
+        const {queriedObject} = this.settings;
+
+        let apiCall = `${this.endPoint}?per_page=5&page=${this.page}&orderby=title&order=asc`;
+
+        if ( this.categoryId ) {
+            apiCall += `&code_category=${this.categoryId}`;
+        }
+
+        return this.api( apiCall ).then( payload => {
             return payload;
         });
     }
