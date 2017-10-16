@@ -60,7 +60,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "a082561a77d2026f421d"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "82da47f6d4a51a8a18b7"; // eslint-disable-line no-unused-vars
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
@@ -2146,7 +2146,7 @@ var Pagination = function () {
 // Instantiate class only if we have a pagination element available
 
 
-if (pageContainer) {
+if (pageContainer && boxContainer) {
     var pagination = new Pagination().getPage(1);
 }
 

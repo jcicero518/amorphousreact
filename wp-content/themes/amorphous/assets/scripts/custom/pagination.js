@@ -124,6 +124,6 @@ class Pagination {
 }
 
 // Instantiate class only if we have a pagination element available
-if ( pageContainer ) {
+if ( pageContainer && boxContainer ) {
     const pagination = new Pagination().getPage(1);
 }

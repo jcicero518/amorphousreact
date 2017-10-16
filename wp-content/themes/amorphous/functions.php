@@ -345,7 +345,7 @@ function amorphous_scripts() {
 		'rest' => home_url( '', 'rest' ) . '/wp-json/amorphous-theme/v1/'
 	]);
 
-	
+
 	$queried_object = get_queried_object();
 	$local = [
 		'queriedObject' => $queried_object
