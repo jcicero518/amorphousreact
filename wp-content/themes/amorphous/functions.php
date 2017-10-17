@@ -335,6 +335,8 @@ function amorphous_scripts() {
 	//wp_enqueue_script( 'build-main', get_template_directory_uri() . '/build/js/app.js', array(), '', true );
 	global $post;
 
+	$logo = get_custom_logo();
+
 	wp_localize_script( 'build-main', 'globalPost', [
 		'postID' => $post->ID
 	]);
@@ -342,6 +344,7 @@ function amorphous_scripts() {
 	wp_localize_script( 'build-main', 'mainMenu', $mainMenu );
 	wp_localize_script( 'build-main', 'themeApi', [
 		'home' => home_url(),
+		'logo' => $logo,
 		'main' => home_url( '', 'rest' ) . '/wp-json/',
 		'rest' => home_url( '', 'rest' ) . '/wp-json/amorphous-theme/v1/'
 	]);
