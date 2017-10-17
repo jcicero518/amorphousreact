@@ -83,42 +83,57 @@ class Posts {
 	}
 
 	function theme_display_sites( \WP_Query $query ) {
-		if ( $query->have_posts() ):
-				?>
-				<div class="boxes-container">
-				<?php
+		if ( $query->have_posts() ): ?>
+          <div class="boxes-container">
+            <?php
 
-					while ( $query->have_posts() ):
-						$query->the_post();
-						?>
-						<div class="panel box">
-							<header class="entry-header">
-								<h2 class="title">
-									<a
-										href="<?= esc_url( get_permalink( $query->post->ID ) ); ?>">
-										<?= get_the_title( $query->post->ID); ?>
-									</a>
-								</h2>
-								<div class="entry-meta">
-									<p><a target="_blank" title="" href="<?= get_field( 'site_url'); ?>"><?= get_field( 'site_url' ); ?></a></p>
-								</div>
-							</header>
-							<div class="entry-content">
-								<div class="site-carousel">
-									<div class="slide">
-										<img src="http://via.placeholder.com/650x250" />
-									</div>
-									<div class="slide">
-										<img src="http://via.placeholder.com/630x230" />
-									</div>
-								</div>
-								<?= wp_get_attachment_image( get_field( 'site_image' )['id'], 'full' ); ?>
-								<?= apply_filters( 'the_content', get_the_content( $query->post->ID ) ); ?>
-							</div>
-						</div>
-						<?php
-					endwhile;
+            while ( $query->have_posts() ):
+              $query->the_post();
+              ?>
+              <div class="box box--site">
+                <header class="entry-header">
+                  <h2 class="title">
+                    <a
+                      href="<?= esc_url( get_permalink( $query->post->ID ) ); ?>">
+                      <?= get_the_title( $query->post->ID); ?>
+                    </a>
+                  </h2>
+                  <!--<div class="entry-meta">
+                    <p><label>Full Site: </label><a target="_blank" title="" href="<?= get_field( 'site_url'); ?>"><?= get_field( 'site_url' ); ?></a></p>
+                  </div>-->
+                </header>
 
-			endif;
+                <div class="entry-content">
+
+                  <div class="card">
+                    <div class="card-image">
+                      <figure class="image square"><?= wp_get_attachment_image( get_field( 'site_image' )['id'], 'full' ); ?></figure>
+                    </div>
+                    <div class="card-content is-clearfix">
+                      <?= apply_filters( 'the_content', get_the_content( $query->post->ID ) ); ?>
+                    </div>
+                    <footer class="card-footer">
+                      <p class="card-footer-item">
+                        <span>
+                          <a
+                            target="_blank"
+                            title="<?= get_the_title( $query->post->ID ); ?>"
+                            href="<?= get_permalink( $query->post->ID ) ?>">Read More</a>
+                        </span>
+                      </p>
+                      <p class="card-footer-item">
+                        <span>Full Site: <a target="_blank" title="Opens in new window" href="<?= get_field( 'site_url'); ?>"><?= get_field( 'site_url' ); ?></a></span>
+                      </p>
+                    </footer>
+                  </div>
+
+                </div>
+              </div>
+              <?php
+            endwhile;
+            ?>
+          </div>
+          <?php
+        endif;
 	}
 }

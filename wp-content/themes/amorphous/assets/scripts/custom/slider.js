@@ -1,30 +1,25 @@
+import {lory} from "lory.js";
 
-const sliderContainer = document.querySelector( '.site-carousel' );
+const sliderContainer = document.querySelector( '.js_slider' );
 
 class Slider {
 
     constructor( sliderOptions ) {
-        /*const defaultOptions = {
-            cellAlign: 'left',
-            setGallerySize: false,
-            contain: true,
-            prevNextButtons: true,
-            pageDots: false,
-            wrapAround: true,
-            autoPlay: 5000,
-            percentPosition: false
-        };*/
+        const defaultOptions = {
+            rewind: true,
+            infinite: 1
+        };
 
         this.sliderOptions = Object.assign( defaultOptions, sliderOptions );
-        this.slider = new Flickity( sliderContainer, this.sliderOptions );
+        this.slider = lory( sliderContainer, this.sliderOptions );
     }
 }
 
 // Conditionally load slider - if sliderContainer element exists
 if ( sliderContainer ) {
+    console.log(sliderContainer);
     // optionally pass in object to add / override default options
-    document.addEventListener( 'DOMContentLoaded', evt => {
-        //new Slider();
+    document.addEventListener( 'DOMContentLoaded', () => {
+        new Slider();
     });
-
 }

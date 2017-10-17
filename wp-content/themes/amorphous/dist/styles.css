@@ -10780,6 +10780,14 @@ table {
   transform: scale(1) translate3d(0, 0, 0);
 }
 
+.box.box--site .entry-content {
+  margin-top: 0.5em;
+}
+
+.card-footer p {
+  margin-bottom: 0;
+}
+
 /*.boxes-container {
   &:not(:empty) {
     opacity: 1;
@@ -10796,6 +10804,52 @@ table {
     }
   }
 }*/
+
+.js_slider .frame {
+  /**
+     * (optional) wrapper width, specifies width of the slider frame.
+     */
+  width: 100%;
+  position: relative;
+  font-size: 0;
+  line-height: 0;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.js_slider .slides {
+  display: inline-block;
+}
+
+.js_slider li {
+  position: relative;
+  display: inline-block;
+  /**
+     * (optional) if the content inside the slide element has a defined size.
+     */
+}
+
+.js_slider .prev,
+.js_slider .next {
+  position: absolute;
+  top: 50%;
+  margin-top: -25px;
+  display: block;
+  cursor: pointer;
+}
+
+.js_slider .next {
+  right: 0;
+}
+
+.js_slider .prev {
+  left: 0;
+}
+
+.js_slider .next svg,
+.js_slider .prev svg {
+  width: 25px;
+}
 
 /*--------------------------------------------------------------
 # Forms

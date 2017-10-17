@@ -28,6 +28,18 @@
   }
 }
 
+.box.box--site {
+  .entry-content {
+    margin-top: 0.5em;
+  }
+}
+
+.card-footer {
+  p {
+    margin-bottom: 0;
+  }
+}
+
 /*.boxes-container {
   &:not(:empty) {
     opacity: 1;

@@ -123,4 +123,58 @@ class CPT {
 		);
 		register_post_type( 'site', $args );
 	}
+
+	public function theme_cpt_slider() {
+
+		$labels = array(
+			'name'                  => _x( 'Slider', 'Post Type General Name', 'mwcc' ),
+			'singular_name'         => _x( 'Slide', 'Post Type Singular Name', 'mwcc' ),
+			'menu_name'             => __( 'Slider', 'mwcc' ),
+			'name_admin_bar'        => __( 'Slider', 'mwcc' ),
+			'archives'              => __( 'Slider Archives', 'mwcc' ),
+			'attributes'            => __( 'Slider Attributes', 'mwcc' ),
+			'parent_item_colon'     => __( 'Parent Item:', 'mwcc' ),
+			'all_items'             => __( 'All Slides', 'mwcc' ),
+			'add_new_item'          => __( 'Add New Slide', 'mwcc' ),
+			'add_new'               => __( 'Add New', 'mwcc' ),
+			'new_item'              => __( 'New Slide', 'mwcc' ),
+			'edit_item'             => __( 'Edit Slide', 'mwcc' ),
+			'update_item'           => __( 'Update Slide', 'mwcc' ),
+			'view_item'             => __( 'View Slide', 'mwcc' ),
+			'view_items'            => __( 'View Slides', 'mwcc' ),
+			'search_items'          => __( 'Search Slides', 'mwcc' ),
+			'not_found'             => __( 'Not found', 'mwcc' ),
+			'not_found_in_trash'    => __( 'Not found in Trash', 'mwcc' ),
+			'featured_image'        => __( 'Featured Image', 'mwcc' ),
+			'set_featured_image'    => __( 'Set featured image', 'mwcc' ),
+			'remove_featured_image' => __( 'Remove featured image', 'mwcc' ),
+			'use_featured_image'    => __( 'Use as featured image', 'mwcc' ),
+			'insert_into_item'      => __( 'Insert into Slide', 'mwcc' ),
+			'uploaded_to_this_item' => __( 'Uploaded to this Slide', 'mwcc' ),
+			'items_list'            => __( 'Slide list', 'mwcc' ),
+			'items_list_navigation' => __( 'Slide list navigation', 'mwcc' ),
+			'filter_items_list'     => __( 'Filter Slide list', 'mwcc' ),
+		);
+		$args = array(
+			'label'                 => __( 'Slider', 'mwcc' ),
+			'description'           => __( 'Slider', 'mwcc' ),
+			'labels'                => $labels,
+			'supports'              => array( 'title', 'thumbnail', 'editor' ),
+			'taxonomies'            => array(),
+			'hierarchical'          => false,
+			'public'                => true,
+			'show_ui'               => true,
+			'show_in_menu'          => true,
+			'menu_position'         => 5,
+			'show_in_admin_bar'     => true,
+			'show_in_nav_menus'     => true,
+			'can_export'            => true,
+			'has_archive'           => false,
+			'exclude_from_search'   => true,
+			'publicly_queryable'    => false,
+			'capability_type'       => 'page',
+			'show_in_rest'          => true,
+		);
+		register_post_type( 'slider', $args );
+	}
 }
