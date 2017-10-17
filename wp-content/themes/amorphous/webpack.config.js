@@ -45,14 +45,58 @@ const webpackConfig = {
                         loader: 'postcss-loader',
                         options: {
                             importLoaders: 1,
+                            sourceMap: true,
                             plugins: () => ([
-                                require('lost')
+                                require('lost'),
+                                require('autoprefixer')({
+                                    browsers: ['last 2 versions', 'ie > 8']
+                                })
                             ])
                         }
                     }
                 ]
             },
             {
+                test: /\.(sass|scss)$/,
+                use: ExtractTextPlugin.extract({
+                    fallback: 'style-loader',
+                    use: [
+                        {
+                            loader: 'css-loader',
+                            options: {
+                                sourceMap: true
+                            }
+                        },
+                        {
+                            loader: 'postcss-loader',
+                            options: {
+                                sourceMap: true,
+                                plugins: () => ([
+                                    require('autoprefixer')({
+                                        browsers: ['last 2 versions', 'ie > 8']
+                                    })
+                                ])
+                            }
+                        },
+                        {
+                            loader: 'resolve-url-loader'
+                        },
+                        {
+                            loader: 'sass-loader'
+                        }
+                    ]
+                })
+            },
+            {
+                test: /\.(ttf|eot|woff2?|png|jpe?g|gif|svg|ico)$/,
+                //include: config.paths.assets,
+                loader: 'url-loader',
+                options: {
+                    limit: 48096,
+                    name: `[path][name].[ext]`
+                }
+            }
+            /*{
                 test: /\.(sass|scss)$/,
                 loaders: ExtractTextPlugin.extract({
                     fallback: 'style-loader',
@@ -62,7 +106,7 @@ const webpackConfig = {
                         'postcss-loader'
                     ]
                 })
-            }
+            }*/
         ]
     },
     plugins: [

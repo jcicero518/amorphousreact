@@ -25,3 +25,30 @@ a {
 		}
 	}
 }
+
+.entry-content {
+	a {
+		transition: all 250ms linear;
+	}
+	p, li {
+		a {
+			color: $color__link;
+			text-decoration: underline;
+			text-decoration-color: darken($color__link, 20%);
+			transition: all 250ms linear;
+			&:hover {
+				color: $color__link-hover;
+				text-decoration-color: darken($color__link-hover, 12%);
+			}
+		}
+	}
+}
+
+.entry-meta {
+	label {
+		font-weight: bold;
+	}
+	a {
+		transition: all 250ms linear;
+	}
+}

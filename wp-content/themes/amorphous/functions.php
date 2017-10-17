@@ -330,6 +330,7 @@ add_filter( 'rest_endpoints', function( $endpoints ){
 function amorphous_scripts() {
 	wp_enqueue_style( 'amorphous-style', get_stylesheet_uri() );
 	wp_enqueue_style( 'extracted-css', get_stylesheet_directory_uri() . '/dist/styles.css' );
+	wp_enqueue_style( 'slider-css', '//cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.2.4/tiny-slider.css' );
 	wp_enqueue_script( 'build-main', get_stylesheet_directory_uri() . '/dist/bundle.js', array(), '', true );
 	//wp_enqueue_script( 'build-main', get_template_directory_uri() . '/build/js/app.js', array(), '', true );
 	global $post;

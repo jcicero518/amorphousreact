@@ -26,6 +26,10 @@ class Posts {
 			return $output;
 		}, 10, 1);
 
+		add_filter( 'theme_display_sites', function( $args = [] ) {
+
+		});
+
 		add_filter( 'theme_display_posts', function( $args = [] ) {
 			$category = isset( $args['category'] ) ? $args['category'] : NULL;
 			$postType = isset( $args['postType'] ) ? $args['postType'] : NULL;
@@ -44,7 +48,7 @@ class Posts {
 			$args['paged'] = $paged;
 			$args['posts_per_page'] = 5;
 
-			if ( $category ) {
+			if ( $category && $postType === 'card' ) {
 				$args['tax_query'] = [[
 					'taxonomy' => 'code_category',
 					'field' => 'slug',
@@ -54,35 +58,14 @@ class Posts {
 
 			$query = new \WP_Query( $args );
 
-			$request = $query->request;
-			$postCount = $query->post_count;
-
-			if ( $query->have_posts() ):
-				?>
-				<div id="content-inner-replace" class="boxes-container">
-				<?php
-				/*while ( $query->have_posts() ):
-					$query->the_post();
-					?>
-					<div class="box">
-						<header class="entry-header">
-							<h2 class="title">
-								<a
-									href="<?= esc_url( get_permalink( $query->post->ID ) ); ?>">
-									<?= get_the_title( $query->post->ID); ?>
-								</a>
-							</h2>
-							<?php amorphous_term_list( $query->post->ID, 'code_category' ); ?>
-						</header>
-						<div class="entry-content">
-							<?= get_the_excerpt( $query->post->ID ); ?>
-						</div>
-					</div>
-					<?php
-				endwhile;*/
-			endif;
+			if ( $postType === 'site' ) {
+				echo '<h2>Recently Built Sites</h2>';
+				$this->theme_display_sites( $query );
+				return;
+			}
 			?>
-			</div>
+			<div id="content-inner-replace" class="boxes-container replace-<?= $postType; ?>"></div>
+
 			<?php
 			theme_page_navi( $query );
 			$output = ob_get_contents();
@@ -97,5 +80,45 @@ class Posts {
 		$more .= '<a class="button" href="' . get_permalink( $post->ID ) . '">Read More &raquo;</a>';
 		$more .= '';
 		return $more;
+	}
+
+	function theme_display_sites( \WP_Query $query ) {
+		if ( $query->have_posts() ):
+				?>
+				<div class="boxes-container">
+				<?php
+
+					while ( $query->have_posts() ):
+						$query->the_post();
+						?>
+						<div class="panel box">
+							<header class="entry-header">
+								<h2 class="title">
+									<a
+										href="<?= esc_url( get_permalink( $query->post->ID ) ); ?>">
+										<?= get_the_title( $query->post->ID); ?>
+									</a>
+								</h2>
+								<div class="entry-meta">
+									<p><a target="_blank" title="" href="<?= get_field( 'site_url'); ?>"><?= get_field( 'site_url' ); ?></a></p>
+								</div>
+							</header>
+							<div class="entry-content">
+								<div class="site-carousel">
+									<div class="slide">
+										<img src="http://via.placeholder.com/650x250" />
+									</div>
+									<div class="slide">
+										<img src="http://via.placeholder.com/630x230" />
+									</div>
+								</div>
+								<?= wp_get_attachment_image( get_field( 'site_image' )['id'], 'full' ); ?>
+								<?= apply_filters( 'the_content', get_the_content( $query->post->ID ) ); ?>
+							</div>
+						</div>
+						<?php
+					endwhile;
+
+			endif;
 	}
 }

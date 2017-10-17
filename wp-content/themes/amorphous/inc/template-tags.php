@@ -42,9 +42,24 @@ if ( ! function_exists( 'amorphous_posted_on' ) ) :
 endif;
 
 function amorphous_term_list( $postId, $tax = 'code_category' ) {
+	$get_term_tag_list = function( $postId, $tax ) {
+		$terms = get_the_terms( $postId, $tax );
+		foreach ( $terms as $term ) {
+			?>
+			<a class="tag is-link"
+			   title="<?= $term->name; ?>"
+			   href="<?= get_term_link( $term->term_id, 'code_category'); ?>"><?= $term->name; ?></a>
+			<?php
+		}
+	};
 	?>
-	<div class="entry-meta">
-		<span class="tag is-info">Topics</span> <?= get_the_term_list( $postId, 'code_category', '', ', ', ' ' ); ?>
+
+	<div class="field is-grouped is-grouped-multiline">
+		<div class="control">
+			<div class="tags has-addons">
+				<p><label>Topics:</label> <?= $get_term_tag_list( $postId, $tax ) ?></p>
+			</div>
+		</div>
 	</div>
 	<?php
 }

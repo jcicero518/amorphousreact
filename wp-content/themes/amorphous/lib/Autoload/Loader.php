@@ -54,8 +54,9 @@ class Loader {
 		if ($dirs) {
 			self::addDirs($dirs);
 		}
-		if (self::$registered == 0) {
-			spl_autoload_register(__CLASS__ . '::autoload');
+
+		if ( self::$registered == 0 ) {
+			spl_autoload_register( __CLASS__ . '::autoload' );
 			self::$registered++;
 		}
 

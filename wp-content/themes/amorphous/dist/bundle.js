@@ -60,7 +60,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "82da47f6d4a51a8a18b7"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "7090a979a7063a2907fa"; // eslint-disable-line no-unused-vars
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
@@ -1911,11 +1911,11 @@ module.exports = __webpack_require__(12);
 
 __webpack_require__(13);
 
+__webpack_require__(55);
+
 __webpack_require__(14);
 
 __webpack_require__(16);
-
-__webpack_require__(55);
 
 /***/ }),
 /* 13 */
@@ -2193,7 +2193,6 @@ var DataStore = function () {
     _createClass(DataStore, [{
         key: 'api',
         value: function api(endPoint) {
-            console.log(endPoint, 'point');
             return new Promise(function (resolve, reject) {
                 _axios2.default.get(endPoint).then(function (response) {
                     resolve(response.data);
@@ -2218,7 +2217,7 @@ var DataStore = function () {
             var queriedObject = this.settings.queriedObject;
 
 
-            var apiCall = this.endPoint + '?per_page=5&page=' + this.page + '&orderby=title&order=asc';
+            var apiCall = this.endPoint + '?per_page=5&page=' + this.page + '&orderby=date&order=desc';
 
             if (this.categoryId) {
                 apiCall += '&code_category=' + this.categoryId;
@@ -3118,13 +3117,13 @@ function __default(obj) { return obj && (obj.__esModule ? obj["default"] : obj);
 module.exports = (Handlebars["default"] || Handlebars).template({"1":function(container,depth0,helpers,partials,data) {
     var helper, alias1=depth0 != null ? depth0 : (container.nullContext || {}), alias2=helpers.helperMissing, alias3="function", alias4=container.escapeExpression;
 
-  return "                <a title=\""
+  return "                            <a class=\"tag is-link\" title=\""
     + alias4(((helper = (helper = helpers.name || (depth0 != null ? depth0.name : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"name","hash":{},"data":data}) : helper)))
     + "\" href=\""
     + alias4(((helper = (helper = helpers.link || (depth0 != null ? depth0.link : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"link","hash":{},"data":data}) : helper)))
     + "\">"
     + alias4(((helper = (helper = helpers.name || (depth0 != null ? depth0.name : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"name","hash":{},"data":data}) : helper)))
-    + "</a>,\n\n";
+    + "</a>\n";
 },"compiler":[7,">= 4.0.0"],"main":function(container,depth0,helpers,partials,data) {
     var stack1, helper, alias1=depth0 != null ? depth0 : (container.nullContext || {}), alias2=helpers.helperMissing, alias3="function", alias4=container.escapeExpression;
 
@@ -3132,11 +3131,9 @@ module.exports = (Handlebars["default"] || Handlebars).template({"1":function(co
     + alias4(((helper = (helper = helpers.post_permalink || (depth0 != null ? depth0.post_permalink : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"post_permalink","hash":{},"data":data}) : helper)))
     + "\">"
     + alias4(((helper = (helper = helpers.plaintitle || (depth0 != null ? depth0.plaintitle : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"plaintitle","hash":{},"data":data}) : helper)))
-    + "</a></h2>\n        <div class=\"entry-meta\">\n            <span class=\"tag is-info "
-    + alias4(((helper = (helper = helpers.tagClass || (depth0 != null ? depth0.tagClass : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"tagClass","hash":{},"data":data}) : helper)))
-    + "\">Topics</span>\n"
+    + "</a></h2>\n        <div class=\"entry-meta\">\n            <div class=\"field is-grouped is-grouped-multiline\">\n                <div class=\"control\">\n                    <div class=\"tags has-addons\">\n                        <p><label>Topics:</label>\n"
     + ((stack1 = helpers.each.call(alias1,(depth0 != null ? depth0.post_code_cat_tax : depth0),{"name":"each","hash":{},"fn":container.program(1, data, 0),"inverse":container.noop,"data":data})) != null ? stack1 : "")
-    + "        </div>\n    </header>\n    <div class=\"entry-content\">"
+    + "                        </p>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </header>\n    <div class=\"entry-content\">"
     + alias4(((helper = (helper = helpers.post_excerpt || (depth0 != null ? depth0.post_excerpt : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"post_excerpt","hash":{},"data":data}) : helper)))
     + "</div>\n    <br />\n    <a class=\"button\" title=\"Read More\" href=\""
     + alias4(((helper = (helper = helpers.post_permalink || (depth0 != null ? depth0.post_permalink : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"post_permalink","hash":{},"data":data}) : helper)))

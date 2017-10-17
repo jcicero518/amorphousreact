@@ -20,7 +20,6 @@ class DataStore {
     }
 
     api( endPoint ) {
-        console.log(endPoint, 'point');
         return new Promise( ( resolve, reject ) => {
             axios.get( endPoint ).then( ( response ) => {
                 resolve( response.data );
@@ -42,7 +41,7 @@ class DataStore {
     getPage() {
         const {queriedObject} = this.settings;
 
-        let apiCall = `${this.endPoint}?per_page=5&page=${this.page}&orderby=title&order=asc`;
+        let apiCall = `${this.endPoint}?per_page=5&page=${this.page}&orderby=date&order=desc`;
 
         if ( this.categoryId ) {
             apiCall += `&code_category=${this.categoryId}`;
