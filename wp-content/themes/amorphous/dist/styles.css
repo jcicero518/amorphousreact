@@ -11099,6 +11099,40 @@ a.button:hover {
   background-color: transparent;
 }
 
+.sticky-component {
+  visibility: hidden;
+  left: -9999em;
+  transition: all 250ms ease;
+  height: 0;
+  opacity: 0;
+  z-index: 5;
+}
+
+.admin-bar .sticky-component {
+  top: 32px;
+}
+
+.sticky-component.sticky {
+  visibility: visible;
+  left: 0;
+  opacity: 1;
+  height: auto;
+}
+
+.sticky-component .navbar {
+  transition: all 250ms ease;
+  background-color: rgba(54, 54, 54, 0.75);
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  border-radius: 0;
+  margin: 0;
+}
+
 .pagination ul li a {
   margin-right: 4px;
   padding: 0 9px;
@@ -11330,10 +11364,6 @@ a.button:hover {
 /*--------------------------------------------------------------
 ## Posts and pages
 --------------------------------------------------------------*/
-
-.sticky {
-  display: block;
-}
 
 .hentry {
   margin: 0 0 1.5em;

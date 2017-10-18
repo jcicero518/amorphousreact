@@ -100,6 +100,38 @@
 	}
 }
 
+.sticky-component {
+	//display: none;
+	visibility: hidden;
+	left: -9999em;
+	transition: all 250ms ease;
+	height: 0;
+	opacity: 0;
+	z-index: 5;
+	@at-root .admin-bar & {
+		top: 32px;
+	}
+	&.sticky {
+		visibility: visible;
+		left: 0;
+		opacity: 1;
+		height: auto;
+	}
+	.navbar {
+		transition: all 250ms ease;
+		background-color: rgba(54, 54, 54, 0.75);
+	}
+}
+
+.sticky {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	border-radius: 0;
+	margin: 0;
+}
+
 %pageLink {
 	margin-right: 4px;
 	padding: 0 9px;
