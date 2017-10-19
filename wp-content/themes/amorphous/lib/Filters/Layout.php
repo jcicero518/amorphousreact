@@ -56,9 +56,15 @@ class Layout {
 								endwhile; // End of the loop.
 
 								if ( is_front_page() ):
+									?>
+									<h2 class="title">Recently Added</h2>
+									<hr />
+									<?php
 									$cardArgs = [
 										'post_type' => 'card',
-										'posts_per_page' => 3
+										'posts_per_page' => 3,
+										'orderby' => 'date',
+										'order' => 'DESC'
 									];
 
 									$cardQuery = new \WP_Query( $cardArgs );

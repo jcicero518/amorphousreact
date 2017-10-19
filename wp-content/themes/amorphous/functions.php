@@ -110,6 +110,24 @@ function amorphous_widgets_init() {
 		'before_title'  => '<h3 class="widget-title">',
 		'after_title'   => '</h3>',
 	) );
+	register_sidebar( array(
+		'name'          => esc_html__( 'Footer Left', 'amorphous' ),
+		'id'            => 'footer-left',
+		'description'   => esc_html__( 'Add widgets here.', 'amorphous' ),
+		'before_widget' => '<section class="widget %2$s">',
+		'after_widget'  => '</section>',
+		'before_title'  => '<h3 class="widget-title">',
+		'after_title'   => '</h3>',
+	) );
+	register_sidebar( array(
+		'name'          => esc_html__( 'Footer Right', 'amorphous' ),
+		'id'            => 'footer-right',
+		'description'   => esc_html__( 'Add widgets here.', 'amorphous' ),
+		'before_widget' => '<section class="widget %2$s">',
+		'after_widget'  => '</section>',
+		'before_title'  => '<h3 class="widget-title">',
+		'after_title'   => '</h3>',
+	) );
 }
 add_action( 'widgets_init', 'amorphous_widgets_init' );
 

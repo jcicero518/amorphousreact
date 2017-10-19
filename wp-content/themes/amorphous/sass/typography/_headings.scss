@@ -9,6 +9,13 @@ h2 {
 	}
 }
 
+.entry-content {
+	h2 {
+		@include font-size(1.5);
+	}
+}
+
+
 .box {
 	.type-page {
 		.entry-header {

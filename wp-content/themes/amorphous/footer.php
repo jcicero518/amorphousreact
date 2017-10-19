@@ -14,8 +14,17 @@
 	<footer id="colophon" class="site-footer footer">
 		<section class="section">
 			<div class="container">
+				<div class="columns is-clearfix">
+					<div class="column is-6">
+						<p>&copy; <?= date( 'Y' ); ?> Amorphous Web Solutions</p>
+						<?php dynamic_sidebar('footer-left'); ?>
+					</div>
+					<div class="column is-6">
+						<?php dynamic_sidebar('footer-right'); ?>
+					</div>
+				</div>
 				<div class="site-info">
-					<p>&copy; <?= date( 'Y' ); ?> Amorphous Web Solutions</p>
+
 				</div><!-- .site-info -->
 			</div>
 		</section>

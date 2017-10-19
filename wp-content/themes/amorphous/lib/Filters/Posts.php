@@ -59,7 +59,9 @@ class Posts {
 			$query = new \WP_Query( $args );
 
 			if ( $postType === 'site' ) {
-				echo '<h2>Recently Built Sites</h2>';
+              ?>
+              <h2 class="title">Recent Sites</h2>
+              <?php
 				$this->theme_display_sites( $query );
 				return;
 			}
@@ -85,6 +87,22 @@ class Posts {
 	function theme_display_sites( \WP_Query $query ) {
 		if ( $query->have_posts() ): ?>
           <div class="boxes-container">
+			  <div class="tabs is-centered">
+				  <ul>
+					  <li class="is-active">
+						  <a>
+							  <span class="icon is-small"><i class="fa fa-image"></i></span>
+							  <span>Freelance</span>
+						  </a>
+					  </li>
+					  <li class="is-active">
+						  <a>
+							  <span class="icon is-small"><i class="fa fa-image"></i></span>
+							  <span>Freelance</span>
+						  </a>
+					  </li>
+				  </ul>
+			  </div>
             <?php
 
             while ( $query->have_posts() ):
@@ -115,7 +133,6 @@ class Posts {
 		                    'thumbnail' => $siteImageField['sizes']['thumbnail'],
 		                    'full' => $siteImageField['url']
 	                    ];
-	                    //var_dump($siteImageField);
 	                    ?>
                       <figure
 	                      class="image card-image-figure square"
