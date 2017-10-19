@@ -107,7 +107,22 @@ class Posts {
 
                   <div class="card">
                     <div class="card-image">
-                      <figure class="image square"><?= wp_get_attachment_image( get_field( 'site_image' )['id'], 'full' ); ?></figure>
+	                    <?php
+	                    $siteImageField = get_field( 'site_image' );
+	                    $siteImages = [
+		                    'id' => $siteImageField['id'],
+		                    'caption' => $siteImageField['caption'],
+		                    'thumbnail' => $siteImageField['sizes']['thumbnail'],
+		                    'full' => $siteImageField['url']
+	                    ];
+	                    //var_dump($siteImageField);
+	                    ?>
+                      <figure
+	                      class="image card-image-figure square"
+                          style="background-image: url(<?= $siteImages['thumbnail']; ?>)"
+                          data-image-full="<?= $siteImages['full']; ?>">
+	                      <img src="<?= $siteImages['thumbnail'] ?>" />
+                      </figure>
                     </div>
                     <div class="card-content is-clearfix">
                       <?= apply_filters( 'the_content', get_the_content( $query->post->ID ) ); ?>

@@ -104,7 +104,8 @@
 	//display: none;
 	visibility: hidden;
 	left: -9999em;
-	transition: all 250ms ease;
+	//transition: all 250ms ease;
+	transition: background 500ms ease;
 	height: 0;
 	opacity: 0;
 	z-index: 5;
@@ -115,11 +116,20 @@
 		visibility: visible;
 		left: 0;
 		opacity: 1;
-		height: auto;
+		top: -77px;
+		transform: translateY(77px);
+		transition: transform 500ms ease,background 900ms ease;
+		height: 77px;
 	}
 	.navbar {
-		transition: all 250ms ease;
-		background-color: rgba(54, 54, 54, 0.75);
+		transition: background 900ms ease;
+		background-color: rgba(54, 54, 54, 0.85);
+	}
+}
+
+.admin-bar .sticky-component {
+	&.sticky {
+		top: -55px;
 	}
 }
 

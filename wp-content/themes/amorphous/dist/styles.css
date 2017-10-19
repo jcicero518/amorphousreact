@@ -11102,7 +11102,7 @@ a.button:hover {
 .sticky-component {
   visibility: hidden;
   left: -9999em;
-  transition: all 250ms ease;
+  transition: background 500ms ease;
   height: 0;
   opacity: 0;
   z-index: 5;
@@ -11116,12 +11116,20 @@ a.button:hover {
   visibility: visible;
   left: 0;
   opacity: 1;
-  height: auto;
+  top: -77px;
+  -ms-transform: translateY(77px);
+      transform: translateY(77px);
+  transition: transform 500ms ease,background 900ms ease;
+  height: 77px;
 }
 
 .sticky-component .navbar {
-  transition: all 250ms ease;
-  background-color: rgba(54, 54, 54, 0.75);
+  transition: background 900ms ease;
+  background-color: rgba(54, 54, 54, 0.85);
+}
+
+.admin-bar .sticky-component.sticky {
+  top: -55px;
 }
 
 .sticky {
@@ -11377,6 +11385,24 @@ a.button:hover {
 .entry-content,
 .entry-summary {
   margin: 1.5em 0 0;
+}
+
+.entry-content .card-image .card-image-figure {
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+  filter: blur(3px);
+}
+
+.entry-content .card-image .card-image-figure.is-loaded {
+  filter: none;
+  transition: filter 1s;
+}
+
+.entry-content .card-image .card-image-figure > img {
+  display: block;
+  width: 100%;
+  opacity: 0;
 }
 
 .page-links {

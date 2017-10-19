@@ -16,6 +16,26 @@
 	margin: 1.5em 0 0;
 }
 
+.entry-content {
+	.card-image {
+		.card-image-figure {
+			background-repeat: no-repeat;
+			background-position: top center;
+			background-size: cover;
+			filter: blur(3px);
+			&.is-loaded {
+				filter: none;
+				transition: filter 1s;
+			}
+			> img {
+				display: block;
+				width: 100%;
+				opacity: 0;
+			}
+		}
+	}
+}
+
 .page-links {
 	clear: both;
 	margin: 0 0 1.5em;
