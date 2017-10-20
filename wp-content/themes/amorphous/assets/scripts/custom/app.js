@@ -5,6 +5,7 @@ import "./lazyLoad";
 import "./webfonts/googleFonts";
 import "./pagination";
 import "./slider";
+import "./tabs";
 import "./sticky";
 
 // https://www.keithcirkel.co.uk/es6-template-literals/

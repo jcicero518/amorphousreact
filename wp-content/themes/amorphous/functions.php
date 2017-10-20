@@ -358,7 +358,15 @@ function amorphous_scripts() {
 	wp_localize_script( 'build-main', 'globalPost', [
 		'postID' => $post->ID
 	]);
-	$mainMenu = wp_get_nav_menu_items( 'Main' );
+	//$mainMenu = wp_get_nav_menu_items( 'Main' );
+	$mainMenu = wp_nav_menu( array(
+		'echo' => FALSE,
+		'menu' => 'Main',
+		'theme_location' => 'menu-1',
+		'container' => FALSE,
+		'menu_class' => 'navbar-menu navbar-end',
+		'walker' => new lib\Menu\MenuWalker()
+	) );
 	wp_localize_script( 'build-main', 'mainMenu', $mainMenu );
 	wp_localize_script( 'build-main', 'themeApi', [
 		'home' => home_url(),

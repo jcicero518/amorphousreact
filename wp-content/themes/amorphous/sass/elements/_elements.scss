@@ -60,6 +60,19 @@ iframe {
 	}
 }
 
+.tabs {
+	.tabs-container {
+		.tab-panel {
+			&[aria-hidden="true"] {
+				display: none;
+			}
+			&[aria-hidden="false"] {
+				display: block;
+			}
+		}
+	}
+}
+
 
 @import "tables";
 @import "boxes";

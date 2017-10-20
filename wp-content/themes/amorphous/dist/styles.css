@@ -10758,6 +10758,14 @@ iframe {
   display: inline-block;
 }
 
+.tabs .tabs-container .tab-panel[aria-hidden="true"] {
+  display: none;
+}
+
+.tabs .tabs-container .tab-panel[aria-hidden="false"] {
+  display: block;
+}
+
 table {
   margin: 0 0 1.5em;
   width: 100%;

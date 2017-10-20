@@ -94,21 +94,43 @@ class Posts {
 		
 		if ( $query->have_posts() ): ?>
           <div class="boxes-container">
-			  <div class="tabs is-centered">
-				  <ul>
-					  <li class="is-active">
-						  <a>
-							  <span class="icon is-small"><i class="fa fa-image"></i></span>
-							  <span>Freelance</span>
-						  </a>
-					  </li>
-					  <li class="is-active">
-						  <a>
-							  <span class="icon is-small"><i class="fa fa-image"></i></span>
-							  <span>Freelance</span>
-						  </a>
-					  </li>
-				  </ul>
+			  <div class="tabs is-centered" role="tablist" aria-multiselectable="false" data-tabs-root>
+				  <nav class="nav-tabs" data-tabs-nav>
+					  <ul role="tablist">
+						  <li class="is-active" role="presentation">
+							  <a href="#" class="tab" id="site_tab_0" role="tab" aria-controls="site_content_1" tabindex="0" aria-selected="true">
+								  <span class="icon is-small"><i class="fa fa-image"></i></span>
+								  <span>Freelance</span>
+							  </a>
+						  </li>
+						  <li role="presentation">
+							  <a href="#" class="tab" id="site_tab_1" role="tab" aria-controls="site_content_2" tabindex="-1" aria-selected="false">
+								  <span class="icon is-small"><i class="fa fa-image"></i></span>
+								  <span>Freelance</span>
+							  </a>
+						  </li>
+					  </ul>
+				  </nav>
+
+				  <div class="tabs-container">
+					  <div class="tab-panel"
+						   role="tabpanel"
+						   aria-controls="site_content_1"
+						   aria-labelledby="site_tab_0"
+						   aria-hidden="false"
+						   aria-expanded="true">
+						  <h2>Freelance</h2>
+					  </div>
+					  <div class="tab-panel"
+						   role="tabpanel"
+						   aria-controls="site_content_2"
+						   aria-labelledby="site_tab_1"
+						   aria-hidden="true"
+						   aria-expanded="false">
+						  <h2>Company</h2>
+					  </div>
+				  </div>
+
 			  </div>
             <?php
 

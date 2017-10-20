@@ -1,4 +1,4 @@
-/*global themeApi */
+/*global themeApi, mainMenu */
 import React, {Component} from "react";
 import ReactDOM from "react-dom";
 import StickyContainer from "./sticky-container";
@@ -6,6 +6,7 @@ import StickyContainer from "./sticky-container";
 class Sticky extends Component {
 
     render() {
+        const menu = { __html: mainMenu };
 
         return (
             <StickyContainer stickyClass="sticky-component" enter="80">
@@ -14,13 +15,7 @@ class Sticky extends Component {
                         <div className="navbar-brand">
                             <a className="navbar-item" href="/">Amorphous Web Solutions</a>
                         </div>
-                        <div className="navbar-menu">
-                            <ul className="navbar-menu navbar-end">
-                                <li><a className="navbar-item" href="http://amorphous.local/about/">About</a></li>
-                                <li><a className="navbar-item" href="http://amorphous.local/code/">Code</a></li>
-                                <li><a className="navbar-item" href="http://amorphous.local/portfolio/">Portfolio</a></li>
-                                <li><a className="navbar-item" href="http://amorphous.local/contact/">Contact</a></li>
-                            </ul>
+                        <div className="navbar-menu" dangerouslySetInnerHTML={menu}>
                         </div>
                     </div>
                 </div>

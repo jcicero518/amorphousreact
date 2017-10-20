@@ -27,7 +27,10 @@ const webpackConfig = {
                 //include: path.resolve(__dirname, 'assets/scripts/custom'),
                 exclude: /node_modules/,
                 use: [{
-                    loader: 'babel-loader'
+                    loader: 'babel-loader',
+                    options: {
+                        sourceMap: true
+                    }
                 }]
             },
             {
