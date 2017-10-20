@@ -56,6 +56,12 @@ class Posts {
 				]];
 			}
 
+			if ( $postType === 'site' ) {
+				$args['meta_key'] = 'site_order';
+				$args['order_by'] = 'meta_value_num';
+				$args['order'] = 'ASC';
+			}
+
 			$query = new \WP_Query( $args );
 
 			if ( $postType === 'site' ) {
@@ -85,6 +91,7 @@ class Posts {
 	}
 
 	function theme_display_sites( \WP_Query $query ) {
+		
 		if ( $query->have_posts() ): ?>
           <div class="boxes-container">
 			  <div class="tabs is-centered">
