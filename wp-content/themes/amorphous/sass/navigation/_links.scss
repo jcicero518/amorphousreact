@@ -19,8 +19,11 @@ a {
 
 	&.button {
 		font-weight: bold;
+		color: $white;
+		background-color: $color__link-hover;
 		&:hover {
-			color: $color_navbar_link-hover;
+			color: $white;
+			background-color: $black;
 			transition: all 250ms linear;
 		}
 	}

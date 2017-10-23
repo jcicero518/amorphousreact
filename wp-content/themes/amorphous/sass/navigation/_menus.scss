@@ -28,7 +28,7 @@
 			}
 
 			a {
-				width: 200px;
+				//width: 200px;
 			}
 
 			:hover > a,
@@ -202,6 +202,54 @@
 .menu-toggle,
 .main-navigation.toggled ul {
 	//display: block;
+}
+
+.navbar-burger {
+	&.is-active, &:hover, &:focus {
+		background-color: $red;
+		color: $white;
+		transition: all 500ms linear;
+	}
+}
+
+@media screen and (max-width: 1023px) {
+	.main-navigation {
+		.container {
+			.navbar-menu {
+				background-color: $color__background-nav;
+				flex-direction: row;
+				&.is-active {
+					display: flex;
+					flex-grow: 1;
+					justify-content: space-around;
+					background-color: $color__background-nav;
+					ul.navbar-end {
+						display: flex;
+						li {
+							padding: 5px 0;
+							a {
+								display: block;
+							}
+						}
+					}
+				}
+				ul.navbar-end {
+
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.main-navigation {
+		.container {
+			.navbar-menu {
+				flex-direction: column;
+				align-items: center;
+			}
+		}
+	}
 }
 
 @media screen and (min-width: 37.5em) {

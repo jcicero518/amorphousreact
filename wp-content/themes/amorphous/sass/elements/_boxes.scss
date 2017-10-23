@@ -29,6 +29,20 @@
 }
 
 .box.box--site {
+  .entry-header {
+    h2 {
+      margin-bottom: -1px;
+      padding: 0.5em 1em;
+      align-items: center;
+      border-bottom-color: #dbdbdb;
+      border-bottom-style: solid;
+      border-bottom-width: 1px;
+      color: #4a4a4a;
+      display: flex;
+      justify-content: center;
+      vertical-align: top;
+    }
+  }
   .entry-content {
     margin-top: 0.5em;
   }

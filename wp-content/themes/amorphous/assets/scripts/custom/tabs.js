@@ -4,14 +4,39 @@ class Tabs {
 
     constructor() {
         this.$root = document.querySelector( '[data-tabs-root]' );
-        this.$nav = this.$root.querySelector( '[data-tabs-nav]' );
         this.$tabs = this.$root.querySelectorAll( '.tab' );
+        this.activeTab = null;
 
         this.$root.addEventListener( 'click', this.onTabClick.bind( this ) );
 
         this.onTabClick = this.onTabClick.bind( this );
         this.showTab = this.showTab.bind( this );
         this.hideTab = this.hideTab.bind( this );
+
+        this.getActiveTab();
+    }
+
+    setActiveTab( tab ) {
+        if ( !tab instanceof Element ) {
+            return false;
+        }
+        this.activeTab = tab.getAttribute( 'id' );
+
+        if ( localStorage ) {
+            localStorage.setItem( 'js.activeTabId', this.activeTab );
+        }
+    }
+
+    getActiveTab() {
+        let tabId;
+        if ( localStorage ) {
+            tabId = this.activeTab = localStorage.getItem( 'js.activeTabId' ) ? localStorage.getItem( 'js.activeTabId' ) : 'site_tab_0';
+        } else {
+            tabId = 'site_tab_0';
+        }
+
+        this.activeTab = document.getElementById( tabId );
+        this.showTab( this.activeTab );
     }
 
     onTabClick( event ) {
@@ -34,6 +59,7 @@ class Tabs {
             tabParent = tab.parentElement;
 
         tab.setAttribute( 'aria-selected', true );
+        this.setActiveTab( tab );
         tabParent.classList.add( 'is-active' );
 
         this.$tabs.forEach( t => {

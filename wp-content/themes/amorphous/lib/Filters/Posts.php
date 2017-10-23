@@ -96,12 +96,13 @@ class Posts {
 			?>
 			<div class="box box--site">
 				<header class="entry-header">
-					<h2 class="title">
+					<!--<h2 class="title">
 						<a
 							href="<?= esc_url( get_permalink( $query->post->ID ) ); ?>">
 							<?= get_the_title( $query->post->ID); ?>
 						</a>
-					</h2>
+					</h2>-->
+					<h2 class="title"><?= get_the_title( $query->post->ID ); ?></h2>
 					<!--<div class="entry-meta">
                     <p><label>Full Site: </label><a target="_blank" title="" href="<?= get_field( 'site_url'); ?>"><?= get_field( 'site_url' ); ?></a></p>
                   </div>-->
@@ -131,14 +132,7 @@ class Posts {
 							<?= apply_filters( 'the_content', get_the_content( $query->post->ID ) ); ?>
 						</div>
 						<footer class="card-footer">
-							<p class="card-footer-item">
-                        <span>
-                          <a
-	                          target="_blank"
-	                          title="<?= get_the_title( $query->post->ID ); ?>"
-	                          href="<?= get_permalink( $query->post->ID ) ?>">Read More</a>
-                        </span>
-							</p>
+
 							<p class="card-footer-item">
 								<span>Full Site: <a target="_blank" title="Opens in new window" href="<?= get_field( 'site_url'); ?>"><?= get_field( 'site_url' ); ?></a></span>
 							</p>
@@ -192,7 +186,7 @@ class Posts {
 						   aria-hidden="true"
 						   aria-expanded="false">
 						  <?php
-						  $args = wp_parse_args( [ 'tag' => 'zone5' ], $query->query_vars );
+						  $args = wp_parse_args( [ 'tag' => 'zone5', 'posts_per_page' => '10' ], $query->query_vars );
 						  $siteQuery = new \lib\Query\SiteQuery( $args );
 						  $this->theme_site_query( $siteQuery );
 						  ?>

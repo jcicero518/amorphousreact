@@ -43,9 +43,13 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
 	## Galleries
 
 --------------------------------------------------------------*/
+@import "../node_modules/bulma/sass/utilities/initial-variables";
+@import "variables-site/variables-bulma";
+@import "../node_modules/bulma-divider/divider";
 @import "variables-site/variables-site";
 @import "mixins/mixins-master";
 
+@import "../node_modules/bulma/bulma";
 /*--------------------------------------------------------------
 # Normalize
 --------------------------------------------------------------*/
@@ -107,6 +111,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
 @import "media/media";
 
 $asset_path: "../assets" !default;
+
 body {
   @include radial-gradient(#f2f2f2, #d1d1d1);
 }

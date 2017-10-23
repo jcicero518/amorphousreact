@@ -57,12 +57,15 @@ class Layout {
 
 								if ( is_front_page() ):
 									?>
-									<h2 class="title">Recently Added</h2>
-									<hr />
+
+									<!--<h2 class="title">Featured</h2>
+									<div class="is-divider" data-content="MORE"></div>-->
 									<?php
 									$cardArgs = [
 										'post_type' => 'card',
 										'posts_per_page' => 3,
+										'meta_key' => 'is_featured',
+										'meta_value' => 'yes',
 										'orderby' => 'date',
 										'order' => 'DESC'
 									];
@@ -70,6 +73,8 @@ class Layout {
 									$cardQuery = new \WP_Query( $cardArgs );
 									if ( $cardQuery->have_posts() ):
 										?>
+
+										<h2 class="title"><span class="fa fa-code" aria-hidden="true"></span> Featured Posts</h2>
 										<div class="columns">
 											<?php
 											while ( $cardQuery->have_posts() ):

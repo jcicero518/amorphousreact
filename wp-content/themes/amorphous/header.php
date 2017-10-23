@@ -40,7 +40,7 @@
 		<div class="container">
 			<div class="navbar-brand">
 				<a class="navbar-item" href="/">Amorphous Web Solutions</a>
-				<button class="button navbar-burger">
+				<button class="button navbar-burger" data-target-class="navbar-menu">
 					<span></span>
 					<span></span>
 					<span></span>
