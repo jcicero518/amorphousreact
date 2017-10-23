@@ -90,27 +90,87 @@ class Posts {
 		return $more;
 	}
 
+	function theme_site_query( \WP_Query $query ) {
+		while ( $query->have_posts() ):
+			$query->the_post();
+			?>
+			<div class="box box--site">
+				<header class="entry-header">
+					<h2 class="title">
+						<a
+							href="<?= esc_url( get_permalink( $query->post->ID ) ); ?>">
+							<?= get_the_title( $query->post->ID); ?>
+						</a>
+					</h2>
+					<!--<div class="entry-meta">
+                    <p><label>Full Site: </label><a target="_blank" title="" href="<?= get_field( 'site_url'); ?>"><?= get_field( 'site_url' ); ?></a></p>
+                  </div>-->
+				</header>
+
+				<div class="entry-content">
+
+					<div class="card">
+						<div class="card-image">
+							<?php
+							$siteImageField = get_field( 'site_image' );
+							$siteImages = [
+								'id' => $siteImageField['id'],
+								'caption' => $siteImageField['caption'],
+								'thumbnail' => $siteImageField['sizes']['thumbnail'],
+								'full' => $siteImageField['url']
+							];
+							?>
+							<figure
+								class="image card-image-figure square"
+								style="background-image: url(<?= $siteImages['thumbnail']; ?>)"
+								data-image-full="<?= $siteImages['full']; ?>">
+								<img src="<?= $siteImages['thumbnail'] ?>" />
+							</figure>
+						</div>
+						<div class="card-content is-clearfix">
+							<?= apply_filters( 'the_content', get_the_content( $query->post->ID ) ); ?>
+						</div>
+						<footer class="card-footer">
+							<p class="card-footer-item">
+                        <span>
+                          <a
+	                          target="_blank"
+	                          title="<?= get_the_title( $query->post->ID ); ?>"
+	                          href="<?= get_permalink( $query->post->ID ) ?>">Read More</a>
+                        </span>
+							</p>
+							<p class="card-footer-item">
+								<span>Full Site: <a target="_blank" title="Opens in new window" href="<?= get_field( 'site_url'); ?>"><?= get_field( 'site_url' ); ?></a></span>
+							</p>
+						</footer>
+					</div>
+
+				</div>
+			</div>
+			<?php
+		endwhile;
+	}
+
 	function theme_display_sites( \WP_Query $query ) {
-		
+
 		if ( $query->have_posts() ): ?>
           <div class="boxes-container">
 			  <div class="tabs is-centered" role="tablist" aria-multiselectable="false" data-tabs-root>
-				  <nav class="nav-tabs" data-tabs-nav>
+
 					  <ul role="tablist">
 						  <li class="is-active" role="presentation">
 							  <a href="#" class="tab" id="site_tab_0" role="tab" aria-controls="site_content_1" tabindex="0" aria-selected="true">
-								  <span class="icon is-small"><i class="fa fa-image"></i></span>
+								  <span class="icon is-small"><i class="fa fa-code-fork"></i></span>
 								  <span>Freelance</span>
 							  </a>
 						  </li>
 						  <li role="presentation">
 							  <a href="#" class="tab" id="site_tab_1" role="tab" aria-controls="site_content_2" tabindex="-1" aria-selected="false">
-								  <span class="icon is-small"><i class="fa fa-image"></i></span>
-								  <span>Freelance</span>
+								  <span class="icon is-small"><i class="fa fa-code-fork"></i></span>
+								  <span>Agency</span>
 							  </a>
 						  </li>
 					  </ul>
-				  </nav>
 
 				  <div class="tabs-container">
 					  <div class="tab-panel"
@@ -119,7 +179,11 @@ class Posts {
 						   aria-labelledby="site_tab_0"
 						   aria-hidden="false"
 						   aria-expanded="true">
-						  <h2>Freelance</h2>
+						  <?php
+						  $args = wp_parse_args( [ 'tag' => 'freelance' ], $query->query_vars );
+						  $siteQuery = new \lib\Query\SiteQuery( $args );
+						  $this->theme_site_query( $siteQuery );
+						  ?>
 					  </div>
 					  <div class="tab-panel"
 						   role="tabpanel"
@@ -127,72 +191,15 @@ class Posts {
 						   aria-labelledby="site_tab_1"
 						   aria-hidden="true"
 						   aria-expanded="false">
-						  <h2>Company</h2>
+						  <?php
+						  $args = wp_parse_args( [ 'tag' => 'zone5' ], $query->query_vars );
+						  $siteQuery = new \lib\Query\SiteQuery( $args );
+						  $this->theme_site_query( $siteQuery );
+						  ?>
 					  </div>
 				  </div>
 
 			  </div>
-            <?php
-
-            while ( $query->have_posts() ):
-              $query->the_post();
-              ?>
-              <div class="box box--site">
-                <header class="entry-header">
-                  <h2 class="title">
-                    <a
-                      href="<?= esc_url( get_permalink( $query->post->ID ) ); ?>">
-                      <?= get_the_title( $query->post->ID); ?>
-                    </a>
-                  </h2>
-                  <!--<div class="entry-meta">
-                    <p><label>Full Site: </label><a target="_blank" title="" href="<?= get_field( 'site_url'); ?>"><?= get_field( 'site_url' ); ?></a></p>
-                  </div>-->
-                </header>
-
-                <div class="entry-content">
-
-                  <div class="card">
-                    <div class="card-image">
-	                    <?php
-	                    $siteImageField = get_field( 'site_image' );
-	                    $siteImages = [
-		                    'id' => $siteImageField['id'],
-		                    'caption' => $siteImageField['caption'],
-		                    'thumbnail' => $siteImageField['sizes']['thumbnail'],
-		                    'full' => $siteImageField['url']
-	                    ];
-	                    ?>
-                      <figure
-	                      class="image card-image-figure square"
-                          style="background-image: url(<?= $siteImages['thumbnail']; ?>)"
-                          data-image-full="<?= $siteImages['full']; ?>">
-	                      <img src="<?= $siteImages['thumbnail'] ?>" />
-                      </figure>
-                    </div>
-                    <div class="card-content is-clearfix">
-                      <?= apply_filters( 'the_content', get_the_content( $query->post->ID ) ); ?>
-                    </div>
-                    <footer class="card-footer">
-                      <p class="card-footer-item">
-                        <span>
-                          <a
-                            target="_blank"
-                            title="<?= get_the_title( $query->post->ID ); ?>"
-                            href="<?= get_permalink( $query->post->ID ) ?>">Read More</a>
-                        </span>
-                      </p>
-                      <p class="card-footer-item">
-                        <span>Full Site: <a target="_blank" title="Opens in new window" href="<?= get_field( 'site_url'); ?>"><?= get_field( 'site_url' ); ?></a></span>
-                      </p>
-                    </footer>
-                  </div>
-
-                </div>
-              </div>
-              <?php
-            endwhile;
-            ?>
           </div>
           <?php
         endif;

@@ -342,11 +342,31 @@ add_filter( 'rest_endpoints', function( $endpoints ){
 	return $endpoints;
 });
 
+add_filter( 'pre_get_posts', 'filterSearchResults', 10, 1 );
+/**
+ * Filter search results by post types set explicitly in $query->set
+ *
+ * @param WP_Query $query
+ * @return WP_Query
+ */
+function filterSearchResults( WP_Query $query ) {
+	// ignore flag for admin or if we're not on search results page
+	$ignore = ( is_admin() || !$query->is_search() );
+	if ( !$ignore && $query->is_search() ):
+		//$query->set( 'post_type', [ 'page', 'post' ] );
+	endif;
+
+	return $query;
+}
+global $wp_filter;
+//var_dump($wp_filter['pre_get_posts']);
+
 /**
  * Enqueue scripts and styles.
  */
 function amorphous_scripts() {
 	wp_enqueue_style( 'amorphous-style', get_stylesheet_uri() );
+	wp_enqueue_style( 'fa', '//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' );
 	wp_enqueue_style( 'extracted-css', get_stylesheet_directory_uri() . '/dist/styles.css' );
 	wp_enqueue_style( 'slider-css', '//cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.2.4/tiny-slider.css' );
 	wp_enqueue_script( 'build-main', get_stylesheet_directory_uri() . '/dist/bundle.js', array(), '', true );

@@ -3,16 +3,15 @@
 class Tabs {
 
     constructor() {
-        this.$tab = undefined;
         this.$root = document.querySelector( '[data-tabs-root]' );
+        this.$nav = this.$root.querySelector( '[data-tabs-nav]' );
+        this.$tabs = this.$root.querySelectorAll( '.tab' );
 
         this.$root.addEventListener( 'click', this.onTabClick.bind( this ) );
 
         this.onTabClick = this.onTabClick.bind( this );
         this.showTab = this.showTab.bind( this );
         this.hideTab = this.hideTab.bind( this );
-        console.log(this, 'this');
-        //this.nav = this.$root.querySelector( '[data-tabs-nav]' );
     }
 
     onTabClick( event ) {
@@ -35,11 +34,21 @@ class Tabs {
             tabParent = tab.parentElement;
 
         tab.setAttribute( 'aria-selected', true );
-        tabParent.classList.add( 'is-selected' );
+        tabParent.classList.add( 'is-active' );
+
+        this.$tabs.forEach( t => {
+            if ( t.getAttribute( 'aria-controls') !== contentControls ) {
+                t.setAttribute( 'aria-selected', false );
+                t.parentElement.classList.remove( 'is-active' );
+            }
+        });
 
         let tabPanels = this.$root.querySelectorAll( '.tab-panel' );
-        let panel = [...tabPanels].filter( p => p.getAttribute( 'aria-controls' ) === contentControls );
-        panel[0].setAttribute( 'aria-hidden', false );
+        tabPanels.forEach( panel => {
+           panel.getAttribute( 'aria-controls' ) === contentControls
+               ? panel.setAttribute( 'aria-hidden', false )
+               : panel.setAttribute( 'aria-hidden', true );
+        });
     }
 
     hideTab( tab ) {
@@ -48,11 +57,17 @@ class Tabs {
             tabParent = tab.parentElement;
 
         tab.setAttribute( 'aria-selected', false );
-        tabParent.classList.remove( 'is-selected' );
-        //contentSelector.setAttribute( 'aria-hidden', true );
+        tabParent.classList.remove( 'is-active' );
+
+        let tabPanels = this.$root.querySelectorAll( '.tab-panel' );
+        tabPanels.forEach( panel => {
+            panel.getAttribute( 'aria-controls' ) === contentControls
+                ? panel.setAttribute( 'aria-hidden', true )
+                : panel.setAttribute( 'aria-hidden', false );
+        });
     }
-
-
 }
 
-new Tabs();
+if ( document.querySelector( '[data-tabs-root]' ) ) {
+    new Tabs();
+}

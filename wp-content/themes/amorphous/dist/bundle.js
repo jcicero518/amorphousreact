@@ -60,7 +60,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "57128bbe1a047247ab6c"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "95be9a9d7f8f365788bc"; // eslint-disable-line no-unused-vars
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
@@ -15466,8 +15466,6 @@ return /******/ (function(modules) { // webpackBootstrap
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
-
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 /*global themeApi */
@@ -15476,16 +15474,15 @@ var Tabs = function () {
     function Tabs() {
         _classCallCheck(this, Tabs);
 
-        this.$tab = undefined;
         this.$root = document.querySelector('[data-tabs-root]');
+        this.$nav = this.$root.querySelector('[data-tabs-nav]');
+        this.$tabs = this.$root.querySelectorAll('.tab');
 
         this.$root.addEventListener('click', this.onTabClick.bind(this));
 
         this.onTabClick = this.onTabClick.bind(this);
         this.showTab = this.showTab.bind(this);
         this.hideTab = this.hideTab.bind(this);
-        console.log(this, 'this');
-        //this.nav = this.$root.querySelector( '[data-tabs-nav]' );
     }
 
     _createClass(Tabs, [{
@@ -15510,13 +15507,19 @@ var Tabs = function () {
                 tabParent = tab.parentElement;
 
             tab.setAttribute('aria-selected', true);
-            tabParent.classList.add('is-selected');
+            tabParent.classList.add('is-active');
+
+            this.$tabs.forEach(function (t) {
+                if (t.getAttribute('aria-controls') !== contentControls) {
+                    t.setAttribute('aria-selected', false);
+                    t.parentElement.classList.remove('is-active');
+                }
+            });
 
             var tabPanels = this.$root.querySelectorAll('.tab-panel');
-            var panel = [].concat(_toConsumableArray(tabPanels)).filter(function (p) {
-                return p.getAttribute('aria-controls') === contentControls;
+            tabPanels.forEach(function (panel) {
+                panel.getAttribute('aria-controls') === contentControls ? panel.setAttribute('aria-hidden', false) : panel.setAttribute('aria-hidden', true);
             });
-            panel[0].setAttribute('aria-hidden', false);
         }
     }, {
         key: 'hideTab',
@@ -15525,15 +15528,21 @@ var Tabs = function () {
                 tabParent = tab.parentElement;
 
             tab.setAttribute('aria-selected', false);
-            tabParent.classList.remove('is-selected');
-            //contentSelector.setAttribute( 'aria-hidden', true );
+            tabParent.classList.remove('is-active');
+
+            var tabPanels = this.$root.querySelectorAll('.tab-panel');
+            tabPanels.forEach(function (panel) {
+                panel.getAttribute('aria-controls') === contentControls ? panel.setAttribute('aria-hidden', true) : panel.setAttribute('aria-hidden', false);
+            });
         }
     }]);
 
     return Tabs;
 }();
 
-new Tabs();
+if (document.querySelector('[data-tabs-root]')) {
+    new Tabs();
+}
 
 /***/ }),
 /* 149 */

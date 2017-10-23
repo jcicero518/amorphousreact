@@ -61,6 +61,28 @@ iframe {
 }
 
 .tabs {
+	&[data-tabs-root] {
+		flex-direction: column;
+	}
+	ul {
+		margin-left: 0;
+		li {
+			a.tab {
+				text-decoration: none;
+				&:hover {
+					text-decoration: none;
+					border-bottom-color: $color__link-hover;
+				}
+			}
+			&.is-active {
+				a {
+					color: $color__link-hover;
+					border-bottom-color: $color__link-hover;
+				}
+			}
+		}
+	}
+
 	.tabs-container {
 		.tab-panel {
 			&[aria-hidden="true"] {
@@ -68,6 +90,22 @@ iframe {
 			}
 			&[aria-hidden="false"] {
 				display: block;
+			}
+		}
+	}
+}
+
+.box {
+	&.box--site {
+		.entry-content {
+			.card {
+				white-space: normal;
+				a {
+					display: inline;
+					border: none;
+					padding: 0;
+					align-items: unset;
+				}
 			}
 		}
 	}
