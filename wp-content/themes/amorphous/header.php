@@ -55,7 +55,6 @@
 					'menu_class' => 'navbar-menu navbar-end',
 					'walker' => new lib\Menu\MenuWalker()
 				) );
-				//var_dump($menu);
 				//add_filter('nav_menu_item_args')
 				?>
 			</div>

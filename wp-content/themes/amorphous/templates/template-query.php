@@ -1,18 +1,17 @@
 <?php
 /**
- * The template for displaying all pages
- *
- * This is the template that displays all pages by default.
- * Please note that this is the WordPress construct of pages
- * and that other 'pages' on your WordPress site may use a
- * different template.
+ * Template Name: Query
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
  * @package amorphous
  */
 global $post;
+global $wp_query;
 $layoutFilter = new lib\Filters\Layout( $post );
+$siteQueryInstance = new lib\Query\SiteQuery( ['posts_per_page' => 3] );
+$siteQueryInstance->loop();
+//var_dump($siteQueryInstance->getQuery());
 get_header(); ?>
 
 	<section class="section">
