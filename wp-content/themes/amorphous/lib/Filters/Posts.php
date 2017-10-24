@@ -12,7 +12,12 @@ class Posts {
 
 	private function initFilters() {
 		add_filter( 'excerpt_more', [ __CLASS__, 'theme_excerpt_more' ], 10, 1 );
-
+		add_filter( 'pre_get_posts', function( \WP_Query $query ) {
+			$ignore = ( is_admin() || !$query->is_search() );
+			if ( !$ignore && $query->is_search() ):
+				$query->set( 'post_type', [ 'page', 'card', 'site' ] );
+			endif;
+		});
 		add_filter( 'theme_display_cards', function( $args = [] ) {
 			$category = isset( $args['category'] ) ? $args['category'] : 'ALL';
 
@@ -72,7 +77,9 @@ class Posts {
 				return;
 			}
 			?>
-			<div id="content-inner-replace" class="boxes-container replace-<?= $postType; ?>"></div>
+			<div id="content-inner-replace" class="boxes-container replace-<?= $postType; ?>">
+				<div class="cssload-clock"></div>
+			</div>
 
 			<?php
 			theme_page_navi( $query );

@@ -10612,6 +10612,153 @@ th {
   padding: 0;
 }
 
+.cssload-loader {
+  height: 70px;
+  width: 72px;
+  position: absolute;
+  left: calc(50% - 35px);
+  animation: cssload-loader 3.25s cubic-bezier(0.8, 0, 0.2, 1) infinite;
+}
+
+.cssload-top {
+  animation: cssload-top 3.25s linear infinite;
+  border-top: 35px solid #da4453;
+  border-right: 35px solid transparent;
+  border-left: 35px solid transparent;
+  height: 0px;
+  width: 2px;
+  -ms-transform-origin: 50% 100%;
+      transform-origin: 50% 100%;
+}
+
+.cssload-bottom {
+  animation: cssload-bottom 3.25s linear infinite;
+  border-right: 35px solid transparent;
+  border-bottom: 35px solid #da4453;
+  border-left: 35px solid transparent;
+  height: 0px;
+  width: 2px;
+  -ms-transform: scale(0);
+      transform: scale(0);
+  -ms-transform-origin: 50% 100%;
+      transform-origin: 50% 100%;
+}
+
+.cssload-line {
+  animation: cssload-line 3.25s linear infinite;
+  border-left: 2px dotted #fa0f26;
+  height: 0px;
+  width: 0px;
+  position: absolute;
+  top: 35px;
+  left: 35px;
+}
+
+@keyframes cssload-loader {
+  90% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(180deg);
+  }
+}
+
+@keyframes cssload-top {
+  90% {
+    transform: scale(0);
+  }
+
+  100% {
+    transform: scale(0);
+  }
+}
+
+@keyframes cssload-bottom {
+  10% {
+    transform: scale(0);
+  }
+
+  90% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes cssload-line {
+  10% {
+    height: 35px;
+  }
+
+  100% {
+    height: 35px;
+  }
+}
+
+.cssload-clock {
+  border-radius: 90px;
+  border: 5px solid black;
+  height: 120px;
+  width: 120px;
+  position: relative;
+  left: 35%;
+  left: calc(50% - 65px);
+  left: -o-calc(50% - 65px);
+  left: -ms-calc(50% - 65px);
+  left: -moz-calc(50% - 65px);
+}
+
+.cssload-clock:after {
+  content: "";
+  position: absolute;
+  background-color: black;
+  top: 3px;
+  left: 48%;
+  height: 57px;
+  width: 6px;
+  border-radius: 8px;
+  -ms-transform-origin: 50% 97%;
+      transform-origin: 50% 97%;
+  animation: grdAiguille 1.2s linear infinite;
+}
+
+.cssload-clock:before {
+  content: "";
+  position: absolute;
+  background-color: black;
+  top: 9px;
+  left: 48%;
+  height: 53px;
+  width: 6px;
+  border-radius: 8px;
+  -ms-transform-origin: 50% 94%;
+      transform-origin: 50% 94%;
+  animation: ptAiguille 7.2s linear infinite;
+}
+
+@keyframes grdAiguille {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes ptAiguille {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 /*--------------------------------------------------------------
 # Typography
 --------------------------------------------------------------*/
@@ -11142,8 +11289,10 @@ a.button:hover {
 --------------------------------------------------------------*/
 
 .navbar {
+  background-color: rgba(54, 54, 54, 0.9);
   background-repeat: repeat;
   background-position: 0 0;
+  box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.5);
 }
 
 .navbar ul {
@@ -11176,12 +11325,14 @@ a.button:hover {
 }
 
 .navbar li {
-  padding: 20px 10px;
+  /*padding: 20px 10px;*/
+  padding: 0 10px;
   display: -ms-flexbox;
   display: flex;
 }
 
 .navbar .navbar-menu a {
+  padding: 20px 10px;
   font-family: "Lato", sans-serif;
   font-weight: bold;
   font-size: 14px;
@@ -11189,12 +11340,15 @@ a.button:hover {
   color: #F5F7FA;
   text-decoration: none;
   text-transform: uppercase;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+  border-bottom: 2px solid transparent;
 }
 
 .navbar .navbar-menu a:hover,
 .navbar .navbar-menu a:focus {
   color: #DA4453;
   background-color: transparent;
+  border-bottom-color: #DA4453;
 }
 
 .navbar .navbar-menu .current_page_item > a,
@@ -11203,6 +11357,7 @@ a.button:hover {
 .navbar .navbar-menu .current-menu-ancestor > a {
   color: #DA4453;
   background-color: transparent;
+  border-bottom-color: #DA4453;
 }
 
 .navbar .navbar-brand a {
@@ -11332,11 +11487,10 @@ a.button:hover {
 /* Small menu. */
 
 .navbar-burger.is-active,
-.navbar-burger:hover,
-.navbar-burger:focus {
+.navbar-burger:hover {
   background-color: #DA4453;
   color: #ffffff;
-  transition: all 500ms linear;
+  transition: background 500ms linear;
 }
 
 @media screen and (max-width: 1023px) {
