@@ -2,27 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="44a3ea5c-d2be-4901-95c1-dffe09959618" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/amorphous/lib/Hooks/SiteLoad.php" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/amorphous_2017-10-19.sql.gz" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/amorphous_2017-10-20.sql.gz" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/amorphous_2017-10-22.sql.gz" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/amorphous__1020_2017_10-27 AM_amorphous_before_import.sql.gz" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/amorphous__1020_2017_2-14 PM_amorphous_after_import.sql.gz" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/amorphous__1023_2017_6-55 PM_amorphous_10_23.sql.gz" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Webpack" afterPath="$PROJECT_DIR$/Webpack" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-config.php" afterPath="$PROJECT_DIR$/wp-config.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/assets/scripts/custom/app.js" afterPath="$PROJECT_DIR$/wp-content/themes/amorphous/assets/scripts/custom/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/assets/scripts/custom/nav.js" afterPath="$PROJECT_DIR$/wp-content/themes/amorphous/assets/scripts/custom/nav.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/assets/scripts/custom/sticky.js" afterPath="$PROJECT_DIR$/wp-content/themes/amorphous/assets/scripts/custom/sticky.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/dist/bundle.js" afterPath="$PROJECT_DIR$/wp-content/themes/amorphous/dist/bundle.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/dist/styles.css" afterPath="$PROJECT_DIR$/wp-content/themes/amorphous/dist/styles.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/functions.php" afterPath="$PROJECT_DIR$/wp-content/themes/amorphous/functions.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/header.php" afterPath="$PROJECT_DIR$/wp-content/themes/amorphous/header.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/lib/Filters/Layout.php" afterPath="$PROJECT_DIR$/wp-content/themes/amorphous/lib/Filters/Layout.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/lib/Filters/Posts.php" afterPath="$PROJECT_DIR$/wp-content/themes/amorphous/lib/Filters/Posts.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/lib/Menu/MenuWalker.php" afterPath="$PROJECT_DIR$/wp-content/themes/amorphous/lib/Menu/MenuWalker.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/sass/forms/_buttons.scss" afterPath="$PROJECT_DIR$/wp-content/themes/amorphous/sass/forms/_buttons.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/sass/navigation/_links.scss" afterPath="$PROJECT_DIR$/wp-content/themes/amorphous/sass/navigation/_links.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/sass/navigation/_menus.scss" afterPath="$PROJECT_DIR$/wp-content/themes/amorphous/sass/navigation/_menus.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/sass/site/primary/_posts-and-pages.scss" afterPath="$PROJECT_DIR$/wp-content/themes/amorphous/sass/site/primary/_posts-and-pages.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/sass/site/secondary/_widgets.scss" afterPath="$PROJECT_DIR$/wp-content/themes/amorphous/sass/site/secondary/_widgets.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/sass/style.scss" afterPath="$PROJECT_DIR$/wp-content/themes/amorphous/sass/style.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/sass/variables-site/_colors.scss" afterPath="$PROJECT_DIR$/wp-content/themes/amorphous/sass/variables-site/_colors.scss" />
     </list>
     <ignored path="amorphous.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -710,57 +696,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="wp-content" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="themes" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="amorphous" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="scripts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="custom" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="amorphous" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="amorphous" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wp-content" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="themes" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="amorphous" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="images" />
+              <option name="myItemId" value="data" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -868,10 +804,10 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="2" y="174" width="1920" height="1124" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30617678" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27263045" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27263045" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32975295" sideWeight="0.502442" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" x="177" y="123" width="1480" height="849" />
