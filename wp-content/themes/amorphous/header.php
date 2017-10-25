@@ -29,7 +29,7 @@
 			<?php
 			the_custom_logo();
 			if ( is_front_page() && is_home() ) : ?>
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+				<!--<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>-->
 			<?php
 			endif;
 			?>
@@ -39,7 +39,10 @@
 	<nav id="site-navigation" class="main-navigation navbar">
 		<div class="container">
 			<div class="navbar-brand">
-				<a class="navbar-item" href="/">Amorphous Web Solutions</a>
+				<!--<a class="navbar-item" href="/">Amorphous Web Solutions</a>-->
+				<a class="navbar-item" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+					<img width="182" height="117" alt="Home" src="<?= get_stylesheet_directory_uri() . '/assets/images/logo-white182.png'; ?>" />
+				</a>
 				<button class="button navbar-burger" data-target-class="navbar-menu">
 					<span></span>
 					<span></span>

@@ -365,20 +365,24 @@ global $wp_filter;
  * Enqueue scripts and styles.
  */
 function amorphous_scripts() {
+	global $wp_scripts;
+	global $post;
+
+	//wp_deregister_script( 'jquery' );
 	wp_enqueue_style( 'amorphous-style', get_stylesheet_uri() );
 	wp_enqueue_style( 'fa', '//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' );
 	wp_enqueue_style( 'extracted-css', get_stylesheet_directory_uri() . '/dist/styles.css' );
 	wp_enqueue_style( 'slider-css', '//cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.2.4/tiny-slider.css' );
 	wp_enqueue_script( 'build-main', get_stylesheet_directory_uri() . '/dist/bundle.js', array(), '', true );
 	//wp_enqueue_script( 'build-main', get_template_directory_uri() . '/build/js/app.js', array(), '', true );
-	global $post;
+
 
 	$logo = get_custom_logo();
 
 	wp_localize_script( 'build-main', 'globalPost', [
 		'postID' => $post->ID
 	]);
-	//$mainMenu = wp_get_nav_menu_items( 'Main' );
+
 	$mainMenu = wp_nav_menu( array(
 		'echo' => FALSE,
 		'menu' => 'Main',
@@ -391,10 +395,17 @@ function amorphous_scripts() {
 	wp_localize_script( 'build-main', 'themeApi', [
 		'home' => home_url(),
 		'logo' => $logo,
+		'theme' => get_stylesheet_directory_uri(),
+		'images' => get_stylesheet_directory_uri() . '/assets/images/',
 		'main' => home_url( '', 'rest' ) . '/wp-json/',
 		'rest' => home_url( '', 'rest' ) . '/wp-json/amorphous-theme/v1/'
 	]);
-
+	wp_localize_script( 'build-main', 'themeNavMap', [
+		'about' => 'menu-page-id-2',
+		'code'  => 'menu-page-id-16',
+		'portfolio' => 'menu-page-id-27',
+		'contact' => 'menu-page-id-39'
+	]);
 
 	$queried_object = get_queried_object();
 	$local = [
@@ -403,12 +414,29 @@ function amorphous_scripts() {
 	$local['taxonomy'] = get_taxonomy( $queried_object->taxonomy );
 
 	wp_localize_script( 'build-main', 'settings', $local );
+
 }
 add_action( 'wp_enqueue_scripts', 'amorphous_scripts' );
 
+/**
+ * Filters the HTML script tag of an enqueued script.
+ *
+ * @since 4.1.0
+ *
+ * @param string $tag    The `<script>` tag for the enqueued script.
+ * @param string $handle The script's registered handle.
+ * @param string $src    The script's source URL.
+ */
+//add_filter( 'script_loader_tag', function( $tag, $handle, $src ) {
+
+//});
 require_once get_template_directory() . '/autoloader.php';
 
+global $wp_filter;
+//var_dump($wp_filter['wp_head']);
+
 add_action( 'init', function() {
+	new lib\Hooks\SiteLoad();
 	new lib\CPT\Taxonomy();
 	new lib\CPT\CPT();
 });

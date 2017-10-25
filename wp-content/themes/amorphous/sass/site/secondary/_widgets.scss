@@ -21,7 +21,10 @@
 
 				}
 				&.current-cat a {
-					color: #DA4453;
+					color: $color__link-hover;
+					&:hover, &:focus {
+						color: $color__link-hover;
+					}
 				}
 			}
 		}

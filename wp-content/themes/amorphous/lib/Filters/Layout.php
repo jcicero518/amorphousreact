@@ -81,12 +81,14 @@ class Layout {
 												$cardQuery->the_post();
 												?>
 												<div class="column">
-													<div class="box">
-														<div class="entry-header">
-															<h2 class="title" style="margin-bottom: 1em"><?= get_the_title( $cardQuery->post->ID ); ?></h2>
+													<div class="card">
+														<div class="entry-header card-header">
+															<p class="card-header-title" style="margin-bottom:0"><?= get_the_title( $cardQuery->post->ID ); ?></p>
 														</div>
-														<div>
-															<?= get_the_excerpt( $cardQuery->post->ID ); ?>
+														<div class="card-content">
+															<div class="content">
+																<?= get_the_excerpt( $cardQuery->post->ID ); ?>
+															</div>
 														</div>
 													</div>
 												</div>

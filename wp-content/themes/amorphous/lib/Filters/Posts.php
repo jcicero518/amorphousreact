@@ -12,6 +12,9 @@ class Posts {
 
 	private function initFilters() {
 		add_filter( 'excerpt_more', [ __CLASS__, 'theme_excerpt_more' ], 10, 1 );
+		add_filter( 'alt_page_title', function( $title ) {
+
+		});
 		add_filter( 'pre_get_posts', function( \WP_Query $query ) {
 			$ignore = ( is_admin() || !$query->is_search() );
 			if ( !$ignore && $query->is_search() ):
@@ -101,52 +104,37 @@ class Posts {
 		while ( $query->have_posts() ):
 			$query->the_post();
 			?>
-			<div class="box box--site">
-				<header class="entry-header">
-					<!--<h2 class="title">
-						<a
-							href="<?= esc_url( get_permalink( $query->post->ID ) ); ?>">
-							<?= get_the_title( $query->post->ID); ?>
-						</a>
-					</h2>-->
-					<h2 class="title"><?= get_the_title( $query->post->ID ); ?></h2>
-					<!--<div class="entry-meta">
-                    <p><label>Full Site: </label><a target="_blank" title="" href="<?= get_field( 'site_url'); ?>"><?= get_field( 'site_url' ); ?></a></p>
-                  </div>-->
+			<div class="card box--site">
+				<header class="card-header">
+					<p class="card-header-title"><?= get_the_title( $query->post->ID ); ?></p>
 				</header>
-
-				<div class="entry-content">
-
-					<div class="card">
-						<div class="card-image">
-							<?php
-							$siteImageField = get_field( 'site_image' );
-							$siteImages = [
-								'id' => $siteImageField['id'],
-								'caption' => $siteImageField['caption'],
-								'thumbnail' => $siteImageField['sizes']['thumbnail'],
-								'full' => $siteImageField['url']
-							];
-							?>
-							<figure
-								class="image card-image-figure square"
-								style="background-image: url(<?= $siteImages['thumbnail']; ?>)"
-								data-image-full="<?= $siteImages['full']; ?>">
-								<img src="<?= $siteImages['thumbnail'] ?>" />
-							</figure>
-						</div>
-						<div class="card-content is-clearfix">
-							<?= apply_filters( 'the_content', get_the_content( $query->post->ID ) ); ?>
-						</div>
-						<footer class="card-footer">
-
-							<p class="card-footer-item">
-								<span>Full Site: <a target="_blank" title="Opens in new window" href="<?= get_field( 'site_url'); ?>"><?= get_field( 'site_url' ); ?></a></span>
-							</p>
-						</footer>
-					</div>
-
+				<div class="card-image">
+					<?php
+					$siteImageField = get_field( 'site_image' );
+					$siteImages = [
+						'id' => $siteImageField['id'],
+						'caption' => $siteImageField['caption'],
+						'thumbnail' => $siteImageField['sizes']['thumbnail'],
+						'full' => $siteImageField['url']
+					];
+					?>
+					<figure
+						class="image card-image-figure square"
+						style="background-image: url(<?= $siteImages['thumbnail']; ?>)"
+						data-image-full="<?= $siteImages['full']; ?>">
+						<img src="<?= $siteImages['thumbnail'] ?>" />
+					</figure>
 				</div>
+				<div class="card-content entry-content">
+					<div class="content is-clearfix">
+						<?= apply_filters( 'the_content', get_the_content( $query->post->ID ) ); ?>
+					</div>
+				</div>
+				<footer class="card-footer">
+					<p class="card-footer-item">
+						<span>Full Site: <a target="_blank" title="Opens in new window" href="<?= get_field( 'site_url'); ?>"><?= get_field( 'site_url' ); ?></a></span>
+					</p>
+				</footer>
 			</div>
 			<?php
 		endwhile;

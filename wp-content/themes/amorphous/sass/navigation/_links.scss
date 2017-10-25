@@ -1,6 +1,6 @@
 a {
 	color: $color__link;
-
+	transition: all 250ms linear;
 	&:visited {
 		color: $color__link-visited;
 	}
@@ -31,7 +31,7 @@ a {
 
 .entry-content {
 	a {
-		transition: all 250ms linear;
+
 	}
 	p, li {
 		a {

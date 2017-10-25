@@ -60,7 +60,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "a7a9ec6d2f459b22f510"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "278c51425b47547fb462"; // eslint-disable-line no-unused-vars
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
@@ -12293,11 +12293,11 @@ __webpack_require__(106);
 
 __webpack_require__(145);
 
-__webpack_require__(147);
-
 __webpack_require__(148);
 
 __webpack_require__(149);
+
+__webpack_require__(147);
 
 /***/ }),
 /* 102 */
@@ -15458,8 +15458,27 @@ return /******/ (function(modules) { // webpackBootstrap
 "use strict";
 
 
-/*global themeApi */
+function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
+
+/*global themeApi, themeNavMap, settings */
 var navBurger = document.querySelector('.navbar-burger');
+var navMenuContainers = document.querySelectorAll('ul.navbar-menu');
+var navMap = Object.assign({}, themeNavMap);
+
+function maybeHighlightNavItem() {
+    var taxonomy = settings.queriedObject.taxonomy;
+
+    if (taxonomy && taxonomy !== undefined) {
+        if (taxonomy === 'code_category') {
+            [].concat(_toConsumableArray(navMenuContainers)).map(function (container) {
+                var listElem = container.querySelector('li.' + navMap['code']);
+                if (!listElem.classList.contains('current-menu-item')) {
+                    listElem.classList.add('current-menu-item');
+                }
+            });
+        }
+    }
+}
 
 navBurger.addEventListener('click', function (event) {
     var navButton = event.target,
@@ -15474,6 +15493,16 @@ navBurger.addEventListener('click', function (event) {
         navTargetElem.classList.contains('is-active') ? navTargetElem.classList.remove('is-active') : navTargetElem.classList.add('is-active');
     }
 });
+
+function domReady(cbfn) {
+    if (document.readyState != 'loading') {
+        cbfn();
+    } else {
+        document.addEventListener('DOMContentLoaded', cbfn);
+    }
+}
+
+domReady(maybeHighlightNavItem);
 
 /***/ }),
 /* 148 */
@@ -15617,7 +15646,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /*global themeApi, mainMenu */
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /*global settings, themeApi, themeNavMap, mainMenu */
 
 
 var Sticky = function (_Component) {
@@ -15648,7 +15677,7 @@ var Sticky = function (_Component) {
         key: "render",
         value: function render() {
             var menu = { __html: mainMenu };
-
+            var logo = themeApi.images + "logo-a-white56.png";
             return _react2.default.createElement(
                 _stickyContainer2.default,
                 { stickyClass: "sticky-component", enter: "80" },
@@ -15664,7 +15693,7 @@ var Sticky = function (_Component) {
                             _react2.default.createElement(
                                 "a",
                                 { className: "navbar-item", href: "/" },
-                                "Amorphous Web Solutions"
+                                _react2.default.createElement("img", { alt: "Home", src: logo })
                             ),
                             _react2.default.createElement(
                                 "button",

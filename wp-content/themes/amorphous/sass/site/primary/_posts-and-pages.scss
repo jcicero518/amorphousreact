@@ -16,7 +16,7 @@
 	margin: 1.5em 0 0;
 }
 
-.entry-content {
+.entry-content, .box--site {
 	.card-image {
 		.card-image-figure {
 			background-repeat: no-repeat;
@@ -33,6 +33,45 @@
 				opacity: 0;
 			}
 		}
+	}
+	.card-content {
+		.content {
+			white-space: normal;
+			a {
+				padding: 0;
+				display: inline;
+				border: none;
+			}
+		}
+	}
+	.card-footer {
+		a {
+			padding: 0;
+			display: inline;
+			border: none;
+		}
+	}
+}
+
+.card-header {
+	background-color: darken($card_header_bg, 5%);
+	p {
+		margin-bottom: 0;
+	}
+}
+
+.box {
+	&.box--site {
+		.entry-header {
+			background-color: darken($card_header_bg, 5%);
+		}
+	}
+}
+
+.footer {
+	.section {
+		padding-top: 1rem;
+		padding-bottom: 1rem;
 	}
 }
 
