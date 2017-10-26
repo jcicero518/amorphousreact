@@ -367,7 +367,8 @@ global $wp_filter;
 function amorphous_scripts() {
 	global $wp_scripts;
 	global $post;
-
+	// https://www.gatsbyjs.org/blog/2017-10-20-from-wordpress-to-developing-in-react-starting-to-see-it/
+	// https://indigotree.co.uk/
 	//wp_deregister_script( 'jquery' );
 	wp_enqueue_style( 'amorphous-style', get_stylesheet_uri() );
 	wp_enqueue_style( 'fa', '//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' );
