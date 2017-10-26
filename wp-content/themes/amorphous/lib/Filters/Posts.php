@@ -74,7 +74,7 @@ class Posts {
 
 			if ( $postType === 'site' ) {
               ?>
-              <h2 class="title">Recent Sites</h2>
+              <h2 class="title">Recent Work</h2>
               <?php
 				$this->theme_display_sites( $query );
 				return;
@@ -98,46 +98,6 @@ class Posts {
 		$more .= '<a class="button" href="' . get_permalink( $post->ID ) . '">Read More &raquo;</a>';
 		$more .= '';
 		return $more;
-	}
-
-	function theme_site_query( \WP_Query $query ) {
-		while ( $query->have_posts() ):
-			$query->the_post();
-			?>
-			<div class="card box--site">
-				<header class="card-header">
-					<p class="card-header-title"><?= get_the_title( $query->post->ID ); ?></p>
-				</header>
-				<div class="card-image">
-					<?php
-					$siteImageField = get_field( 'site_image' );
-					$siteImages = [
-						'id' => $siteImageField['id'],
-						'caption' => $siteImageField['caption'],
-						'thumbnail' => $siteImageField['sizes']['thumbnail'],
-						'full' => $siteImageField['url']
-					];
-					?>
-					<figure
-						class="image card-image-figure square"
-						style="background-image: url(<?= $siteImages['thumbnail']; ?>)"
-						data-image-full="<?= $siteImages['full']; ?>">
-						<img src="<?= $siteImages['thumbnail'] ?>" />
-					</figure>
-				</div>
-				<div class="card-content entry-content">
-					<div class="content is-clearfix">
-						<?= apply_filters( 'the_content', get_the_content( $query->post->ID ) ); ?>
-					</div>
-				</div>
-				<footer class="card-footer">
-					<p class="card-footer-item">
-						<span>Full Site: <a target="_blank" title="Opens in new window" href="<?= get_field( 'site_url'); ?>"><?= get_field( 'site_url' ); ?></a></span>
-					</p>
-				</footer>
-			</div>
-			<?php
-		endwhile;
 	}
 
 	function theme_display_sites( \WP_Query $query ) {
@@ -192,5 +152,61 @@ class Posts {
           </div>
           <?php
         endif;
+	}
+
+	function theme_site_query( \WP_Query $query ) {
+		while ( $query->have_posts() ):
+			$query->the_post();
+			$siteImageField = get_field( 'site_image' );
+			$siteDetails = get_field( 'site_details' );
+			$siteImages = [
+				'id' => $siteImageField['id'],
+				'caption' => $siteImageField['caption'],
+				'thumbnail' => $siteImageField['sizes']['thumbnail'],
+				'full' => $siteImageField['url']
+			];
+			?>
+			<div class="card box--site">
+				<header class="card-header">
+					<p class="card-header-title"><?= get_the_title( $query->post->ID ); ?></p>
+				</header>
+				<div class="columns">
+					<div class="column is-5">
+						<div class="card-content entry-content">
+							<h2 class="title">Project Details</h2>
+							<div>
+								<div class="entry-meta">
+									<?php amorphous_term_list( $query->post->ID, 'site_category', FALSE ); ?>
+								</div>
+							</div>
+							<!--<div class="content is-clearfix">
+								<?= apply_filters( 'the_content', get_the_content( $query->post->ID ) ); ?>
+							</div>-->
+						</div>
+					</div>
+					<div class="column">
+						<div class="card-image">
+							<figure
+								class="image card-image-figure square"
+								style="background-image: url(<?= $siteImages['thumbnail']; ?>)"
+								data-image-full="<?= $siteImages['full']; ?>">
+								<img src="<?= $siteImages['thumbnail'] ?>" />
+							</figure>
+						</div>
+					</div>
+				</div>
+
+
+				<footer class="card-footer">
+					<p class="card-footer-item">
+						<span>Full Site: <a target="_blank" title="Opens in new window" href="<?= get_field( 'site_url'); ?>"><?= get_field( 'site_url' ); ?></a></span>
+					</p>
+					<p class="card-footer-item">
+						<a href="<?= get_permalink( $query->post->ID ); ?>" title="Read More">Read More &raquo;</a>
+					</p>
+				</footer>
+			</div>
+			<?php
+		endwhile;
 	}
 }

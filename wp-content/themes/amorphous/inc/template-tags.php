@@ -41,23 +41,36 @@ if ( ! function_exists( 'amorphous_posted_on' ) ) :
 	}
 endif;
 
-function amorphous_term_list( $postId, $tax = 'code_category' ) {
-	$get_term_tag_list = function( $postId, $tax ) {
+function amorphous_term_list( $postId, $tax = 'code_category', $isLinked = TRUE ) {
+	$get_term_tag_list = function( $postId, $tax, $isLinked ) {
 		$terms = get_the_terms( $postId, $tax );
-		foreach ( $terms as $term ) {
-			?>
-			<a class="tag is-link"
-			   title="<?= $term->name; ?>"
-			   href="<?= get_term_link( $term->term_id, 'code_category'); ?>"><?= $term->name; ?></a>
-			<?php
-		}
+
+		if ( $isLinked ):
+			foreach ( $terms as $term ) {
+				?>
+				<a class="tag is-link"
+				   title="<?= $term->name; ?>"
+				   href="<?= get_term_link( $term->term_id, $tax); ?>"><?= $term->name; ?></a>
+				<?php
+			}
+		else:
+			foreach ( $terms as $term ) {
+				?>
+				<span class="tag" style="display: block"><?= $term->name; ?></span>
+				<?php
+			}
+		endif;
 	};
 	?>
 
 	<div class="field is-grouped is-grouped-multiline">
 		<div class="control">
 			<div class="tags has-addons">
-				<p><label>Topics:</label> <?= $get_term_tag_list( $postId, $tax ) ?></p>
+				<?php if ( $isLinked ): ?>
+					<p><label>Topics:</label> <?= $get_term_tag_list( $postId, $tax, $isLinked ) ?></p>
+				<?php else: ?>
+					<p><?= $get_term_tag_list( $postId, $tax, $isLinked ) ?></p>
+				<?php endif; ?>
 			</div>
 		</div>
 	</div>
