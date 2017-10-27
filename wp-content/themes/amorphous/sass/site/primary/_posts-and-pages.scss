@@ -23,6 +23,7 @@
 	}
 }
 
+
 @media screen and (min-width: 768px) and (max-width: 899px) {
 	.columns {
 		&.main-flex-columns {
@@ -47,6 +48,13 @@
 			display: flex;
 			.main-flex-column {
 				display: flex;
+				&.is-main-content {
+					flex-grow: 1;
+					min-width: 75%;
+					.box {
+						flex-grow: 1;
+					}
+				}
 				&:first-of-type {
 					flex-basis: 50%;
 				}
@@ -124,6 +132,7 @@
 			margin: 0;
 		}
 		.card-content {
+			padding: 0.5em 0;
 			a {
 				margin: 0;
 				padding: 0;

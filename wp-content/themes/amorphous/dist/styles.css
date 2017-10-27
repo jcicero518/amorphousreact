@@ -11331,6 +11331,22 @@ textarea {
   width: 100%;
 }
 
+form.wpcf7-form label {
+  font-weight: bold;
+}
+
+form.wpcf7-form label input[type="text"],
+form.wpcf7-form label input[type="email"] {
+  transition: all 350ms linear;
+}
+
+form.wpcf7-form label input[type="text"]:focus,
+form.wpcf7-form label input[type="email"]:focus {
+  border-color: #2c99ce;
+  transition: all 350ms linear;
+  outline: none;
+}
+
 /*--------------------------------------------------------------
 # Navigation
 --------------------------------------------------------------*/
@@ -11897,6 +11913,17 @@ a.button:hover {
     display: flex;
   }
 
+  .columns.main-flex-columns .main-flex-column.is-main-content {
+    -ms-flex-positive: 1;
+        flex-grow: 1;
+    min-width: 75%;
+  }
+
+  .columns.main-flex-columns .main-flex-column.is-main-content .box {
+    -ms-flex-positive: 1;
+        flex-grow: 1;
+  }
+
   .columns.main-flex-columns .main-flex-column:first-of-type {
     -ms-flex-preferred-size: 50%;
         flex-basis: 50%;
@@ -11976,6 +12003,10 @@ a.button:hover {
 
 .card.box--site .columns {
   margin: 0;
+}
+
+.card.box--site .card-content {
+  padding: 0.5em 0;
 }
 
 .card.box--site .card-content a {

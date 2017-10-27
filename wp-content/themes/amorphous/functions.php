@@ -95,6 +95,22 @@ function amorphous_content_width() {
 }
 add_action( 'after_setup_theme', 'amorphous_content_width', 0 );
 
+add_action( 'theme_analytics_gtag_head', function() {
+	ob_start();
+	?>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-108839105-1"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'UA-108839105-1');
+	</script>
+	<?php
+	ob_end_flush();
+});
+
 /**
  * Register widget area.
  *
@@ -374,7 +390,7 @@ function amorphous_scripts() {
 	wp_enqueue_style( 'fa', '//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' );
 	wp_enqueue_style( 'extracted-css', get_stylesheet_directory_uri() . '/dist/styles.css' );
 	wp_enqueue_style( 'slider-css', '//cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.2.4/tiny-slider.css' );
-	wp_enqueue_script( 'build-main', get_stylesheet_directory_uri() . '/dist/bundle.js', array(), '', true );
+	wp_enqueue_script( 'build-main', get_stylesheet_directory_uri() . '/buildProd/dist/bundle.js', array(), '', true );
 	//wp_enqueue_script( 'build-main', get_template_directory_uri() . '/build/js/app.js', array(), '', true );
 
 

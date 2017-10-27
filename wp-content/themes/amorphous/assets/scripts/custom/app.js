@@ -1,3 +1,4 @@
+//process.env.NODE_ENV = 'production';
 //import "bulma";
 import "../../../sass/style.scss";
 

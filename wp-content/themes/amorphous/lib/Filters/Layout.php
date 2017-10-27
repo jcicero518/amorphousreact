@@ -25,7 +25,7 @@ class Layout {
 				case 'twocol':
 					?>
 					<div class="columns main-flex-columns">
-						<div class="column main-flex-column">
+						<div class="column is-9 is-main-content main-flex-column">
 							<div class="box">
 								<?php
 								while ( have_posts() ) : the_post();

@@ -31,3 +31,22 @@ select {
 textarea {
 	width: 100%;
 }
+
+form {
+	&.wpcf7-form {
+		label {
+			font-weight: bold;
+			span {
+
+			}
+			input[type="text"], input[type="email"] {
+				transition: all 350ms linear;
+				&:focus {
+					border-color: $color__link-hover;
+					transition: all 350ms linear;
+					outline: none;
+				}
+			}
+		}
+	}
+}

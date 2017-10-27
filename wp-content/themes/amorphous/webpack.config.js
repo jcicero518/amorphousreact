@@ -3,15 +3,17 @@
 const path = require('path');
 const webpack = require('webpack');
 const BrowserSyncPlugin = require( 'browser-sync-webpack-plugin' );
+const CopyWebpackPlugin = require( 'copy-webpack-plugin' );
+const CleanWebpackPlugin = require( 'clean-webpack-plugin' );
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 const config = require('./assets/config.json');
 
+// https://webpack.js.org/guides/production/
+// https://medium.com/netscape/webpack-3-react-production-build-tips-d20507dba99a
+
 const webpackConfig = {
-    //devtool: 'inline-source-map',
-    /*node: {
-        fs: 'empty'
-    },*/
+    devtool: 'inline-source-map',
     entry: [
         './assets/scripts/custom/app.js'
     ],
@@ -99,24 +101,17 @@ const webpackConfig = {
                     name: `[path][name].[ext]`
                 }
             }
-            /*{
-                test: /\.(sass|scss)$/,
-                loaders: ExtractTextPlugin.extract({
-                    fallback: 'style-loader',
-                    use: [
-                        'css-loader',
-                        'sass-loader',
-                        'postcss-loader'
-                    ]
-                })
-            }*/
         ]
     },
     plugins: [
         //new webpack.LoaderOptionsPlugin({
             //debug: true
         //}),
-        new ExtractTextPlugin('styles.css'),
+        new ExtractTextPlugin({
+            disable: false,
+            filename: 'styles.css',
+            allChunks: true
+        }),
         new webpack.HotModuleReplacementPlugin(),
         //new webpack.NoEmitOnErrorsPlugin(),
         new BrowserSyncPlugin({
@@ -128,5 +123,64 @@ const webpackConfig = {
         })
     ]
 };
+
+process.env.NODE_ENV = 'production';
+// webpack --progress --define process.env.NODE_ENV="'production'"
+
+if ( process.env.NODE_ENV === 'production' ) {
+    const buildFolder = path.resolve( __dirname, 'buildProd' );
+
+    webpackConfig.devtool = 'cheap-module-source-map';
+
+    webpackConfig.plugins.push( new webpack.DefinePlugin({
+        'process.env': {
+            'NODE_ENV': JSON.stringify('production')
+        }
+    }));
+
+    /*webpackConfig.plugins.push( new webpack.optimize.ModuleConcatenationPlugin() );
+    webpackConfig.plugins.push( new webpack.optimize.CommonsChunkPlugin({
+        name: 'vendor',
+        filename: 'vendor.[chunk].js',
+        minChunks(module) {
+            return module.context && module.context.indexOf('node_modules') >= 0;
+        }
+    }));*/
+
+    webpackConfig.plugins.push( new webpack.optimize.UglifyJsPlugin({
+        'mangle': {
+            'screw_ie8': true
+        },
+        'compress': {
+            'screw_ie8': true,
+            'warnings': false
+        },
+        'output': {
+            'comments': false
+        },
+        sourceMap: true
+    }));
+
+    //webpackConfig.plugins.push( new webpack.HashedModuleIdsPlugin() );
+
+    // Clean out the current contents of our build folder
+    webpackConfig.plugins.push( new CleanWebpackPlugin( [buildFolder] ) );
+
+    webpackConfig.plugins.push(
+        new CopyWebpackPlugin( [
+            //{ from: path.resolve( __dirname, 'server' ) + '/**', to: buildFolder },
+            //{ from: path.resolve( __dirname, '../../../*.php' ), to: buildFolder },
+            //{ from: path.resolve( __dirname, '*.php' ), to: buildFolder }
+        ], {
+
+            // By default, we only copy modified files during
+            // a watch or webpack-dev-server build. Setting this
+            // to `true` copies all files.
+            copyUnmodified: true
+        } )
+    );
+
+    webpackConfig.output.path = buildFolder + '/dist';
+}
 
 module.exports = webpackConfig;
