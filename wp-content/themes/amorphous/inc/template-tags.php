@@ -56,7 +56,7 @@ function amorphous_term_list( $postId, $tax = 'code_category', $isLinked = TRUE 
 		else:
 			foreach ( $terms as $term ) {
 				?>
-				<span class="tag" style="display: block"><?= $term->name; ?></span>
+				<span class="tag is-medium is-info"><?= $term->name; ?></span>
 				<?php
 			}
 		endif;
@@ -69,10 +69,28 @@ function amorphous_term_list( $postId, $tax = 'code_category', $isLinked = TRUE 
 				<?php if ( $isLinked ): ?>
 					<p><label>Topics:</label> <?= $get_term_tag_list( $postId, $tax, $isLinked ) ?></p>
 				<?php else: ?>
-					<p><?= $get_term_tag_list( $postId, $tax, $isLinked ) ?></p>
+					<?= $get_term_tag_list( $postId, $tax, $isLinked ) ?>
 				<?php endif; ?>
 			</div>
 		</div>
+	</div>
+	<?php
+}
+
+function amorphous_site_term_list( $postId, $tax = 'site_category' ) {
+	$get_term_tag_list = function( $postId, $tax ) {
+		$terms = get_the_terms( $postId, $tax );
+
+		foreach ( $terms as $term ) {
+			?>
+			<span class="tag is-medium is-info"><?= $term->name; ?></span>
+			<?php
+		}
+	};
+	?>
+
+	<div class="tags">
+		<?= $get_term_tag_list( $postId, $tax, $isLinked ) ?>
 	</div>
 	<?php
 }

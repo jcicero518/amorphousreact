@@ -24,8 +24,8 @@ class Layout {
 			switch ( $layoutArgs['layout'] ) {
 				case 'twocol':
 					?>
-					<div class="columns">
-						<div class="column is-9">
+					<div class="columns main-flex-columns">
+						<div class="column main-flex-column">
 							<div class="box">
 								<?php
 								while ( have_posts() ) : the_post();
@@ -58,8 +58,6 @@ class Layout {
 								if ( is_front_page() ):
 									?>
 
-									<!--<h2 class="title">Featured</h2>
-									<div class="is-divider" data-content="MORE"></div>-->
 									<?php
 									$cardArgs = [
 										'post_type' => 'card',
@@ -73,31 +71,33 @@ class Layout {
 									$cardQuery = new \WP_Query( $cardArgs );
 									if ( $cardQuery->have_posts() ):
 										?>
-
-										<h2 class="title"><span class="fa fa-code" aria-hidden="true"></span> Featured Posts</h2>
-										<div class="columns">
-											<?php
-											while ( $cardQuery->have_posts() ):
-												$cardQuery->the_post();
-												?>
-												<div class="column">
-													<div class="card">
-														<div class="entry-header card-header">
-															<p class="card-header-title" style="margin-bottom:0"><?= get_the_title( $cardQuery->post->ID ); ?></p>
-														</div>
-														<div class="card-content">
-															<div class="content">
-																<?= get_the_excerpt( $cardQuery->post->ID ); ?>
+										<section class="featured-columns">
+											<h2 class="title"><span class="fa fa-code" aria-hidden="true"></span> Featured Posts</h2>
+											<div class="columns">
+												<?php
+												while ( $cardQuery->have_posts() ):
+													$cardQuery->the_post();
+													?>
+													<div class="column">
+														<div class="card">
+															<div class="entry-header card-header">
+																<p class="card-header-title" style="margin-bottom:0"><?= get_the_title( $cardQuery->post->ID ); ?></p>
+															</div>
+															<div class="card-content">
+																<div class="content">
+																	<?= get_the_excerpt( $cardQuery->post->ID ); ?>
+																</div>
 															</div>
 														</div>
 													</div>
-												</div>
-												<?php
-											endwhile;
-											wp_reset_postdata();
-											wp_reset_query();
-											?>
-										</div>
+													<?php
+												endwhile;
+												wp_reset_postdata();
+												wp_reset_query();
+												?>
+											</div>
+										</section>
+
 										<?php
 									endif;
 								endif;
@@ -110,7 +110,7 @@ class Layout {
 							</div>
 
 						</div>
-						<div class="column">
+						<div class="column main-flex-column">
 							<div class="box">
 								<?php get_sidebar(); ?>
 							</div>

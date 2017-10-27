@@ -171,19 +171,22 @@ class Posts {
 					<p class="card-header-title"><?= get_the_title( $query->post->ID ); ?></p>
 				</header>
 				<div class="columns">
-					<div class="column is-5">
-						<div class="card-content entry-content">
+					<div class="column">
+						<div class="card-content">
 							<h2 class="title">Project Details</h2>
 							<div>
 								<div class="entry-meta">
-									<?php amorphous_term_list( $query->post->ID, 'site_category', FALSE ); ?>
+									<?php amorphous_site_term_list( $query->post->ID, 'site_category' ); ?>
 								</div>
 							</div>
-							<!--<div class="content is-clearfix">
-								<?= apply_filters( 'the_content', get_the_content( $query->post->ID ) ); ?>
-							</div>-->
+							<div class="is-divider has-no-border"></div>
+							<h2 class="title has-inline-below">Full Site</h2>
+							<div>
+								<a target="_blank" title="Opens in new window" href="<?= get_field( 'site_url'); ?>"><?= get_field( 'site_url' ); ?></a>
+							</div>
 						</div>
 					</div>
+					<div class="is-divider-vertical" data-content="<>"></div>
 					<div class="column">
 						<div class="card-image">
 							<figure
@@ -195,16 +198,6 @@ class Posts {
 						</div>
 					</div>
 				</div>
-
-
-				<footer class="card-footer">
-					<p class="card-footer-item">
-						<span>Full Site: <a target="_blank" title="Opens in new window" href="<?= get_field( 'site_url'); ?>"><?= get_field( 'site_url' ); ?></a></span>
-					</p>
-					<p class="card-footer-item">
-						<a href="<?= get_permalink( $query->post->ID ); ?>" title="Read More">Read More &raquo;</a>
-					</p>
-				</footer>
 			</div>
 			<?php
 		endwhile;

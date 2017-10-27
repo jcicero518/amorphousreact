@@ -71,13 +71,15 @@
 			text-decoration: none;
 			text-transform: uppercase;
 			text-shadow: 1px 1px 2px rgba(0,0,0,.3);
-			border-bottom: 2px solid transparent;
+			border-bottom: 3px solid transparent;
+			position: relative;
+
 			&:hover, &:focus {
 				color: $color_navbar_link-hover;
 				background-color: transparent;
 				border-bottom-color: $color_navbar_link-hover;
+				transition: all 250ms linear;
 			}
-
 		}
 		.current_page_item > a,
 		.current-menu-item > a,
@@ -121,11 +123,11 @@
 }
 
 .sticky-component {
-	//display: none;
 	visibility: hidden;
 	left: -9999em;
-	//transition: all 250ms ease;
-	transition: background 500ms ease;
+	//transform: translateY(-77px);
+	transform: translateY(-77px);
+	transition: transform 500ms ease, opacity 550ms ease;
 	height: 0;
 	opacity: 0;
 	z-index: 5;
@@ -137,8 +139,9 @@
 		left: 0;
 		opacity: 1;
 		top: -77px;
+		//transform: translateY(77px);
 		transform: translateY(77px);
-		transition: transform 500ms ease,background 900ms ease;
+		transition: transform 500ms ease, opacity 950ms ease;
 		height: 77px;
 	}
 	.navbar {
@@ -149,7 +152,8 @@
 
 .admin-bar .sticky-component {
 	&.sticky {
-		top: -55px;
+		//top: -55px;
+		top: -45px;
 	}
 }
 
@@ -225,6 +229,7 @@
 }
 
 .navbar-burger {
+	margin: auto 0 auto auto;
 	&.is-active, &:hover {
 		background-color: $color__link-hover;
 		color: $white;
@@ -255,6 +260,20 @@
 				}
 				ul.navbar-end {
 
+				}
+			}
+		}
+	}
+	.sticky-component {
+		.navbar {
+			.navbar-brand {
+				.navbar-item {
+					img {
+						max-height: 3rem;
+					}
+				}
+				.navbar-burger {
+					margin: auto 0 auto auto;
 				}
 			}
 		}

@@ -26,7 +26,7 @@ class Sticky extends Component {
         const menu = { __html: mainMenu };
         const logo = `${themeApi.images}logo-a-white56.png`;
         return (
-            <StickyContainer stickyClass="sticky-component" enter="80">
+            <StickyContainer stickyClass="sticky-component" enter="140">
                 <div className="navbar main-navigation">
                     <div className="container">
                         <div className="navbar-brand">

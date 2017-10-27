@@ -18,15 +18,11 @@
 			the_title( '<h2 class="subtitle"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
 		endif;
 
-		if ( 'post' === get_post_type() || 'card' === get_post_type() ) : ?>
+		?>
 		<div class="entry-meta">
-			<?php //amorphous_posted_on(); ?>
-		</div><!-- .entry-meta -->
-		<div class="entry-meta">
-				<?php amorphous_term_list( get_the_ID(), 'code_category' ); ?>
-			</div>
-		<?php
-		endif; ?>
+			<?php amorphous_term_list( get_the_ID(), 'code_category' ); ?>
+		</div>
+
 	</header><!-- .entry-header -->
 
 	<div class="entry-content">
