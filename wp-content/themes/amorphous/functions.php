@@ -435,6 +435,42 @@ function amorphous_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'amorphous_scripts' );
 
+/******************************************************
+SCRIPTS & ENQUEUEING WP FILTERS FOR DEFER / ASYNC LOADS
+ * defer_enqueued_js : Attaches to the clean_url WP filter
+ *                     to iterate through registered scripts
+ *                     and add the defer attribute to them
+ *                     -- excludes admin JS for now
+ *
+ * Deferring JS keeps the same load order but allows scripts
+ * to run before DOMContentLoaded.
+ *
+ * Async JS does close to the same thing, but gives no
+ * guarantee that the load order will remain the same..
+ * all kinds of havoc could be wrought from this.
+ *
+TODO
+ * Add the ability to insert a placeholder in the script
+ * path that will decide which scripts get deferred
+ *******************************************************/
+function defer_enqueued_js( $url ) {
+	if ( !is_admin() ) {
+		if ( strpos($url, '.js') === false ) {
+			// Not a JS file, return url unmodified
+			return $url;
+		} else if ( strpos($url, 'googleapis') !== false ) {
+			return "$url' defer='defer' async";
+			//return $url;
+		} else if ( strpos($url, 'modernizr') !== false ) {
+			//return "$url' defer='defer";
+		} else {
+			return "$url' defer='defer";
+		}
+	}
+	return $url;
+}
+add_filter( 'clean_url', 'defer_enqueued_js', 11, 1 );
+
 /**
  * Filters the HTML script tag of an enqueued script.
  *
