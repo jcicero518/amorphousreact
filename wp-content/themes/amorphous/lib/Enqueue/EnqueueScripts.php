@@ -56,7 +56,7 @@ class EnqueueScripts extends InitDefaults {
 		//wp_deregister_script( 'jquery' );
 		wp_enqueue_style( 'amorphous-style', get_stylesheet_uri() );
 		wp_enqueue_style( 'fa', '//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' );
-		//wp_enqueue_style( 'extracted-css', get_stylesheet_directory_uri() . '/dist/styles.css' );
+		wp_enqueue_style( 'extracted-css', get_stylesheet_directory_uri() . '/dist/styles.css' );
 		//wp_enqueue_style( 'slider-css', '//cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.2.4/tiny-slider.css' );
 		//wp_enqueue_script( 'build-main', get_stylesheet_directory_uri() . 'dist/bundle.js', array(), '', true );
 		//wp_enqueue_script( 'build-sticky', get_stylesheet_directory_uri() . '/dist/runtime.bundle.js', array(), '', true );

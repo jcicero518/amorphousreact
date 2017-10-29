@@ -2,235 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="44a3ea5c-d2be-4901-95c1-dffe09959618" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/amorphous/lib/Abstracts/InitDefaults.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/amorphous/lib/Enqueue/EnqueueScripts.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/amorphous/lib/Hooks/HookInits.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/amorphous/webpack.common.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/amorphous/webpack.config.dev.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/amorphous/webpack.config.production.js" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/acf-to-rest-api/includes/admin/views/html-notice-missing-acf.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/acf-to-rest-api/includes/admin/views/html-notice-missing-rest-api.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/acf-to-rest-api/lib/endpoints/class-acf-to-rest-api-attachment-controller.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/acf-to-rest-api/lib/endpoints/class-acf-to-rest-api-controller.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/acf-to-rest-api/lib/endpoints/class-acf-to-rest-api-option-controller.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/acf-to-rest-api/lib/endpoints/class-acf-to-rest-api-term-controller.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/dist/0.027b1621421648e242b2.hot-update.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/dist/0.03ac7d9fca8c20dbed3f.hot-update.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/dist/0.03bb1da61c523fff3a93.hot-update.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/dist/0.07dd70e256367b364c70.hot-update.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/dist/0.09aebddfa8c624cf53ff.hot-update.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/dist/0.0cb8e65fce1a412e13ee.hot-update.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/dist/0.0ccacd70d41391793cee.hot-update.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/dist/0.1223a951ec9d222209bb.hot-update.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/dist/0.1450f6ccbba11b37f2a1.hot-update.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/dist/0.15a6afac3842802f22ce.hot-update.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/dist/0.15e66427b9798e96081b.hot-update.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/dist/0.18cb921639ef96d5f777.hot-update.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/dist/0.1c616f03063b590f179c.hot-update.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/dist/0.1d852219975abd406526.hot-update.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/dist/0.238a16d620092b37c57e.hot-update.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/dist/0.26eea6bd8f7e6d6c5696.hot-update.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/dist/0.27e019e77636b7619716.hot-update.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/dist/0.27ea718d7c367a59d3cd.hot-update.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/dist/0.329ead747a5b05432238.hot-update.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/dist/0.36d610b3fe74d7021ab9.hot-update.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/dist/0.377f34cfb3b30caa19b1.hot-update.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/dist/0.3a558a549a109a5d1936.hot-update.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/dist/0.3af7a5bbbea73c49a698.hot-update.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/dist/0.3c46638c1cb42c08c8f0.hot-update.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/dist/0.3eaf3c1d31e056c12ecd.hot-update.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/dist/0.448021d46a4d8d508cd1.hot-update.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/dist/0.46f4fa3e74511ff21ef6.hot-update.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/dist/0.470dc035da42243a431d.hot-update.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/dist/0.485617778c768d58fee2.hot-update.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/dist/0.48a59ed7c5618bc3d8c5.hot-update.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/dist/0.517e1549c0ad63080a2d.hot-update.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/dist/0.52491dba2ee512c8acd7.hot-update.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/dist/0.53930a240a492f41d6a8.hot-update.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/dist/0.558c44eeb4feda44b28b.hot-update.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/dist/0.5b05f6e8c41d8caa1ddc.hot-update.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/dist/0.5b9e8be212f715d2582d.hot-update.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/dist/0.664927ee8bf9932629f7.hot-update.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/dist/0.67d1af90e5fb4085bc06.hot-update.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/dist/0.67fe8a713e5543213229.hot-update.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/dist/0.688c6439e0f2438f7019.hot-update.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/dist/0.6b985bc15d7bc5b5c1a1.hot-update.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/dist/0.6c5792a83756a5494f00.hot-update.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/dist/0.6dfa33c93f7978c8c43f.hot-update.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/dist/0.72f3417ebdef88b6a3a1.hot-update.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/dist/0.758e6ee14d4b61056853.hot-update.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/dist/0.77553a2be6f8ab69d487.hot-update.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/dist/0.79022a6b91333c6e7f09.hot-update.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/dist/0.79a22799ff2411bdd205.hot-update.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/dist/0.7a61e225e8749fb48145.hot-update.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/dist/0.7c3d92355824a7e053ce.hot-update.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/dist/0.87c04ff6cf3e850057d1.hot-update.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/dist/0.88aeb87bfbabaa37b9e7.hot-update.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/dist/0.89fd045ab4f2234ca0ca.hot-update.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/dist/0.8b0290e9aa66c700cc78.hot-update.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/dist/0.8ff71d46af4dd682ed67.hot-update.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/dist/0.9139c25662ce03b32571.hot-update.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/dist/0.93fd3b15a8a14900d5df.hot-update.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/dist/0.94e6f2027cc61629245a.hot-update.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/dist/0.95abdc02b859e2e70241.hot-update.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/dist/0.9afadb85ac1149dd9aac.hot-update.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/dist/0.9b457cce8907539ca228.hot-update.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/dist/0.9beab606a1b5067bd9d8.hot-update.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/dist/0.9cc7a14115afdbf7cf5c.hot-update.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/dist/0.9e198ae2c4149abce65b.hot-update.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/dist/0.a00e5f8b173e629038e7.hot-update.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/dist/0.a770ff9b2326a2a57dd3.hot-update.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/dist/0.a7f1763e196e79c47187.hot-update.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/dist/0.a8e2e12ee0d2ed1d47c3.hot-update.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/dist/0.a8f4ae2c79391e5d4d9d.hot-update.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/dist/0.a9a225f1aa41f9abdf48.hot-update.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/dist/0.b12555d18c587c9e8681.hot-update.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/dist/0.b6f7dd5d6c00c112b739.hot-update.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/dist/0.be45262baea814ab1c3f.hot-update.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/dist/0.be624c08b6eb75932ccf.hot-update.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/dist/0.c05ec1776bd3c1a16e61.hot-update.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/dist/0.c06fc28ca154857dc0fb.hot-update.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/dist/0.c0cca2d93c9fb392ea18.hot-update.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/dist/0.c6a2f40b87f4cb94fa57.hot-update.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/dist/0.c8504a26a28612d0218f.hot-update.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/dist/0.cd1be8a7bb3edc2be663.hot-update.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/dist/0.d0c2b760acfb284ea292.hot-update.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/dist/0.d92de090e72f4795b040.hot-update.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/dist/0.d98894d64a4fb3f41a6e.hot-update.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/dist/0.de83fa9592051ddfd9ec.hot-update.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/dist/0.e11b63b4795edb41e22f.hot-update.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/dist/0.e327836dd731bab23f48.hot-update.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/dist/0.e4b57cf89c5222581a88.hot-update.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/dist/0.e8bc71325c95f0e7589d.hot-update.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/dist/0.e9c159668e63702c4d44.hot-update.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/dist/0.ea3619bcd1de07d1401a.hot-update.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/dist/0.ead99906c71b9f4be91a.hot-update.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/dist/0.eb362211c871a0a61113.hot-update.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/dist/0.eca12e2bf8a69d0c25d4.hot-update.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/dist/0.f3cbb7c4762446b77a85.hot-update.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/dist/0.f6aaaf1d5197253b5d4b.hot-update.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/dist/0.f9df59678e04d871c362.hot-update.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/dist/0.fa22835d538d6717f44b.hot-update.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/dist/0.ffb2e2d76e201ba83215.hot-update.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/dist/027b1621421648e242b2.hot-update.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/dist/03ac7d9fca8c20dbed3f.hot-update.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/dist/03bb1da61c523fff3a93.hot-update.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/dist/07dd70e256367b364c70.hot-update.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/dist/09aebddfa8c624cf53ff.hot-update.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/dist/0cb8e65fce1a412e13ee.hot-update.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/dist/0ccacd70d41391793cee.hot-update.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/dist/1223a951ec9d222209bb.hot-update.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/dist/1450f6ccbba11b37f2a1.hot-update.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/dist/15a6afac3842802f22ce.hot-update.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/dist/15e66427b9798e96081b.hot-update.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/dist/18cb921639ef96d5f777.hot-update.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/dist/1c616f03063b590f179c.hot-update.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/dist/1d852219975abd406526.hot-update.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/dist/225547472d67df6040dd.hot-update.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/dist/238a16d620092b37c57e.hot-update.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/dist/26eea6bd8f7e6d6c5696.hot-update.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/dist/27e019e77636b7619716.hot-update.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/dist/27ea718d7c367a59d3cd.hot-update.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/dist/329ead747a5b05432238.hot-update.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/dist/36d610b3fe74d7021ab9.hot-update.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/dist/377f34cfb3b30caa19b1.hot-update.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/dist/3a558a549a109a5d1936.hot-update.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/dist/3af7a5bbbea73c49a698.hot-update.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/dist/3c46638c1cb42c08c8f0.hot-update.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/dist/3eaf3c1d31e056c12ecd.hot-update.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/dist/448021d46a4d8d508cd1.hot-update.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/dist/46f4fa3e74511ff21ef6.hot-update.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/dist/470dc035da42243a431d.hot-update.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/dist/485617778c768d58fee2.hot-update.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/dist/48a59ed7c5618bc3d8c5.hot-update.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/dist/517e1549c0ad63080a2d.hot-update.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/dist/518f059f0c047f30dcab.hot-update.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/dist/52491dba2ee512c8acd7.hot-update.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/dist/53930a240a492f41d6a8.hot-update.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/dist/558c44eeb4feda44b28b.hot-update.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/dist/5b05f6e8c41d8caa1ddc.hot-update.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/dist/5b9e8be212f715d2582d.hot-update.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/dist/664927ee8bf9932629f7.hot-update.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/dist/67d1af90e5fb4085bc06.hot-update.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/dist/67fe8a713e5543213229.hot-update.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/dist/688c6439e0f2438f7019.hot-update.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/dist/69e0fd253b2bbfb067aa.hot-update.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/dist/6b985bc15d7bc5b5c1a1.hot-update.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/dist/6c5792a83756a5494f00.hot-update.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/dist/6dfa33c93f7978c8c43f.hot-update.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/dist/72f3417ebdef88b6a3a1.hot-update.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/dist/758e6ee14d4b61056853.hot-update.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/dist/77553a2be6f8ab69d487.hot-update.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/dist/79022a6b91333c6e7f09.hot-update.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/dist/79a22799ff2411bdd205.hot-update.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/dist/7a61e225e8749fb48145.hot-update.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/dist/7c3d92355824a7e053ce.hot-update.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/dist/817cb613e5e2ced3ad3d.hot-update.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/dist/87c04ff6cf3e850057d1.hot-update.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/dist/88aeb87bfbabaa37b9e7.hot-update.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/dist/89fd045ab4f2234ca0ca.hot-update.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/dist/8b0290e9aa66c700cc78.hot-update.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/dist/8ff71d46af4dd682ed67.hot-update.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/dist/9139c25662ce03b32571.hot-update.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/dist/93fd3b15a8a14900d5df.hot-update.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/dist/94e6f2027cc61629245a.hot-update.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/dist/95abdc02b859e2e70241.hot-update.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/dist/9afadb85ac1149dd9aac.hot-update.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/dist/9b457cce8907539ca228.hot-update.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/dist/9beab606a1b5067bd9d8.hot-update.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/dist/9cc7a14115afdbf7cf5c.hot-update.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/dist/9e198ae2c4149abce65b.hot-update.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/dist/a00e5f8b173e629038e7.hot-update.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/dist/a770ff9b2326a2a57dd3.hot-update.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/dist/a7f1763e196e79c47187.hot-update.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/dist/a8e2e12ee0d2ed1d47c3.hot-update.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/dist/a8f4ae2c79391e5d4d9d.hot-update.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/dist/a9a225f1aa41f9abdf48.hot-update.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/dist/b12555d18c587c9e8681.hot-update.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/dist/b6f7dd5d6c00c112b739.hot-update.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/dist/be45262baea814ab1c3f.hot-update.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/dist/be624c08b6eb75932ccf.hot-update.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/dist/bundle.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/dist/c05ec1776bd3c1a16e61.hot-update.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/dist/c06fc28ca154857dc0fb.hot-update.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/dist/c0cca2d93c9fb392ea18.hot-update.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/dist/c6a2f40b87f4cb94fa57.hot-update.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/dist/c8504a26a28612d0218f.hot-update.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/dist/cd1be8a7bb3edc2be663.hot-update.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/dist/css/styles.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/dist/d0c2b760acfb284ea292.hot-update.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/dist/d0df2aee640cc86758a7.hot-update.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/dist/d92de090e72f4795b040.hot-update.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/dist/d98894d64a4fb3f41a6e.hot-update.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/dist/de83fa9592051ddfd9ec.hot-update.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/dist/e11b63b4795edb41e22f.hot-update.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/dist/e327836dd731bab23f48.hot-update.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/dist/e4b57cf89c5222581a88.hot-update.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/dist/e8bc71325c95f0e7589d.hot-update.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/dist/e9c159668e63702c4d44.hot-update.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/dist/ea3619bcd1de07d1401a.hot-update.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/dist/ead99906c71b9f4be91a.hot-update.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/dist/eb362211c871a0a61113.hot-update.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/dist/ebc5071fe8b9d4736595.hot-update.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/dist/eca12e2bf8a69d0c25d4.hot-update.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/dist/f3cbb7c4762446b77a85.hot-update.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/dist/f6aaaf1d5197253b5d4b.hot-update.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/dist/f9df59678e04d871c362.hot-update.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/dist/fa22835d538d6717f44b.hot-update.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/dist/ffb2e2d76e201ba83215.hot-update.json" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/acf-to-rest-api/languages/pt_BR.mo" afterPath="$PROJECT_DIR$/wp-content/plugins/acf-to-rest-api/languages/pt_BR.mo" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/acf-to-rest-api/class-acf-to-rest-api.php" afterPath="$PROJECT_DIR$/wp-content/plugins/acf-to-rest-api/class-acf-to-rest-api.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/acf-to-rest-api/readme.md" afterPath="$PROJECT_DIR$/wp-content/plugins/acf-to-rest-api/readme.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/acf-to-rest-api/readme.txt" afterPath="$PROJECT_DIR$/wp-content/plugins/acf-to-rest-api/readme.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/assets/scripts/custom/app.js" afterPath="$PROJECT_DIR$/wp-content/themes/amorphous/assets/scripts/custom/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/assets/scripts/custom/pagination.js" afterPath="$PROJECT_DIR$/wp-content/themes/amorphous/assets/scripts/custom/pagination.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/dist/styles.css" afterPath="$PROJECT_DIR$/wp-content/themes/amorphous/dist/styles.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/functions.php" afterPath="$PROJECT_DIR$/wp-content/themes/amorphous/functions.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/lib/Hooks/SiteLoad.php" afterPath="$PROJECT_DIR$/wp-content/themes/amorphous/lib/Hooks/SiteLoad.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/package.json" afterPath="$PROJECT_DIR$/wp-content/themes/amorphous/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/sass/forms/_fields.scss" afterPath="$PROJECT_DIR$/wp-content/themes/amorphous/sass/forms/_fields.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/webpack.config.js" afterPath="$PROJECT_DIR$/wp-content/themes/amorphous/webpack.config.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/amorphous/lib/Enqueue/EnqueueScripts.php" afterPath="$PROJECT_DIR$/wp-content/themes/amorphous/lib/Enqueue/EnqueueScripts.php" />
     </list>
     <ignored path="amorphous.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -272,11 +44,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="EnqueueScripts.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="EnqueueScripts.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/wp-content/themes/amorphous/lib/Enqueue/EnqueueScripts.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-16.25">
-              <caret line="64" column="10" selection-start-line="64" selection-start-column="10" selection-end-line="64" selection-end-column="10" />
+            <state vertical-scroll-proportion="0.5148206">
+              <caret line="60" column="34" selection-start-line="60" selection-start-column="34" selection-end-line="60" selection-end-column="34" />
               <folding>
                 <element signature="e#31#55#0#PHP" expanded="true" />
               </folding>
@@ -294,10 +66,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="webpack.common.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="webpack.common.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/wp-content/themes/amorphous/webpack.common.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.42857143">
+            <state vertical-scroll-proportion="0.0">
               <caret line="28" column="26" selection-start-line="28" selection-start-column="26" selection-end-line="28" selection-end-column="26" />
               <folding />
             </state>
@@ -402,9 +174,9 @@
         <option value="$PROJECT_DIR$/wp-content/themes/amorphous/functions.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/amorphous/webpack.config.production.js" />
         <option value="$PROJECT_DIR$/wp-content/themes/amorphous/webpack.config.dev.js" />
-        <option value="$PROJECT_DIR$/wp-content/themes/amorphous/lib/Enqueue/EnqueueScripts.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/amorphous/assets/scripts/custom/app.js" />
         <option value="$PROJECT_DIR$/wp-content/themes/amorphous/webpack.common.js" />
+        <option value="$PROJECT_DIR$/wp-content/themes/amorphous/lib/Enqueue/EnqueueScripts.php" />
       </list>
     </option>
   </component>
@@ -1194,16 +966,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/amorphous/lib/Enqueue/EnqueueScripts.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-16.25">
-          <caret line="64" column="10" selection-start-line="64" selection-start-column="10" selection-end-line="64" selection-end-column="10" />
-          <folding>
-            <element signature="e#31#55#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/amorphous/assets/sass/variables-site/_variables-site.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1278,9 +1040,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/amorphous/webpack.common.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.42857143">
+        <state vertical-scroll-proportion="0.0">
           <caret line="28" column="26" selection-start-line="28" selection-start-column="26" selection-end-line="28" selection-end-column="26" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/amorphous/lib/Enqueue/EnqueueScripts.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5148206">
+          <caret line="60" column="34" selection-start-line="60" selection-start-column="34" selection-end-line="60" selection-end-column="34" />
+          <folding>
+            <element signature="e#31#55#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
