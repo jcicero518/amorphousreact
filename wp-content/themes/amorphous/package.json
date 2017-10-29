@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "MWCC theme modules / tasks",
   "scripts": {
-    "start": "webpack --watch --progress --config webpack.config.js",
+    "start": "webpack --watch --progress --config webpack.config.dev.js",
     "build": "webpack -p --progress  --config webpack.config.js ",
     "clean": "rimraf ./build/*"
   },
@@ -118,7 +118,9 @@
     "webpack-dashboard": "^0.4.0",
     "webpack-dev-middleware": "^1.11.0",
     "webpack-dev-server": "^2.6.1",
-    "webpack-hot-middleware": "^2.18.2"
+    "webpack-hot-middleware": "^2.18.2",
+    "webpack-merge": "^4.1.0",
+    "webpack-php-output": "^1.0.8"
   },
   "dependencies": {
     "Tabby": "cferdinandi/tabby",

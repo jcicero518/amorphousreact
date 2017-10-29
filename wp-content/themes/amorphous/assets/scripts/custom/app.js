@@ -11,5 +11,6 @@ import "./sticky";
 import "./nav";
 
 // https://www.keithcirkel.co.uk/es6-template-literals/
+// https://engineering.opsgenie.com/i-wish-i-knew-these-before-diving-into-react-301e0ee2e488
 // Entry point app
 //import "./index";

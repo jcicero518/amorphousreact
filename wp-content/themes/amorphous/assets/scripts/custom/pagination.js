@@ -92,7 +92,6 @@ class Pagination {
     getPage( pageNum ) {
         // Set page number in data store then renders updated pagination when necessary
         this.dataStore.setPage( pageNum ).then( payload => {
-            //if ( pageNum === 1 ) return false;
             if ( payload === null ) return false;
             this.renderPagination( payload );
         }).catch( err => {

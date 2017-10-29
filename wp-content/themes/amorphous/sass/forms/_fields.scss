@@ -47,6 +47,9 @@ form {
 					outline: none;
 				}
 			}
+			input[type="text"], input[type="email"], textarea {
+				max-width: 100%;
+			}
 		}
 	}
 }
