@@ -341,7 +341,6 @@ function filterSearchResults( WP_Query $query ) {
 global $wp_filter;
 //var_dump($wp_filter['pre_get_posts']);
 
-
 /******************************************************
 SCRIPTS & ENQUEUEING WP FILTERS FOR DEFER / ASYNC LOADS
  * defer_enqueued_js : Attaches to the clean_url WP filter

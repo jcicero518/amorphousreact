@@ -7,7 +7,7 @@ const CleanWebpackPlugin = require( 'clean-webpack-plugin' );
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const StyleExtHtmlWebpackPlugin = require('style-ext-html-webpack-plugin');
 
-const PhpOutputPlugin = require('webpack-php-output');
+//const PhpOutputPlugin = require('webpack-php-output');
 const config = require('./assets/config.json');
 
 module.exports = {
@@ -18,8 +18,8 @@ module.exports = {
     },
     devtool: 'inline-source-map',
     plugins: [
-        new CleanWebpackPlugin( ['dist'] ),
-        new PhpOutputPlugin(),
+        //new CleanWebpackPlugin( ['dist'] ),
+        //new PhpOutputPlugin(),
         new webpack.optimize.CommonsChunkPlugin({
             name: 'vendor'
         }),

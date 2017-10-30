@@ -15,7 +15,7 @@ module.exports = merge( common, {
     },
     plugins: [
         new ExtractTextPlugin({
-            disable: true,
+            disable: false,
             //filename: '[name].[contentHash].css',
             filename: 'styles.css',
             allChunks: true

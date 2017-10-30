@@ -79,7 +79,7 @@ class Layout {
 													$cardQuery->the_post();
 													?>
 													<div class="column">
-														<div class="card">
+														<div class="card is-animated has-slide-up">
 															<div class="entry-header card-header">
 																<p class="card-header-title" style="margin-bottom:0"><?= get_the_title( $cardQuery->post->ID ); ?></p>
 															</div>

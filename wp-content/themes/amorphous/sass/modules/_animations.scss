@@ -37,6 +37,23 @@
   left: 35px;
 }
 
+.is-animated {
+  position: relative;
+  &.has-slide-up {
+    animation: fadeInSlideUp 1s ease-in-out both;
+  }
+}
+
+@keyframes fadeInSlideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(70px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
 @keyframes cssload-loader {
   90% { transform: rotate(0deg); }

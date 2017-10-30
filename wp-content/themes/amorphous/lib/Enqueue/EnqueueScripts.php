@@ -46,6 +46,7 @@ class EnqueueScripts extends InitDefaults {
 	public function theme_scripts() {
 		global $wp_scripts;
 		global $post;
+		$isProduction = TRUE;
 		// https://www.gatsbyjs.org/blog/2017-10-20-from-wordpress-to-developing-in-react-starting-to-see-it/
 		// https://indigotree.co.uk/
 
@@ -53,17 +54,21 @@ class EnqueueScripts extends InitDefaults {
 			wp_deregister_script( 'jquery' );
 			wp_register_script( 'jquery', '//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js', array(), '', true );
 		}
-		//wp_deregister_script( 'jquery' );
+
 		wp_enqueue_style( 'amorphous-style', get_stylesheet_uri() );
 		wp_enqueue_style( 'fa', '//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' );
-		wp_enqueue_style( 'extracted-css', get_stylesheet_directory_uri() . '/dist/styles.css' );
 		//wp_enqueue_style( 'slider-css', '//cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.2.4/tiny-slider.css' );
-		//wp_enqueue_script( 'build-main', get_stylesheet_directory_uri() . 'dist/bundle.js', array(), '', true );
-		//wp_enqueue_script( 'build-sticky', get_stylesheet_directory_uri() . '/dist/runtime.bundle.js', array(), '', true );
-		wp_enqueue_script( 'build-vendor', get_stylesheet_directory_uri() . '/dist/vendor.bundle.js', array(), '', true );
-		wp_enqueue_script( 'build-main', get_stylesheet_directory_uri() . '/dist/app.bundle.js', array(), '', true );
 		//wp_enqueue_script( 'build-page', get_stylesheet_directory_uri() . '/dist/pagination.bundle.js', array(), '', true );
-		//wp_enqueue_script( 'build-main', get_template_directory_uri() . '/build/js/app.js', array(), '', true );
+
+		if ( $isProduction ):
+			wp_enqueue_style( 'extracted-css', get_stylesheet_directory_uri() . '/buildProd/dist/styles.css' );
+			wp_enqueue_script( 'build-vendor', get_stylesheet_directory_uri() . '/buildProd/dist/vendor.bundle.js', array(), '', true );
+			wp_enqueue_script( 'build-main', get_stylesheet_directory_uri() . '/buildProd/dist/app.bundle.js', array(), '', true );
+		else:
+			wp_enqueue_style( 'extracted-css', get_stylesheet_directory_uri() . '/dist/styles.css' );
+			wp_enqueue_script( 'build-vendor', get_stylesheet_directory_uri() . '/dist/vendor.bundle.js', array(), '', true );
+			wp_enqueue_script( 'build-main', get_stylesheet_directory_uri() . '/dist/app.bundle.js', array(), '', true );
+		endif;
 
 		wp_localize_script( 'build-main', 'globalPost', [
 			'postID' => $post->ID
