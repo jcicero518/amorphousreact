@@ -20,8 +20,11 @@ if ( file_exists( plugin_dir_path( __FILE__ ) . '/vendor/autoload.php' ) ) {
   require_once plugin_dir_path( __FILE__ ) . '/vendor/autoload.php';
 }
 
-$config_file = __DIR__ . 'config/confDefaults.php';
-$config = ConfigFactory::create( $config_file );
+$core = new ThemeCustomizerCore();
+$core->run();
+
+//$config_file = __DIR__ . 'config/confDefaults.php';
+//$config = ConfigFactory::create( $config_file );
 //ThemeCustomizerCore::get_instance( $config->getSubConfig( 'Amorphous\ThemeCustomizer') )->run();
 //var_dump($config);
 //ThemeCustomizerCore::get_instance( $config->getSubConfig( 'Amorphous\ThemeCustomizer' ) );

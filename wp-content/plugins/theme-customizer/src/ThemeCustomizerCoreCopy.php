@@ -2,13 +2,12 @@
 
 namespace Amorphous\ThemeCustomizer;
 
-use Amorphous\ThemeCustomizer\Customizer\Init;
 use BrightNucleus\Config\ConfigInterface;
 use BrightNucleus\Config\ConfigTrait;
 use BrightNucleus\Config\Exception\FailedToProcessConfigException;
 use BrightNucleus\Settings\Settings;
 
-class ThemeCustomizerCore {
+class ThemeCustomizerCoreCopy {
 
   use ConfigTrait;
 
@@ -33,8 +32,8 @@ class ThemeCustomizerCore {
    *
    * @param ConfigInterface $config Config to parametrize the object.
    */
-  public function __construct() {
-
+  public function __construct( ConfigInterface $config ) {
+    $this->processConfig( $config );
   }
 
   /**
@@ -48,9 +47,9 @@ class ThemeCustomizerCore {
    *                                object.
    * @return self
    */
-  public static function get_instance() {
+  public static function get_instance( ConfigInterface $config = null ) {
     if ( ! self::$instance ) {
-      self::$instance = new self();
+      self::$instance = new self( $config );
     }
 
     return self::$instance;
@@ -62,12 +61,19 @@ class ThemeCustomizerCore {
    * @since 0.1.0
    */
   public function run() {
-    $this->defineHooks();
+    add_action( 'plugins_loaded', [ $this, 'load_textdomain' ] );
+
+    // Initialize admin page.
+    $admin_page = new Settings( $this->config->getSubConfig( 'Settings' ) );
+    $admin_page->register();
   }
 
-  public function defineHooks() {
-    //var_dump(__NAMESPACE__);
-    add_action( 'customize_register', [ __NAMESPACE__ . '\Customizer\Init', 'register' ] );
+  /**
+   * Load the plugin text domain.
+   *
+   * @since 0.1.0
+   */
+  public function load_textdomain() {
+    load_plugin_textdomain( $this->config->getKey( 'Plugin/textdomain' ) );
   }
-
 }
