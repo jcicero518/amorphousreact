@@ -124,6 +124,60 @@ class CPT {
 		register_post_type( 'site', $args );
 	}
 
+	public function theme_cpt_alerts() {
+
+		$labels = array(
+			'name'                  => _x( 'Alerts', 'Post Type General Name', 'mwcc' ),
+			'singular_name'         => _x( 'Alert', 'Post Type Singular Name', 'mwcc' ),
+			'menu_name'             => __( 'Alerts', 'mwcc' ),
+			'name_admin_bar'        => __( 'Alerts', 'mwcc' ),
+			'archives'              => __( 'Alert Archives', 'mwcc' ),
+			'attributes'            => __( 'Alert Attributes', 'mwcc' ),
+			'parent_item_colon'     => __( 'Parent Item:', 'mwcc' ),
+			'all_items'             => __( 'All Alerts', 'mwcc' ),
+			'add_new_item'          => __( 'Add New Alert', 'mwcc' ),
+			'add_new'               => __( 'Add New', 'mwcc' ),
+			'new_item'              => __( 'New Alert', 'mwcc' ),
+			'edit_item'             => __( 'Edit Alert', 'mwcc' ),
+			'update_item'           => __( 'Update Alert', 'mwcc' ),
+			'view_item'             => __( 'View Alert', 'mwcc' ),
+			'view_items'            => __( 'View Alerts', 'mwcc' ),
+			'search_items'          => __( 'Search Alerts', 'mwcc' ),
+			'not_found'             => __( 'Not found', 'mwcc' ),
+			'not_found_in_trash'    => __( 'Not found in Trash', 'mwcc' ),
+			'featured_image'        => __( 'Featured Image', 'mwcc' ),
+			'set_featured_image'    => __( 'Set featured image', 'mwcc' ),
+			'remove_featured_image' => __( 'Remove featured image', 'mwcc' ),
+			'use_featured_image'    => __( 'Use as featured image', 'mwcc' ),
+			'insert_into_item'      => __( 'Insert into Alert', 'mwcc' ),
+			'uploaded_to_this_item' => __( 'Uploaded to this Alert', 'mwcc' ),
+			'items_list'            => __( 'Alert list', 'mwcc' ),
+			'items_list_navigation' => __( 'Alert list navigation', 'mwcc' ),
+			'filter_items_list'     => __( 'Filter Alert list', 'mwcc' ),
+		);
+		$args = array(
+			'label'                 => __( 'Alert', 'mwcc' ),
+			'description'           => __( 'Alert', 'mwcc' ),
+			'labels'                => $labels,
+			'supports'              => array( 'title', 'editor' ),
+			'taxonomies'            => array(),
+			'hierarchical'          => false,
+			'public'                => true,
+			'show_ui'               => true,
+			'show_in_menu'          => true,
+			'menu_position'         => 80,
+			'show_in_admin_bar'     => true,
+			'show_in_nav_menus'     => true,
+			'can_export'            => true,
+			'has_archive'           => false,
+			'exclude_from_search'   => true,
+			'publicly_queryable'    => false,
+			'capability_type'       => 'page',
+			'show_in_rest'          => true,
+		);
+		register_post_type( 'alert', $args );
+	}
+
 	public function theme_cpt_slider() {
 
 		$labels = array(
