@@ -2,13 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="44a3ea5c-d2be-4901-95c1-dffe09959618" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/theme-customizer/src/ThemeCustomizerCoreCopy.php" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Webpack" afterPath="$PROJECT_DIR$/Webpack" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/amorphous.iml" afterPath="$PROJECT_DIR$/.idea/amorphous.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/theme-customizer/init.php" afterPath="$PROJECT_DIR$/wp-content/plugins/theme-customizer/init.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/theme-customizer/src/Customizer/Init.php" afterPath="$PROJECT_DIR$/wp-content/plugins/theme-customizer/src/Customizer/Init.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/theme-customizer/src/ThemeCustomizerCore.php" afterPath="$PROJECT_DIR$/wp-content/plugins/theme-customizer/src/ThemeCustomizerCore.php" />
     </list>
     <ignored path="amorphous.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -53,8 +48,8 @@
       <file leaf-file-name="ThemeCustomizerCore.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/wp-content/plugins/theme-customizer/src/ThemeCustomizerCore.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7829582">
-              <caret line="68" column="52" selection-start-line="68" selection-start-column="52" selection-end-line="68" selection-end-column="52" />
+            <state vertical-scroll-proportion="0.15594855">
+              <caret line="42" column="17" selection-start-line="42" selection-start-column="17" selection-end-line="42" selection-end-column="17" />
               <folding>
                 <element signature="e#45#91#0#PHP" expanded="true" />
               </folding>
@@ -174,8 +169,8 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" interpreter_name="Remote PHP 7" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="77" />
-    <option name="y" value="23" />
+    <option name="x" value="151" />
+    <option name="y" value="200" />
     <option name="width" value="1920" />
     <option name="height" value="1123" />
   </component>
@@ -540,11 +535,11 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="77" y="23" width="1920" height="1123" extended-state="0" />
-    <editor active="false" />
+    <frame x="151" y="200" width="1920" height="1123" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30617678" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2891374" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2891374" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32975295" sideWeight="0.502442" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -998,8 +993,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/plugins/theme-customizer/src/ThemeCustomizerCore.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7829582">
-          <caret line="68" column="52" selection-start-line="68" selection-start-column="52" selection-end-line="68" selection-end-column="52" />
+        <state vertical-scroll-proportion="0.15594855">
+          <caret line="42" column="17" selection-start-line="42" selection-start-column="17" selection-end-line="42" selection-end-column="17" />
           <folding>
             <element signature="e#45#91#0#PHP" expanded="true" />
           </folding>
