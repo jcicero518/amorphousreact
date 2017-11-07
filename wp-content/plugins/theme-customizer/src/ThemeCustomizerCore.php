@@ -65,9 +65,10 @@ class ThemeCustomizerCore {
     $this->defineHooks();
   }
 
+  // https://premium.wpmudev.org/blog/creating-custom-controls-wordpress-theme-customizer/
+  // https://paulund.co.uk/custom-wordpress-controls
   public function defineHooks() {
-    //var_dump(__NAMESPACE__);
-    add_action( 'customize_register', [ __NAMESPACE__ . '\Customizer\Init', 'register' ] );
+    add_action( 'customize_register', [ Init::class, 'register' ] );
   }
 
 }

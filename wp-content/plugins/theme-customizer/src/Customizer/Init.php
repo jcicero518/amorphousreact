@@ -2,13 +2,15 @@
 
 namespace Amorphous\ThemeCustomizer\Customizer;
 
+use WP_Customize_Manager;
+
 class Init {
 
   public function __construct() {
 
   }
 
-  public function register() {
-    var_dump(__FILE__);
+  public function register( WP_Customize_Manager $wp_customizer ) {
+
   }
 }
